@@ -1,6 +1,5 @@
 from os import environ
 
-
 SESSION_CONFIGS = [
     dict(
         name='public_goods',
@@ -18,7 +17,13 @@ SESSION_CONFIGS = [
         name='survey',
         display_name='survey',
         num_demo_participants=1,
-        app_sequence=['survey', 'payment_info'],
+        app_sequence=['survey'],
+    ),
+    dict(
+        name='depression_optimism_scale',
+        display_name='औदासिन्य आणि आशावाद सर्वेक्षण',
+        num_demo_participants=1,
+        app_sequence=['depression_optimism_scale'],
     ),
 ]
 
@@ -33,10 +38,10 @@ SESSION_CONFIG_DEFAULTS = dict(
 
 # ISO-639 code
 # for example: de, fr, ja, ko, zh-hans
-LANGUAGE_CODE = 'en'
+LANGUAGE_CODE = 'mr'
 
 # e.g. EUR, GBP, CNY, JPY
-REAL_WORLD_CURRENCY_CODE = 'USD'
+REAL_WORLD_CURRENCY_CODE = 'INR'
 USE_POINTS = True
 
 ROOMS = [

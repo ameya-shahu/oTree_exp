@@ -1,0 +1,18 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    औदासिन्य आणि आशावाद सर्वेक्षण
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        कृपया खालील प्रश्नांची उत्तरे द्या
+    </p>
+
+    {% formfields %}
+
+    {% next_button %}
+
+{% endblock %}
