@@ -14,16 +14,16 @@ SESSION_CONFIGS = [
         app_sequence=['guess_two_thirds', 'payment_info'],
     ),
     dict(
-        name='survey',
-        display_name='survey',
-        num_demo_participants=1,
-        app_sequence=['survey'],
-    ),
-    dict(
         name='depression_optimism_scale',
         display_name='औदासिन्य आणि आशावाद सर्वेक्षण',
         num_demo_participants=1,
         app_sequence=['depression_optimism_scale'],
+    ),
+    dict(
+        name='depression_optimism_scale_hindi',
+        display_name='औदासिन्य और आशावाद सर्वेक्षण',
+        num_demo_participants=1,
+        app_sequence=['depression_optimism_scale_hindi'],
     ),
 ]
 
@@ -63,6 +63,8 @@ Here are some oTree games.
 
 # don't share this with anybody.
 SECRET_KEY = '_l+m7#$h$m32=7rvke^o-nx=eoiz%!#e&d5ut+fw3^qt3$a4yr'
+
+# DEBUG=False
 
 INSTALLED_APPS = ['otree']
 
