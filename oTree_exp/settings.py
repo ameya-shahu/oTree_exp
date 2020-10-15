@@ -25,6 +25,12 @@ SESSION_CONFIGS = [
         num_demo_participants=1,
         app_sequence=['depression_optimism_scale_hindi'],
     ),
+    dict(
+        name='savings_game',
+        display_name='savings_game',
+        num_demo_participants=1,
+        app_sequence=['savings_game'],
+    ),
 ]
 
 # if you set a property in SESSION_CONFIG_DEFAULTS, it will be inherited by all configs
