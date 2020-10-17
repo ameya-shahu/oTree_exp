@@ -19,76 +19,28 @@ Savings Game
 class Constants(BaseConstants):
     name_in_url = 'savings_game'
     players_per_group = None
-    num_rounds = 25
+    num_rounds = 4
     # endowment = 100000 - not a variable since this is just displayed and not manipulated
 
 
-# class Subsession(BaseSubsession):
-#     pass
+class Subsession(BaseSubsession):
+    pass
 
 
-# class Group(BaseGroup):
-#     pass
+class Group(BaseGroup):
+    pass
 
 
 class Player(BasePlayer):
     # all consumption variables - 25 rounds, 25 variables
-    consumption_1 = models.IntegerField(label="खर्च :")
-    consumption_2 = models.IntegerField(label="खर्च :")
-    consumption_3 = models.IntegerField(label="खर्च :")
-    consumption_4 = models.IntegerField(label="खर्च :")
-    consumption_5 = models.IntegerField(label="खर्च :")
-    consumption_6 = models.IntegerField(label="खर्च :")
-    consumption_7 = models.IntegerField(label="खर्च :")
-    consumption_8 = models.IntegerField(label="खर्च :")
-    consumption_9 = models.IntegerField(label="खर्च :")
-    consumption_10 = models.IntegerField(label="खर्च :")
-    consumption_11 = models.IntegerField(label="खर्च :")
-    consumption_12 = models.IntegerField(label="खर्च :")
-    consumption_13 = models.IntegerField(label="खर्च :")
-    consumption_14 = models.IntegerField(label="खर्च :")
-    consumption_15 = models.IntegerField(label="खर्च :")
-    consumption_16 = models.IntegerField(label="खर्च :")
-    consumption_17 = models.IntegerField(label="खर्च :")
-    consumption_18 = models.IntegerField(label="खर्च :")
-    consumption_19 = models.IntegerField(label="खर्च :")
-    consumption_20 = models.IntegerField(label="खर्च :")
-    consumption_21 = models.IntegerField(label="खर्च :")
-    consumption_22 = models.IntegerField(label="खर्च :")
-    consumption_23 = models.IntegerField(label="खर्च :")
-    consumption_24 = models.IntegerField(label="खर्च :")
-    consumption_25 = models.IntegerField(label="खर्च :")
+    consumption = models.IntegerField(label="खर्च :")
 
     # all savings variables - 25 rounds, 25 variables
-    savings_1 = models.IntegerField(label="बचत :")
-    savings_2 = models.IntegerField(label="बचत :")
-    savings_3 = models.IntegerField(label="बचत :")
-    savings_4 = models.IntegerField(label="बचत :")
-    savings_5 = models.IntegerField(label="बचत :")
-    savings_6 = models.IntegerField(label="बचत :")
-    savings_7 = models.IntegerField(label="बचत :")
-    savings_8 = models.IntegerField(label="बचत :")
-    savings_9 = models.IntegerField(label="बचत :")
-    savings_10 = models.IntegerField(label="बचत :")
-    savings_11 = models.IntegerField(label="बचत :")
-    savings_12 = models.IntegerField(label="बचत :")
-    savings_13 = models.IntegerField(label="बचत :")
-    savings_14 = models.IntegerField(label="बचत :")
-    savings_15 = models.IntegerField(label="बचत :")
-    savings_16 = models.IntegerField(label="बचत :")
-    savings_17 = models.IntegerField(label="बचत :")
-    savings_18 = models.IntegerField(label="बचत :")
-    savings_19 = models.IntegerField(label="बचत :")
-    savings_20 = models.IntegerField(label="बचत :")
-    savings_21 = models.IntegerField(label="बचत :")
-    savings_22 = models.IntegerField(label="बचत :")
-    savings_23 = models.IntegerField(label="बचत :")
-    savings_24 = models.IntegerField(label="बचत :")
-    savings_25 = models.IntegerField(label="बचत :")
+    savings = models.IntegerField(label="बचत :")
 
     # cumulative savings variable - one that gets updated every round
     total_savings_remaining = models.IntegerField(label="एकूण शिल्लक बचत :")
-    total_savings_remaining = 0
+    # total_savings_remaining = 0
 
     # the fun begins here - all the debt related variables
 
@@ -120,9 +72,9 @@ class Player(BasePlayer):
         ])
 
     # debt taken input value for each expenditure round
-    debt_taken_round_4 = models.IntegerField(labels="आपण किती कर्ज घेत आहात?")
-    debt_taken_round_12 = models.IntegerField(labels="आपण किती कर्ज घेत आहात?")
-    debt_taken_round_19 = models.IntegerField(labels="आपण किती कर्ज घेत आहात?")
+    debt_taken_round_4 = models.IntegerField(label="आपण किती कर्ज घेत आहात?")
+    debt_taken_round_12 = models.IntegerField(label="आपण किती कर्ज घेत आहात?")
+    debt_taken_round_19 = models.IntegerField(label="आपण किती कर्ज घेत आहात?")
 
     # debt amount with interest
     debt_amount_with_interest_round_4 = models.IntegerField(label="आपले व्याजासकट कर्ज इतके आहे :")

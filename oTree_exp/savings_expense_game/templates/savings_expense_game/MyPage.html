@@ -1,0 +1,96 @@
+{% extends "global/Page.html" %}
+{% load humanize %}
+{% load otree %}
+
+
+{% block title %}
+    Saving and expense ( फेरी क्रमांक - {{ subsession.round_number }})
+{% endblock %}
+
+{% block global_styles  %}
+    <style>
+         .table-info, .table-info>td, .table-info>th {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+             font-weight: normal;
+        }
+         .card-text{
+             color: {{ participant.vars.savings_color }};
+             font-size: x-large;
+         }
+    </style>
+{% endblock %}
+
+
+{% block content %}
+
+    <p>
+        तुम्हाला {{ roundSalary | intcomma }} रुपये मिळाले, तुम्ही किती खर्च कराल आणि किती बचत कराल?
+    </p>
+
+    {% formfields %}
+    {% next_button %}
+
+
+    {% if subsession.round_number != 1 %}
+        <div class="card text-center w-25">
+            <div class="card-body">
+                <h5 class="card-title"><b>आतापर्यंत एकूण बचत</b></h5>
+                <p class="card-text"> <b>रुपये {{ participant.vars.totalSavings | intcomma }}</b></p>
+            </div>
+        </div>
+    {% endif %}
+    <br>
+    {% if participant.vars.emi_1 > 0 %}
+    <div>
+        <table class="table">
+          <thead>
+            <tr class = "table-info">
+              <th scope="col">कर्ज क्रमांक</th>
+              <th scope="col">शिल्लक रक्कम</th>
+              <th scope="col">फेरीनुसार परत करण्यायोग्य रक्कम</th>
+              <th scope="col">उर्वरित कर्जाच्या फे्या</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>{{ participant.vars.debt_1_amount | intcomma }}</td>
+              <td>{{ participant.vars.emi_1 }}</td>
+              <td>{{ participant.vars.debt_1_round }}</td>
+            </tr>
+            {% if participant.vars.emi_2 > 0 %}
+                <tr>
+                  <th scope="row">2</th>
+                  <td>{{ participant.vars.debt_2_amount | intcomma }}</td>
+                  <td>{{ participant.vars.emi_2 }}</td>
+                  <td>{{ participant.vars.debt_2_round }}</td>
+                </tr>
+            {% endif %}
+
+            {% if participant.vars.emi_3 > 0 %}
+                <tr>
+                  <th scope="row">3</th>
+                  <td>{{ participant.vars.debt_3_amount | intcomma }}</td>
+                  <td>{{ participant.vars.emi_3 }}</td>
+                  <td>{{ participant.vars.debt_3_round }}</td>
+                </tr>
+            {% endif %}
+          </tbody>
+    </table>
+    </div>
+    {% endif %}
+{% endblock %}
+
+{% block app_scripts %}
+    <script>
+        $(document).ready(function (){
+            $('label[for="id_EMI1"]').html('पहिल्या कर्जाची ईएमआय रुपये {{ participant.vars.emi_1 | intcomma }} :');
+            $('label[for="id_EMI2"]').html('तुमच्या दुसर्‍या कर्जाची ईएमआय रुपये {{ participant.vars.emi_2 | intcomma}} :');
+            $('label[for="id_EMI3"]').html('तुमच्या तिसर्‍या कर्जाची ईएमआय रुपये {{ participant.vars.emi_3 | intcomma}} :');
+        });
+    </script>
+{% endblock %}
+
+

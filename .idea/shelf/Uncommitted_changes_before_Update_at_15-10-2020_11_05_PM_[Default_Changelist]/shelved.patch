@@ -1,0 +1,23 @@
+Index: oTree_exp/survey/templates/survey/CognitiveReflectionTest.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{% extends \"global/Page.html\" %}\r\n{% load otree %}\r\n\r\n{% block title %}\r\n    Survey\r\n{% endblock %}\r\n\r\n{% block content %}\r\n\r\n    <p>\r\n        Please answer the following questions.\r\n    </p>\r\n\r\n    {% formfields %}\r\n\r\n    {% next_button %}\r\n\r\n{% endblock %}\r\n
+===================================================================
+--- oTree_exp/survey/templates/survey/CognitiveReflectionTest.html	(revision 40b7e3afc2d98d322f0d5a7a243b0fb28a37a512)
++++ oTree_exp/depression_optimism_scale_hindi/templates/depression_optimism_scale_hindi/MyPage.html	(date 1602704137193)
+@@ -2,13 +2,12 @@
+ {% load otree %}
+ 
+ {% block title %}
+-    Survey
++    औदासिन्य और आशावाद सर्वेक्षण
+ {% endblock %}
+ 
+ {% block content %}
+-
+     <p>
+-        Please answer the following questions.
++        निम्नलिखित प्रश्नो के उत्तर दो
+     </p>
+ 
+     {% formfields %}

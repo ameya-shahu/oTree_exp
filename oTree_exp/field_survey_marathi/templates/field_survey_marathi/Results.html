@@ -1,18 +1,13 @@
 {% extends "global/Page.html" %}
-{% load otree %}
+{% load otree static %}
 
 {% block title %}
-    Survey
+    Page title
 {% endblock %}
 
 {% block content %}
 
-    <p>
-        Please answer the following questions.
-    </p>
-
-    {% formfields %}
-
     {% next_button %}
-
 {% endblock %}
+
+

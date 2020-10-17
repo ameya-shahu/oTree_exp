@@ -8,15 +8,15 @@ from .models import Constants
 # def is_displayed(self) is a condition on whether that page should be displayed or not - has
 # nothing to do with internal calculations and shit
 
-class Round1(Page):
+class MyPage(Page):
     form_model = "player"
-    form_fields = ['consumption_1' 'savings_1']
+    form_fields = ['consumption' 'savings']
 
-    def vars_for_template(self):
-        self.player.total_savings_remaining = self.player.total_savings_remaining + self.player.savings_1
-        return {
-            "Total Savings:": self.player.total_savings_remaining
-        }
+    # def vars_for_template(self):
+    #     self.player.total_savings_remaining = self.player.total_savings_remaining + self.player.savings_1
+    #     return {
+    #         "Total Savings:": self.player.total_savings_remaining
+    #     }
 
 
 class Round2(Page):
@@ -153,4 +153,4 @@ class Results(Page):
     form_fields = ['total_savings_remaining', 'total_debt_remaining', 'diff_between_savings_debt']
 
 
-page_sequence = [MyPage, ResultsWaitPage, Results]
+page_sequence = [MyPage, '''ResultsWaitPage, Results''']

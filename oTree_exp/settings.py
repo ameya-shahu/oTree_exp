@@ -27,10 +27,11 @@ SESSION_CONFIGS = [
     ),
     dict(
         name='savings_game',
-        display_name='savings_game',
+        display_name='savings game',
         num_demo_participants=1,
-        app_sequence=['savings_game'],
+        app_sequence=['savings_expense_game'],
     ),
+
 ]
 
 # if you set a property in SESSION_CONFIG_DEFAULTS, it will be inherited by all configs
@@ -72,7 +73,11 @@ SECRET_KEY = '_l+m7#$h$m32=7rvke^o-nx=eoiz%!#e&d5ut+fw3^qt3$a4yr'
 
 # DEBUG=False
 
-INSTALLED_APPS = ['otree']
+INSTALLED_APPS = [
+    'django.contrib.humanize',
+    'otree',
+
+]
 
 # inactive session configs
 # dict(name='trust', display_name="Trust Game", num_demo_participants=2, app_sequence=['trust', 'payment_info']),

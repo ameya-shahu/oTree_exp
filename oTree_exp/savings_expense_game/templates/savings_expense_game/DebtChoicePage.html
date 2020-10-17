@@ -1,0 +1,47 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+
+{% block title %}
+    Saving and expense ( फेरी क्रमांक - {{ subsession.round_number }})
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        आपत्कालीन परिस्थितीसाठी आपल्याला रुपये {{ emergedFund }} खर्च करण्याची आवश्यकता आहे. आपण कोणता पर्याय निवडला आहे?
+    </p>
+
+    {% formfields %}
+    {% if subsession.round_number != 1 %}
+    <p>आतापर्यंत एकूण बचत - {{ participant.vars.totalSavings }}</p>
+    {% endif %}
+    {% next_button %}
+
+{% endblock %}
+
+{% block app_scripts %}
+    {% if fromTotalSavingChoice %}
+    <script>
+    // script to hide form fields depend on choices from radio button
+    $('input[name="debtChoice"]').on("click", function(e) {
+       console.log('JavaScript is executing');
+       let selected = $("input[name='debtChoice']:checked").val();
+       console.log(selected);
+       if (selected === '{{ fromTotalSavingChoice }}'){
+           $('label[for="id_fromSavingAmt"]').hide();
+           $('input[name="fromSavingAmt"]').hide();
+
+           $('label[for="id_fromLoanAmount"]').hide();
+           $('input[name="fromLoanAmount"]').hide();
+       }else{
+           $('label[for="id_fromSavingAmt"]').show();
+           $('input[name="fromSavingAmt"]').show();
+
+           $('label[for="id_fromLoanAmount"]').show();
+           $('input[name="fromLoanAmount"]').show();
+       }
+    })
+    </script>
+    {% endif %}
+{% endblock %}
