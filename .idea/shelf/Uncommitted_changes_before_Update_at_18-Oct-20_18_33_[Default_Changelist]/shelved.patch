@@ -1,0 +1,515 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"BranchesTreeState\">\r\n    <expand>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n    </expand>\r\n    <select>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"BRANCH:master\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n    </select>\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"7ff55e55-eaa2-49c3-b406-38d4b805ea2c\" name=\"Default Changelist\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/bargaining/__init__.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/bargaining/_builtin/__init__.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/bargaining/models.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/bargaining/pages.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/bargaining/templates/bargaining/Introduction.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/bargaining/templates/bargaining/Request.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/bargaining/templates/bargaining/Results.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/bargaining/templates/bargaining/instructions.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/bargaining/tests.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/bertrand/__init__.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/bertrand/_builtin/__init__.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/bertrand/models.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/bertrand/pages.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/bertrand/templates/bertrand/Decide.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/bertrand/templates/bertrand/Introduction.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/bertrand/templates/bertrand/Results.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/bertrand/templates/bertrand/instructions.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/bertrand/tests.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/common_value_auction/__init__.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/common_value_auction/_builtin/__init__.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/common_value_auction/models.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/common_value_auction/pages.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/common_value_auction/templates/common_value_auction/Bid.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/common_value_auction/templates/common_value_auction/Introduction.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/common_value_auction/templates/common_value_auction/Results.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/common_value_auction/templates/common_value_auction/instructions.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/common_value_auction/tests.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/cournot/__init__.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/cournot/_builtin/__init__.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/cournot/models.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/cournot/pages.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/cournot/templates/cournot/Decide.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/cournot/templates/cournot/Introduction.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/cournot/templates/cournot/Results.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/cournot/templates/cournot/instructions.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/cournot/tests.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/dictator/__init__.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/dictator/_builtin/__init__.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/dictator/models.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/dictator/pages.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/dictator/templates/dictator/Introduction.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/dictator/templates/dictator/Offer.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/dictator/templates/dictator/Results.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/dictator/templates/dictator/instructions.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/dictator/tests.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/expenditureanxiety_marathi/models.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/oTree_exp/expenditureanxiety_marathi/models.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/guess_two_thirds/__init__.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/guess_two_thirds/_builtin/__init__.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/guess_two_thirds/models.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/guess_two_thirds/pages.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/guess_two_thirds/templates/guess_two_thirds/Guess.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/guess_two_thirds/templates/guess_two_thirds/Introduction.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/guess_two_thirds/templates/guess_two_thirds/Results.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/guess_two_thirds/templates/guess_two_thirds/instructions.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/guess_two_thirds/tests.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/matching_pennies/__init__.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/matching_pennies/_builtin/__init__.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/matching_pennies/models.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/matching_pennies/pages.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/matching_pennies/templates/matching_pennies/Choice.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/matching_pennies/templates/matching_pennies/ResultsSummary.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/matching_pennies/tests.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/prisoner/__init__.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/prisoner/_builtin/__init__.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/prisoner/models.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/prisoner/pages.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/prisoner/templates/prisoner/Decision.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/prisoner/templates/prisoner/Introduction.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/prisoner/templates/prisoner/Results.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/prisoner/templates/prisoner/instructions.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/prisoner/tests.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/public_goods/__init__.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/public_goods/_builtin/__init__.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/public_goods/models.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/public_goods/pages.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/public_goods/templates/public_goods/Contribute.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/public_goods/templates/public_goods/Introduction.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/public_goods/templates/public_goods/Results.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/public_goods/templates/public_goods/admin_report.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/public_goods/templates/public_goods/instructions.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/public_goods/tests.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/public_goods_simple/__init__.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/public_goods_simple/_builtin/__init__.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/public_goods_simple/models.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/public_goods_simple/pages.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/public_goods_simple/templates/public_goods_simple/Contribute.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/public_goods_simple/templates/public_goods_simple/Results.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/public_goods_simple/tests.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/traveler_dilemma/__init__.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/traveler_dilemma/_builtin/__init__.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/traveler_dilemma/models.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/traveler_dilemma/pages.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/traveler_dilemma/templates/traveler_dilemma/Claim.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/traveler_dilemma/templates/traveler_dilemma/Introduction.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/traveler_dilemma/templates/traveler_dilemma/Results.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/traveler_dilemma/templates/traveler_dilemma/instructions.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/traveler_dilemma/tests.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/trust/__init__.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/trust/_builtin/__init__.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/trust/models.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/trust/pages.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/trust/templates/trust/Introduction.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/trust/templates/trust/Results.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/trust/templates/trust/Send.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/trust/templates/trust/SendBack.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/trust/templates/trust/instructions.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/trust/tests.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/trust_simple/__init__.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/trust_simple/_builtin/__init__.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/trust_simple/models.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/trust_simple/pages.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/trust_simple/templates/trust_simple/Results.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/trust_simple/templates/trust_simple/Send.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/trust_simple/templates/trust_simple/SendBack.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/trust_simple/templates/trust_simple/instructions.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/trust_simple/tests.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/volunteer_dilemma/__init__.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/volunteer_dilemma/_builtin/__init__.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/volunteer_dilemma/models.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/volunteer_dilemma/pages.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/volunteer_dilemma/templates/volunteer_dilemma/Decision.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/volunteer_dilemma/templates/volunteer_dilemma/Introduction.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/volunteer_dilemma/templates/volunteer_dilemma/Results.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/volunteer_dilemma/templates/volunteer_dilemma/instructions.html\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/volunteer_dilemma/tests.py\" beforeDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"JupyterTrust\" id=\"07f7f5f1-dc9c-46c7-9338-d18b0677ec5a\" />\r\n  <component name=\"ProjectId\" id=\"1ipWfyMY7qlw048QJxP2LrXcFO2\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\r\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\r\n    <property name=\"node.js.path.for.package.eslint\" value=\"project\" />\r\n    <property name=\"node.js.path.for.package.tslint\" value=\"project\" />\r\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\r\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"7ff55e55-eaa2-49c3-b406-38d4b805ea2c\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1602605121137</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1602605121137</updated>\r\n      <workItem from=\"1602605159259\" duration=\"1911000\" />\r\n      <workItem from=\"1602655249030\" duration=\"11763000\" />\r\n      <workItem from=\"1602737985982\" duration=\"9740000\" />\r\n      <workItem from=\"1602991587101\" duration=\"18909000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"incomeuncertainty_marathi added\">\r\n      <created>1603004387941</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1603004387941</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"master\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"incomeuncertainty_marathi added\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"incomeuncertainty_marathi added\" />\r\n  </component>\r\n  <component name=\"WindowStateProjectService\">\r\n    <state x=\"267\" y=\"24\" key=\"#Inspections\" timestamp=\"1602999092714\">\r\n      <screen x=\"0\" y=\"0\" width=\"1280\" height=\"689\" />\r\n    </state>\r\n    <state x=\"267\" y=\"24\" key=\"#Inspections/0.0.1280.689@0.0.1280.689\" timestamp=\"1602999092714\" />\r\n    <state x=\"233\" y=\"78\" key=\"Vcs.Push.Dialog.v2\" timestamp=\"1603015547467\">\r\n      <screen x=\"0\" y=\"0\" width=\"1280\" height=\"689\" />\r\n    </state>\r\n    <state x=\"233\" y=\"78\" key=\"Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689\" timestamp=\"1603015547467\" />\r\n    <state x=\"458\" y=\"259\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2\" timestamp=\"1603004418598\">\r\n      <screen x=\"0\" y=\"0\" width=\"1280\" height=\"689\" />\r\n    </state>\r\n    <state x=\"458\" y=\"259\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.689@0.0.1280.689\" timestamp=\"1603004418598\" />\r\n    <state x=\"303\" y=\"10\" width=\"672\" height=\"678\" key=\"search.everywhere.popup\" timestamp=\"1603014363852\">\r\n      <screen x=\"0\" y=\"0\" width=\"1280\" height=\"689\" />\r\n    </state>\r\n    <state x=\"303\" y=\"10\" width=\"672\" height=\"678\" key=\"search.everywhere.popup/0.0.1280.689@0.0.1280.689\" timestamp=\"1603014363852\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision daee4cb848fc287e1ebea389efac433625cfa2a8)
++++ .idea/workspace.xml	(date 1603026131302)
+@@ -27,131 +27,10 @@
+   <component name="ChangeListManager">
+     <list default="true" id="7ff55e55-eaa2-49c3-b406-38d4b805ea2c" name="Default Changelist" comment="">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/bargaining/__init__.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/bargaining/_builtin/__init__.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/bargaining/models.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/bargaining/pages.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/bargaining/templates/bargaining/Introduction.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/bargaining/templates/bargaining/Request.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/bargaining/templates/bargaining/Results.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/bargaining/templates/bargaining/instructions.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/bargaining/tests.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/bertrand/__init__.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/bertrand/_builtin/__init__.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/bertrand/models.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/bertrand/pages.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/bertrand/templates/bertrand/Decide.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/bertrand/templates/bertrand/Introduction.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/bertrand/templates/bertrand/Results.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/bertrand/templates/bertrand/instructions.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/bertrand/tests.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/common_value_auction/__init__.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/common_value_auction/_builtin/__init__.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/common_value_auction/models.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/common_value_auction/pages.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/common_value_auction/templates/common_value_auction/Bid.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/common_value_auction/templates/common_value_auction/Introduction.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/common_value_auction/templates/common_value_auction/Results.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/common_value_auction/templates/common_value_auction/instructions.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/common_value_auction/tests.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/cournot/__init__.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/cournot/_builtin/__init__.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/cournot/models.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/cournot/pages.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/cournot/templates/cournot/Decide.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/cournot/templates/cournot/Introduction.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/cournot/templates/cournot/Results.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/cournot/templates/cournot/instructions.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/cournot/tests.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/dictator/__init__.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/dictator/_builtin/__init__.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/dictator/models.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/dictator/pages.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/dictator/templates/dictator/Introduction.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/dictator/templates/dictator/Offer.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/dictator/templates/dictator/Results.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/dictator/templates/dictator/instructions.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/dictator/tests.py" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/oTree_exp/expenditureanxiety_marathi/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/expenditureanxiety_marathi/models.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/guess_two_thirds/__init__.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/guess_two_thirds/_builtin/__init__.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/guess_two_thirds/models.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/guess_two_thirds/pages.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/guess_two_thirds/templates/guess_two_thirds/Guess.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/guess_two_thirds/templates/guess_two_thirds/Introduction.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/guess_two_thirds/templates/guess_two_thirds/Results.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/guess_two_thirds/templates/guess_two_thirds/instructions.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/guess_two_thirds/tests.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/matching_pennies/__init__.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/matching_pennies/_builtin/__init__.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/matching_pennies/models.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/matching_pennies/pages.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/matching_pennies/templates/matching_pennies/Choice.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/matching_pennies/templates/matching_pennies/ResultsSummary.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/matching_pennies/tests.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/prisoner/__init__.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/prisoner/_builtin/__init__.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/prisoner/models.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/prisoner/pages.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/prisoner/templates/prisoner/Decision.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/prisoner/templates/prisoner/Introduction.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/prisoner/templates/prisoner/Results.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/prisoner/templates/prisoner/instructions.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/prisoner/tests.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods/__init__.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods/_builtin/__init__.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods/models.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods/pages.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods/templates/public_goods/Contribute.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods/templates/public_goods/Introduction.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods/templates/public_goods/Results.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods/templates/public_goods/admin_report.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods/templates/public_goods/instructions.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods/tests.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods_simple/__init__.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods_simple/_builtin/__init__.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods_simple/models.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods_simple/pages.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods_simple/templates/public_goods_simple/Contribute.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods_simple/templates/public_goods_simple/Results.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods_simple/tests.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/traveler_dilemma/__init__.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/traveler_dilemma/_builtin/__init__.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/traveler_dilemma/models.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/traveler_dilemma/pages.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/traveler_dilemma/templates/traveler_dilemma/Claim.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/traveler_dilemma/templates/traveler_dilemma/Introduction.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/traveler_dilemma/templates/traveler_dilemma/Results.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/traveler_dilemma/templates/traveler_dilemma/instructions.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/traveler_dilemma/tests.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/trust/__init__.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/trust/_builtin/__init__.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/trust/models.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/trust/pages.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/trust/templates/trust/Introduction.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/trust/templates/trust/Results.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/trust/templates/trust/Send.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/trust/templates/trust/SendBack.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/trust/templates/trust/instructions.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/trust/tests.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/trust_simple/__init__.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/trust_simple/_builtin/__init__.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/trust_simple/models.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/trust_simple/pages.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/trust_simple/templates/trust_simple/Results.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/trust_simple/templates/trust_simple/Send.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/trust_simple/templates/trust_simple/SendBack.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/trust_simple/templates/trust_simple/instructions.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/trust_simple/tests.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/volunteer_dilemma/__init__.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/volunteer_dilemma/_builtin/__init__.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/volunteer_dilemma/models.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/volunteer_dilemma/pages.py" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/volunteer_dilemma/templates/volunteer_dilemma/Decision.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/volunteer_dilemma/templates/volunteer_dilemma/Introduction.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/volunteer_dilemma/templates/volunteer_dilemma/Results.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/volunteer_dilemma/templates/volunteer_dilemma/instructions.html" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/volunteer_dilemma/tests.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/oTree_exp/expenditureanxiety_marathi/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/expenditureanxiety_marathi/pages.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/oTree_exp/incomeuncertainty_marathi/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/incomeuncertainty_marathi/pages.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/oTree_exp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/settings.py" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -169,6 +48,7 @@
+     <option name="showLibraryContents" value="true" />
+   </component>
+   <component name="PropertiesComponent">
++    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+     <property name="WebServerToolWindowFactoryState" value="false" />
+     <property name="node.js.detected.package.eslint" value="true" />
+@@ -189,7 +69,7 @@
+       <workItem from="1602605159259" duration="1911000" />
+       <workItem from="1602655249030" duration="11763000" />
+       <workItem from="1602737985982" duration="9740000" />
+-      <workItem from="1602991587101" duration="18909000" />
++      <workItem from="1602991587101" duration="27455000" />
+     </task>
+     <task id="LOCAL-00001" summary="incomeuncertainty_marathi added">
+       <created>1603004387941</created>
+@@ -198,7 +78,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1603004387941</updated>
+     </task>
+-    <option name="localTasksCounter" value="2" />
++    <task id="LOCAL-00002" summary="expenditureanxiety_marathi added">
++      <created>1603015712777</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1603015712777</updated>
++    </task>
++    <option name="localTasksCounter" value="3" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -230,21 +117,26 @@
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="incomeuncertainty_marathi added" />
+-    <option name="LAST_COMMIT_MESSAGE" value="incomeuncertainty_marathi added" />
++    <MESSAGE value="expenditureanxiety_marathi added" />
++    <option name="LAST_COMMIT_MESSAGE" value="expenditureanxiety_marathi added" />
+   </component>
+   <component name="WindowStateProjectService">
+     <state x="267" y="24" key="#Inspections" timestamp="1602999092714">
+       <screen x="0" y="0" width="1280" height="689" />
+     </state>
+     <state x="267" y="24" key="#Inspections/0.0.1280.689@0.0.1280.689" timestamp="1602999092714" />
+-    <state x="233" y="78" key="Vcs.Push.Dialog.v2" timestamp="1603015547467">
++    <state x="233" y="78" key="Vcs.Push.Dialog.v2" timestamp="1603015730431">
++      <screen x="0" y="0" width="1280" height="689" />
++    </state>
++    <state x="233" y="78" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1603015730431" />
++    <state x="458" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603025145578">
+       <screen x="0" y="0" width="1280" height="689" />
+     </state>
+-    <state x="233" y="78" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1603015547467" />
+-    <state x="458" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603004418598">
++    <state x="458" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.689@0.0.1280.689" timestamp="1603025145578" />
++    <state x="362" y="0" width="872" height="676" key="dock-window-1" timestamp="1603016276559">
+       <screen x="0" y="0" width="1280" height="689" />
+     </state>
+-    <state x="458" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.689@0.0.1280.689" timestamp="1603004418598" />
++    <state x="362" y="0" width="872" height="676" key="dock-window-1/0.0.1280.689@0.0.1280.689" timestamp="1603016276559" />
+     <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1603014363852">
+       <screen x="0" y="0" width="1280" height="689" />
+     </state>
+Index: oTree_exp/expenditureanxiety_marathi/models.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from otree.api import (\r\n    models,\r\n    widgets,\r\n    BaseConstants,\r\n    BaseSubsession,\r\n    BaseGroup,\r\n    BasePlayer,\r\n    Currency as c,\r\n    currency_range,\r\n)\r\n\r\nfrom django import forms\r\n\r\nauthor = 'Your name here'\r\n\r\ndoc = \"\"\"\r\nYour app description\r\n\"\"\"\r\n\r\n\r\nclass Constants(BaseConstants):\r\n    name_in_url = 'SES_marathi'\r\n    players_per_group = None\r\n    num_rounds = 1\r\n\r\n\r\nclass Subsession(BaseSubsession):\r\n    pass\r\n\r\n\r\nclass Group(BaseGroup):\r\n    pass\r\n\r\n\r\nyesNoChoice = [\r\n    [True, 'होय'],\r\n    [False, 'नाही'],\r\n]\r\n\r\nclass Player(BasePlayer):\r\n    howmanypeople = models.IntegerField(label=\"आपल्या कुटुंबातील किती लोक आहेत?\",\r\n                                        min=1,\r\n                                        max=10,\r\n                                        )\r\n    howmanydependent = models.IntegerField(label=\"किती आर्थिकदृष्ट्या अवलंबून (मुलांसह)?\",\r\n                                           min=1,\r\n                                           max=10,\r\n                                           )\r\n    areyouemployed = models.IntegerField(label=\"तुम्ही सध्या व्यवसाय किंवा नोकरी करत आहात का?\",\r\n                                         choices=yesNoChoice)\r\n    howmanymonthsago = models.IntegerField(\r\n        label=\"जर व्यवसाय किंवा नोकरी नाही, तर, किती महिन्यांपूर्वी आपण व्यवसाय किंवा नोकरी गमावली?\",\r\n        choices=[\r\n            [1, \"1-3\"],\r\n            [2, \"4-6\"],\r\n            [3, \"7-9\"],\r\n            [4, \"9-12\"],\r\n            [5, \"12+\"],\r\n            [6, \"अजूनही व्यवसाय किंवा नोकरी आहे\"],\r\n            [7, \"व्यवसाय किंवा नोकरी कधीच नव्हती\"]\r\n    )\r\n    fullorpartial = models.IntegerField(\r\n        label=\"आपला व्यवसाय किंवा नोकरी अस्ल्यास, आपण पूर्ण उत्पन्न किंवा पगार का आंशिक पगार घेत आहात?\",\r\n        choices=[\r\n            [1, \"पूर्ण उत्पन्न किंवा पगार\"],\r\n            [2, \"आंशिक उत्पन्न किंवा पगार\"],\r\n            [3, \"व्यवसाय किंवा नोकरी नाही आहे\"],\r\n            [4, \"व्यवसाय किंवा नोकरी कधीच नव्हती\"]\r\n    )\r\n    groceries_weekly=models.IntegerField(label=\"आपण किराण्याच्या सामानावर दर आठवडा किती खर्च करता?\", choices=[\r\n        [1, \"200-500\"],\r\n        [2,\"501-1000\"],\r\n        [3,\"1001-1500\"],\r\n        [4,\"1501-2000\"],\r\n        [5, \"2001 आणि अधिक\"]\r\n    ])\r\n    groceries_gonedown=models.IntegerField(label=\"आपल्याला लोकडाऊनच्या आधी इतकं किराणा सामान आज कल परवडतं का?\",\r\n                                           choices=yesNoChoice)\r\nelectricity_monthly=models.IntegerField(label=\"आपण दर महिना विजेवर किती खर्च करता?\", choices=[\r\n    [1, \"200-500\"],\r\n    [2, \"501-1000\"],\r\n    [3, \"1001-1500\"],\r\n    [4, \"1501-2000\"],\r\n    [5, \"2001-2500\"],\r\n    [6, \"2501-5000\"],\r\n    [7, \"5001 आणि अधिक\"]\r\n])\r\n    electricity_goneup=models.IntegerField(label=\"मागील तीन महिन्यांत विजेवरचा खर्च वाढला आहे?\", choices=yesNoChoice)\r\nmobile_monthly=models.IntegerField(label=\"आपण दरमहा मोबाइलवर किती खर्च करता?\", choices=\r\n[\r\n    [1, \"200-500\"],\r\n    [2, \"501-1000\"],\r\n    [3, \"1001-1500\"],\r\n    [4, \"1501-2000\"],\r\n    [5, \"2001 आणि अधिक\"]\r\n])\r\nmobile_goneup=models.IntegerField(label=\"मागील तीन महिन्यांत मोबाईलवरचा खर्च वाढला आहे?\", choices=yesNoChoice)\r\ncurrent_conditions=models.IntegerField(label=\"जर सध्याची आर्थिक परिस्थिती अशीच चालू राहिली तर, आपण किराणा सामान, वीज आणि मोबाइलसाठी पैसे देणे चालू ठेवू शकता असे आपल्याला वाटते का?\", choices=yesNoChoice)\r\nunexpected_increase=models.IntegerField(label=\"मागील सहा महिन्यांत इतर कोणते खर्च अनपेक्षितपणे वाढले आहेत?\", choices=[\r\n    [1, \"मुलांच्या शिक्षणावरचा खर्च\"],\r\n    [2, \"औषदांवरचा किंवा हॉस्पिटलचा किंवा टेस्टिंगवरचा किंवा क्वारंटाईन वरचा खर्च\"],\r\n    [3, \"प्रवासावरचा खर्च\"],\r\n    [4, \"इतर\"],\r\n    [5, \"अनपेक्षित खर्च आला नाही\"]\r\n])\r\nsavingsbeforelockdown=models.IntegerField(label=\"लॉकडाउनपूर्वी आपण दर महिना किती बचत करायचा?\", choices=[\r\n    [1, \"200-500\"],\r\n    [2, \"501-1000\"],\r\n    [3, \"1001-1500\"],\r\n    [4, \"1501-2000\"],\r\n    [5, \"2001-2500\"],\r\n    [6, \"2501-5000\"],\r\n    [7, \"5001-8000\"],\r\n    [8, \"8001-10000\"],\r\n    [9,\"10001 आणि अधिक\"]\r\n])\r\nhowmuchpercentsavingsspent=models.IntegerField(label=\"बचत केलेले किती टक्के पैसे आपण लोकडाऊन च्या काळात खर्च केले?\",choices=[\r\n    [1,\"0-25%\"],\r\n    [2,\"26-50%\"],\r\n    [3,\"51-75%\"],\r\n    [4,\"76-85%\"],\r\n    [5,\"85-95%\"],\r\n    [6,\"95-100%\"]\r\n])\r\nhowmuchleftsavings=models.IntegerField(label=\"आत्ता (रुपयांमध्ये) आपली किती बचत उरली आहे?\", choices=[\r\n    [1, \"200-500\"],\r\n    [2, \"501-1000\"],\r\n    [3, \"1001-1500\"],\r\n    [4, \"1501-2000\"],\r\n    [5, \"2001-2500\"],\r\n    [6, \"2501-5000\"],\r\n    [7, \"5001-8000\"],\r\n    [8, \"8001-10000\"],\r\n    [9,\"10001 आणि अधिक\"]\r\n])\r\ndoyouthinkthatisenough=models.IntegerField(label=\"जर लॉकडाउन अधिक काळ चालला तर आपल्याला वाटतं का कि ती रक्कम पुरेशी आहे?\",\r\n                                           choices=yesNoChoice)\r\ncelebratediwali=models.IntegerField(label=\"आपणास असे वाटते की आपण यावर्षी दिवाळी, ईद किंवा क्रिसमस साजरा कराल?\",choices==yesNoChoice)\r\n\r\nwhatwillyouspendon=models.IntegerField(label=\"कशावर खर्च करू शकाल?\", widget = Widgets.checkbox, choices=[\r\n    [1,\"खाद्य पदार्थ\"],\r\n    [2,\"मुलांसाठी कपडे\"],\r\n    [3, \"सगळ्यांसाठी कपडे\"],\r\n    [4, \"सोनं, चांदी, इ\"]\r\n])\r\n\r\nhowmuchcanyouspend=models.IntegerField(label=\"अंदाजे आपण किती खर्च करू शकता असे वाटते?\", choices=[\r\n    [1, \"200-500\"],\r\n    [2, \"501-1000\"],\r\n    [3, \"1001-1500\"],\r\n    [4, \"1501-2000\"],\r\n    [5, \"2001-2500\"],\r\n    [6, \"2501-5000\"],\r\n    [7, \"5001-8000\"],\r\n    [8, \"8001-10000\"],\r\n    [9,\"10001 आणि अधिक\"]\r\n])\r\nenoughfoodfortwomeals=models.IntegerField(label=\"सध्या घरात असलेल्या प्रत्येकासाठी दोनदा जेवणासाठी पुरेसे भोजन आहे का?\", choices=yesNoChoice)\r\nhowlongcanyouensurefood=models.IntegerField(label=\"लॉकडाउन अधिक काळ चालला तर आपल्याला वाटते का कि आपल्या कुटुंबाला २ वेळचं जेवण मिळत राहील?\",choices=yesNoChoice)\r\nemergency1000rupees=models.IntegerField(label=\"आपल्याला त्वरित 1000 रुपयांची आवश्यकता असल्यास, उदाहरणार्थ डॉक्टरांच्या भेटीसाठी, आपल्याला ते कुठे ममिळतील?\", choices=[\r\n    [1, \"माझ्याकडे आहेत\"],\r\n    [2, \"घरातल्यांना विचारून\"],\r\n    [3, \"शेजार-पाजाऱ्यांना किंवा नातेवाइकांना विचारून\"],\r\n    [4,\"सावकाराकडून\"],\r\n    [5,\"नाही मिळणार\"],\r\n])\r\nemergency10000rupees=models.IntegerField(label=\"आपल्याला त्वरित 10,000 रुपयांची आवश्यकता असल्यास, उदाहरणार्थ रुग्णालयात दाखल करण्यासाठी, आपल्याला ते कुठे ममिळतील?\", choices=[\r\n    [1, \"माझ्याकडे आहेत\"],\r\n    [2, \"घरातल्यांना विचारून\"],\r\n    [3, \"शेजार-पाजाऱ्यांना किंवा नातेवाइकांना विचारून\"],\r\n    [4,\"सावकाराकडून\"],\r\n    [5,\"बँकेतून लोन घेऊन\"],\r\n    [6,\"नाही मिळणार\"],\r\n])\r\nemergency50000rupees=models.IntegerField(label=\"आपल्याला त्वरित 50,000 रुपयांची आवश्यकता असल्यास, उदाहरणार्थ रूग्णालयात बरेच दिवस काढण्यासाठी, आपल्याला ते कुठे ममिळतील?\", choices=[\r\n    [1, \"माझ्याकडे आहेत\"],\r\n    [2, \"घरातल्यांना विचारून\"],\r\n    [3, \"शेजार-पाजाऱ्यांना किंवा नातेवाइकांना विचारून\"],\r\n    [4,\"सावकाराकडून\"],\r\n    [5,\"बँकेतून लोन घेऊन\"],\r\n    [6,\"नाही मिळणार\"],\r\n])\r\nemergency100000rupees=models.IntegerField(label=\"आपल्याला त्वरित 1,00,000 रुपयांची आवश्यकता असल्यास, उदाहरणार्थ अपघातानंतर शस्त्रक्रिया करावी लागल्यास, आपल्याला ते कुठे ममिळतील?\", choices=[\r\n    [1, \"माझ्याकडे आहेत\"],\r\n    [2, \"घरातल्यांना विचारून\"],\r\n    [3, \"शेजार-पाजाऱ्यांना किंवा नातेवाइकांना विचारून\"],\r\n    [4,\"सावकाराकडून\"],\r\n    [5,\"बँकेतून लोन घेऊन\"],\r\n    [6,\"नाही मिळणार\"],\r\n])\r\n\r\nemergency500000rupees=models.IntegerField(label=\"आपल्याला त्वरित 1,00,000 रुपयांची आवश्यकता असल्यास, उदाहरणार्थ अपघातानंतर खूप गंभीर शस्त्रक्रिया करावी लागल्यास, आपल्याला ते कुठे ममिळतील?\", choices=[\r\n    [1, \"माझ्याकडे आहेत\"],\r\n    [2, \"घरातल्यांना विचारून\"],\r\n    [3, \"शेजार-पाजाऱ्यांना किंवा नातेवाइकांना विचारून\"],\r\n    [4,\"सावकाराकडून\"],\r\n    [5,\"बँकेतून लोन घेऊन\"],\r\n    [6,\"नाही मिळणार\"],\r\n])\r\noptimistic=models.IntegerField(label=\"0-3 च्या प्रमाणात, आपण आपल्या भविष्याबद्दल किती आशावादी आहात?\",choices=[\r\n        [1,\"0\"],\r\n        [2, \"1\"],\r\n        [3, \"2\"],\r\n        [4, \"3\"]\r\n    ])
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- oTree_exp/expenditureanxiety_marathi/models.py	(revision daee4cb848fc287e1ebea389efac433625cfa2a8)
++++ oTree_exp/expenditureanxiety_marathi/models.py	(date 1603018337559)
+@@ -19,7 +19,7 @@
+ 
+ 
+ class Constants(BaseConstants):
+-    name_in_url = 'SES_marathi'
++    name_in_url = 'incomeuncertainty_marathi'
+     players_per_group = None
+     num_rounds = 1
+ 
+Index: oTree_exp/expenditureanxiety_marathi/pages.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from otree.api import Currency as c, currency_range\r\nfrom ._builtin import Page, WaitPage\r\nfrom .models import Constants\r\n\r\n\r\nclass MyPage(Page):\r\n    pass\r\n\r\n\r\nclass ResultsWaitPage(WaitPage):\r\n    pass\r\n\r\n\r\nclass Results(Page):\r\n    pass\r\n\r\n\r\npage_sequence = [MyPage, ResultsWaitPage, Results]\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- oTree_exp/expenditureanxiety_marathi/pages.py	(revision daee4cb848fc287e1ebea389efac433625cfa2a8)
++++ oTree_exp/expenditureanxiety_marathi/pages.py	(date 1603017757293)
+@@ -3,16 +3,154 @@
+ from .models import Constants
+ 
+ 
+-class MyPage(Page):
+-    pass
++class SurveyFormBase(Page):
++    template_name = 'expenditure_anxiety_marathi/MyPage.html'
++    form_model = 'player'
++
++
++'''all the classes below will use base class
++as SurveyFormBase and use common template define by
++SurveyFormBase. This will avoid to create all the template for individual
++classes '''
++
++
++class howmanypeople(SurveyFormBase):
++    form_fields = ['howmanypeople']
++
++
++class howmanydependent(SurveyFormBase):
++    form_fields = ['howmanydependent']
++
++
++class areyouemployed(SurveyFormBase):
++    form_fields = ['areyouemployed']
++
++
++class howmanymonthsago(SurveyFormBase):
++    form_fields = ['howmanymonthsago']
++
++
++class fullorpartial(SurveyFormBase):
++    form_fields = ['fullorpartial']
++
++
++class groceries_weekly(SurveyFormBase):
++    form_fields = ['groceries_weekly']
++
++
++class groceries_gonedown(SurveyFormBase):
++    form_fields = ['groceries_gonedown']
++
++
++class electricity_monthly(SurveyFormBase):
++    form_fields = ['electricity_monthly']
++
++
++class electricity_goneup(SurveyFormBase):
++    form_fields = ['electricity_goneup']
++
++
++class mobile_monthly(SurveyFormBase):
++    form_fields = ['mobile_monthly'],
++
++
++class mobile_goneup(SurveyFormBase):
++    form_fields = ['mobile_goneup']
++
++
++class current_conditions(SurveyFormBase):
++    form_fields = ['current_conditions']
++
++
++class unexpected_increase(SurveyFormBase):
++    form_fields = ['unexpected_increase']
++
++
++class savingsbeforelockdown(SurveyFormBase):
++    form_fields = ['savingsbeforelockdown']
++
++
++class howmuchpercentsavingsspent(SurveyFormBase):
++    form_fields = ['howmuchpercentsavingsspent']
++
++
++class howmuchleftsavings(SurveyFormBase):
++    form_fields = ['howmuchleftsavings']
++
++
++class doyouthinkthatisenough(SurveyFormBase):
++    form_fields = ['doyouthinkthatisenough']
++
+ 
++class celebratediwali(SurveyFormBase):
++    form_fields = ['celebratediwali']
+ 
+-class ResultsWaitPage(WaitPage):
+-    pass
+ 
++class whatwillyouspendon(SurveyFormBase):
++    form_fields = ['whatwillyouspendon']
+ 
+-class Results(Page):
+-    pass
+ 
++class howmuchcanyouspend(SurveyFormBase):
++    form_fields = ['howmuchcanyouspend']
+ 
+-page_sequence = [MyPage, ResultsWaitPage, Results]
++
++class enoughfoodfortwomeals(SurveyFormBase):
++    form_fields = ['enoughfoodfortwomeals']
++
++
++class howlongcanyouensurefood(SurveyFormBase):
++    form_fields = ['howlongcanyouensurefood']
++
++
++class emergency1000rupees(SurveyFormBase):
++    form_fields = ['emergency1000rupees']
++
++
++class emergency10000rupees(SurveyFormBase):
++    form_fields = ['emergency10000rupees']
++
++
++class emergency50000rupees(SurveyFormBase):
++    form_fields = ['emergency50000rupees']
++
++
++class emergency100000rupees(SurveyFormBase):
++    form_fields = ['emergency100000rupees']
++
++
++class emergency500000rupees(SurveyFormBase):
++    form_fields = ['emergency500000rupees']
++
++
++class optimistic(SurveyFormBase):
++    form_fields = ['optimistic']
++
++
++page_sequence = [howmanypeople,
++                 howmanydependent,
++                 areyouemployed,
++                 howmanymonthsago,
++                 fullorpartial,
++                 groceries_weekly,
++                 groceries_gonedown,
++                 electricity_monthly,
++                 electricity_goneup,
++                 mobile_monthly,
++                 mobile_goneup,
++                 current_conditions,
++                 unexpected_increase,
++                 savingsbeforelockdown,
++                 howmuchpercentsavingsspent,
++                 howmuchleftsavings,
++                 doyouthinkthatisenough,
++                 celebratediwali,
++                 whatwillyouspendon,
++                 howmuchcanyouspend,
++                 enoughfoodfortwomeals,
++                 howlongcanyouensurefood,
++                 emergency1000rupees,
++                 emergency10000rupees,
++                 emergency50000rupees,
++                 emergency100000rupees,
++                 emergency500000rupees,
++                 optimistic]
+Index: oTree_exp/settings.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from os import environ\r\nDEBUG=False\r\nSESSION_CONFIGS = [\r\n    dict(\r\n        name='public_goods',\r\n        display_name=\"Public Goods\",\r\n        num_demo_participants=3,\r\n        app_sequence=['public_goods', 'payment_info'],\r\n    ),\r\n    dict(\r\n        name='guess_two_thirds',\r\n        display_name=\"Guess 2/3 of the Average\",\r\n        num_demo_participants=3,\r\n        app_sequence=['guess_two_thirds', 'payment_info'],\r\n    ),\r\n    dict(\r\n        name='depression_optimism_scale',\r\n        display_name='औदासिन्य आणि आशावाद सर्वेक्षण',\r\n        num_demo_participants=1,\r\n        app_sequence=['depression_optimism_scale'],\r\n    ),\r\n    dict(\r\n        name='depression_optimism_scale_hindi',\r\n        display_name='औदासिन्य और आशावाद सर्वेक्षण',\r\n        num_demo_participants=1,\r\n        app_sequence=['depression_optimism_scale_hindi'],\r\n    ),\r\n    dict(\r\n        name='savings_game',\r\n        display_name='savings game',\r\n        num_demo_participants=1,\r\n        app_sequence=['savings_expense_game'],\r\n    ),\r\n\r\n]\r\n\r\n# if you set a property in SESSION_CONFIG_DEFAULTS, it will be inherited by all configs\r\n# in SESSION_CONFIGS, except those that explicitly override it.\r\n# the session config can be accessed from methods in your apps as self.session.config,\r\n# e.g. self.session.config['participation_fee']\r\n\r\nSESSION_CONFIG_DEFAULTS = dict(\r\n    real_world_currency_per_point=1.00, participation_fee=0.00, doc=\"\"\r\n)\r\n\r\n# ISO-639 code\r\n# for example: de, fr, ja, ko, zh-hans\r\nLANGUAGE_CODE = 'mr'\r\n\r\n# e.g. EUR, GBP, CNY, JPY\r\nREAL_WORLD_CURRENCY_CODE = 'INR'\r\nUSE_POINTS = True\r\n\r\nROOMS = [\r\n    dict(\r\n        name='econ101',\r\n        display_name='Econ 101 class',\r\n        participant_label_file='_rooms/econ101.txt',\r\n    ),\r\n    dict(name='live_demo', display_name='Room for live demo (no participant labels)'),\r\n]\r\n\r\nADMIN_USERNAME = 'admin'\r\n# for security, best to set admin password in an environment variable\r\nADMIN_PASSWORD = environ.get('OTREE_ADMIN_PASSWORD')\r\n\r\nDEMO_PAGE_INTRO_HTML = \"\"\"\r\nHere are some oTree games.\r\n\"\"\"\r\n\r\n# don't share this with anybody.\r\nSECRET_KEY = '_l+m7#$h$m32=7rvke^o-nx=eoiz%!#e&d5ut+fw3^qt3$a4yr'\r\n\r\n# DEBUG=False\r\n\r\nINSTALLED_APPS = [\r\n    'django.contrib.humanize',\r\n    'otree',\r\n\r\n]\r\n\r\n# inactive session configs\r\n# dict(name='trust', display_name=\"Trust Game\", num_demo_participants=2, app_sequence=['trust', 'payment_info']),\r\n# dict(name='prisoner', display_name=\"Prisoner's Dilemma\", num_demo_participants=2,\r\n#      app_sequence=['prisoner', 'payment_info']),\r\n# dict(name='volunteer_dilemma', display_name=\"Volunteer's Dilemma\", num_demo_participants=3,\r\n#      app_sequence=['volunteer_dilemma', 'payment_info']),\r\n# dict(name='cournot', display_name=\"Cournot Competition\", num_demo_participants=2, app_sequence=[\r\n#     'cournot', 'payment_info'\r\n# ]),\r\n# dict(name='dictator', display_name=\"Dictator Game\", num_demo_participants=2,\r\n#      app_sequence=['dictator', 'payment_info']),\r\n# dict(name='matching_pennies', display_name=\"Matching Pennies\", num_demo_participants=2, app_sequence=[\r\n#     'matching_pennies',\r\n# ]),\r\n# dict(name='traveler_dilemma', display_name=\"Traveler's Dilemma\", num_demo_participants=2,\r\n#      app_sequence=['traveler_dilemma', 'payment_info']),\r\n# dict(name='bargaining', display_name=\"Bargaining Game\", num_demo_participants=2,\r\n#      app_sequence=['bargaining', 'payment_info']),\r\n# dict(name='common_value_auction', display_name=\"Common Value Auction\", num_demo_participants=3,\r\n#      app_sequence=['common_value_auction', 'payment_info']),\r\n# dict(name='bertrand', display_name=\"Bertrand Competition\", num_demo_participants=2, app_sequence=[\r\n#     'bertrand', 'payment_info'\r\n# ]),\r\n# dict(name='public_goods_simple', display_name=\"Public Goods (simple version from tutorial)\",\r\n#      num_demo_participants=3, app_sequence=['public_goods_simple', 'payment_info']),\r\n# dict(name='trust_simple', display_name=\"Trust Game (simple version from tutorial)\", num_demo_participants=2,\r\n#      app_sequence=['trust_simple']),\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- oTree_exp/settings.py	(revision daee4cb848fc287e1ebea389efac433625cfa2a8)
++++ oTree_exp/settings.py	(date 1603020471277)
+@@ -1,18 +1,18 @@
+ from os import environ
+ DEBUG=False
+ SESSION_CONFIGS = [
+-    dict(
+-        name='public_goods',
+-        display_name="Public Goods",
+-        num_demo_participants=3,
+-        app_sequence=['public_goods', 'payment_info'],
+-    ),
+-    dict(
+-        name='guess_two_thirds',
+-        display_name="Guess 2/3 of the Average",
+-        num_demo_participants=3,
+-        app_sequence=['guess_two_thirds', 'payment_info'],
+-    ),
++    # dict(
++    #     name='public_goods',
++    #     display_name="Public Goods",
++    #     num_demo_participants=3,
++    #     app_sequence=['public_goods', 'payment_info'],
++    # ),
++    # dict(
++    #     name='guess_two_thirds',
++    #     display_name="Guess 2/3 of the Average",
++    #     num_demo_participants=3,
++    #     app_sequence=['guess_two_thirds', 'payment_info'],
++    #),
+     dict(
+         name='depression_optimism_scale',
+         display_name='औदासिन्य आणि आशावाद सर्वेक्षण',
+Index: oTree_exp/incomeuncertainty_marathi/pages.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from otree.api import Currency as c, currency_range\r\nfrom ._builtin import Page, WaitPage\r\nfrom .models import Constants\r\n\r\n\r\nclass MyPage(Page):\r\n    pass\r\n\r\n\r\nclass ResultsWaitPage(WaitPage):\r\n    pass\r\n\r\n\r\nclass Results(Page):\r\n    pass\r\n\r\n\r\npage_sequence = [MyPage, ResultsWaitPage, Results]\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- oTree_exp/incomeuncertainty_marathi/pages.py	(revision daee4cb848fc287e1ebea389efac433625cfa2a8)
++++ oTree_exp/incomeuncertainty_marathi/pages.py	(date 1603019853210)
+@@ -3,16 +3,60 @@
+ from .models import Constants
+ 
+ 
+-class MyPage(Page):
+-    pass
++class SurveyFormBase(Page):
++    template_name = 'income_uncertainty_marathi/MyPage.html'
++    form_model = 'player'
++
++class howmanypeople(SurveyFormBase):
++    form_fields = ['howmanypeople']
++
++class howmanydependent(SurveyFormBase):
++    form_fields = ['howmanydependent']
++
++class wenttoworktoday(SurveyFormBase):
++    form_fields = ['wenttoworktoday']
++
++class wenttoworkbeforelockdown(SurveyFormBase):
++    form_fields = ['howmanymonthsago']
++
++class tempwork(SurveyFormBase):
++    form_fields = ['fullorpartial']
++
++class areyouemployed(SurveyFormBase):
++    form_fields = ['areyouemployed']
++
++class howmanymonthsago(SurveyFormBase):
++    form_fields = ['howmanymonthsago']
+ 
++class directlylostjob(SurveyFormBase):
++    form_fields = ['directlylostjob']
+ 
+-class ResultsWaitPage(WaitPage):
+-    pass
++class fullorpartial(SurveyFormBase):
++    form_fields = ['fullorpartial']
+ 
++class ifpartial(SurveyFormBase):
++    form_fields = ['ifpartial']
+ 
+-class Results(Page):
+-    pass
++class otheremployed(SurveyFormBase):
++    form_fields = ['otheremployed']
+ 
++class otherfullorpartial(SurveyFormBase):
++    form_fields = ['otherfullorpartial']
+ 
+-page_sequence = [MyPage, ResultsWaitPage, Results]
++class otherifpartial(SurveyFormBase):
++    form_fields = ['otherifpartial']
++
++page_sequence = [howmanypeople,
++                 howmanydependent,
++                 wenttoworktoday,
++                 wenttoworkbeforelockdown,
++                 tempwork,
++areyouemployed,
++howmanymonthsago,
++directlylostjob,
++fullorpartial,
++ifpartial,
++otheremployed,
++otherfullorpartial,
++otherifpartial,
++                 ]

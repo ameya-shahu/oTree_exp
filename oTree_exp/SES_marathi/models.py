@@ -48,7 +48,7 @@ class Player(BasePlayer):
     tiredRate = models.IntegerField(
         label='प्रयोगादरम्यान आपण किती थकलेले आहात त्याचे रेटिंग द्या (1 ते 5)',
         min=1,
-        max=5
+        max=5,
     )
 
     age = models.IntegerField(
@@ -103,34 +103,32 @@ class Player(BasePlayer):
     )
 
     # family background
-    totalFamilyMember = models.IntegerField(
-        label='एकूण, आपल्या कुटुंबातील किती लोक?'
-    )
-
-    totalChildren = models.IntegerField(
-        label='किती मुले आहेत?'
-    )
+    # totalFamilyMember = models.IntegerField(
+    #     label='एकूण, आपल्या कुटुंबातील किती लोक?'
+    # )
+    #
+    # totalChildren = models.IntegerField(
+    #     label='किती मुले आहेत?'
+    # )
 
     occupation = models.IntegerField(
-        label='काय काम करतात?'
+        label='आपण काय काम करतात?',choices=[
+            [1,"सरकारी नोकरी"],
+            [2, "स्वत: चा व्यवसाय"],
+            [3, "घरगुती व्यवसाय"],
+            [4, "कारखान्यात कामगार"],
+            [5, "रिक्षा किंवा टॅक्सी ड्रायव्हर किंवा डिलिव्हरी चे काम"],
+            [6, "मोठ्या कंपनीत नोकरी"],
+            [7, "वैद्यकीय क्षेत्र (वार्ड बोय, नर्स इ.)"],
+            [8, "शिक्षक"],
+            [9,"इतर"],
+            [10, "नोकरी कधीच नव्हती"]
+        ]
     )
-
-    totalWorkingPeople = models.IntegerField(
-        label='आज किती लोक कामावर गेले?'
-    )
-
-    preLockdownWorkingPeople = models.IntegerField(
-        label='Lockdown करण्यापूर्वी किती लोक कामावर जात होते?'
-    )
-
-    totalIncome = models.IntegerField(
-        label='Lockdown करण्यापूर्वी कुटुंबातील एकूण उत्पन्न किती होते?'
-    )
-
-    # Expenditure
-    groceriesExpend = models.IntegerField(
-        label='आपण आठवड्यात किराणा सामानावर किती खर्च करता?'
-    )
+    useofhands=models.BooleanField(label="आपल्या हाताचा वापर करणं हे आपल्या व्यवसायाचा खूप मोठा भाग आहे का? (उदाहरणार्थ: फॅक्टरी कामगार, टेलर ...)",
+                                   widget=widgets.RadioSelect,
+                                   choices=yesNoChoice
+                                   )
 
     isOwnHouse = models.BooleanField(
         label='तुमचे स्वत: चे घर आहे का?',
@@ -138,95 +136,33 @@ class Player(BasePlayer):
         choices=yesNoChoice
     )
 
-    MonthlyRent = models.IntegerField(
-        label='आपण दरमहा किती भाडे द्याल?',
-        blank=True
-    )
+hasbankaccount=models.BooleanField(label="आपला बँक अकाउंट आहे का ?",
+                                   widget=widgets.RadioSelect,
+                                   choices=yesNoChoice)
 
-    lastThreeMonthRent = models.BooleanField(
-        label='आपण मागील तीन महिन्यांत पूर्ण भाडे रक्कम भरण्यास सक्षम आहात काय?',
-        widget=widgets.RadioSelect,
-        choices=yesNoChoice,
-        blank=True
-    )
+hasFD=models.BooleanField(label="आपला बँक अकाउंट आहे का ?",
+                                   widget=widgets.RadioSelect,
+                                   choices=yesNoChoice)
 
-    percentRentPaid = models.IntegerField(
-        label='आपण भाड्याने किती टक्के दिले हे निर्दिष्ट करा.'
-    )
+hasmutualfunds=models.BooleanField(label="आपला म्युच्युअल फंडस् आहे का ?",
+                                   widget=widgets.RadioSelect,
+                                   choices=yesNoChoice)
 
-    electricityExpense = models.IntegerField(
-        label='आपण दरमहा विजेवर किती खर्च करता?'
-    )
-
-    LPGExpenses = models.IntegerField(
-        label='आपण दरमहा गॅसवर किती खर्च करता?'
-    )
-
-    mobileExpense = models.IntegerField(
-        label='आपण दरमहा मोबाइलवर किती खर्च करता?'
-    )
-
-    medicineExpense = models.IntegerField(
-        label='दरमहा तुम्ही औषधांवर किती खर्च करता?'
-    )
-
-    isEmergencyExpense = models.BooleanField(
-        label='गेल्या सहा महिन्यांत तुमच्यासाठी काही अनपेक्षित खर्च झाले - आरोग्यासाठी, भाड्याने देण्यासाठी, '
-              'दुरुस्तीच्या कामासाठी, अन्नासाठी ...?',
-        widget=widgets.RadioSelect,
-        choices=yesNoChoice
-    )
-
-    EmergencyExpense = models.IntegerField(
-        label='जर होय, तर किती रक्कम होती?'
-    )
-
-    heardRefinance = models.BooleanField(
-        label='आपण पुनर्वित्त ऐकले आहे? मराठी मध्ये पुनर्निर्देशित. वित्तपुरवठा',
-        widget=widgets.RadioSelect,
-        choices=yesNoChoice
-    )
-
-    isRefinance = models.BooleanField(
-        label='आपण कधीही पुनर्वित्त दिले आहे?',
-        widget=widgets.RadioSelect,
-        choices=yesNoChoice
-    )
-
-    refinaceAmt = models.IntegerField(
-        label='पुनर्वित्त रक्कम आणि टक्केवारी किती होती?'
-    )
-
-    # Saving and Investment
-    regularMonthlySavings = models.IntegerField(
-        label='सामान्य परिस्थितीत, आपण दरमहा किती बचत कराल?'
-    )
-
-    lastSixMonthSavingUsed = models.IntegerField(
-        label='मागील 6 महिन्यांत आपण किती बचत वापरली आहे?'
-    )
-
-    remainingSaving = models.IntegerField(
-        label='आत्ता आपण किती बचत शिल्लक आहे?'
-    )
-
-    currentMonthlySavings = models.StringField(
-        label='तुमच्या सध्याच्या उत्पन्नातून तुम्ही  किती बचत करीत आहात (रुपये मध्ये)?',
-        widget=forms.CheckboxSelectMultiple,
-        choices=[
-            ['Home', 'घरी'],
-            ['Bank', 'एका बँकेत'],
-            ['Other', 'इतर:']
-        ]
-    )
-
-    bankSaving = models.IntegerField(
-        label='तुम्ही बँकेत किती बचत करता?',
-        blank=True
-    )
-
-    homeSaving = models.IntegerField(
-        label='आपण घरी किती बचत कराल?',
-        blank=True
-    )
-
+hasinsurance=models.BooleanField(label="आपल्याकडे विमा आहे का?",
+                                   widget=widgets.RadioSelect,
+                                   choices=yesNoChoice)
+gotcovid=models.BooleanField(label="आपल्याला कोवीड  झाला होता का?",
+                                   widget=widgets.RadioSelect,
+                                   choices=yesNoChoice)
+notnenoughfood=models.BooleanField(label="गेल्या सहा महिन्यांत अशी वेळ आली आहे का जेव्हा तुमच्याकडे पुरेसे अन्न नव्हते?",
+                                   widget=widgets.RadioSelect,
+                                   choices=yesNoChoice)
+howmanytimes=models.IntegerField(label="किती वेळा असे घडले?",
+                                 choices=[
+                                     [1,"1-2"],
+                                     [2,"3-4"],
+                                     [3,"5-6"],
+                                     [4,"7-8"],
+                                     [5,"8 आणि अधिक"],
+                                     [6,"कधीच असे घडले नाही"]
+                                 ])

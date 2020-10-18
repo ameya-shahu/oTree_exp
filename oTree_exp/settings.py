@@ -1,6 +1,12 @@
 from os import environ
-#DEBUG=False
+DEBUG=False
 SESSION_CONFIGS = [
+    dict(
+        name='public_goods',
+        display_name="Public Goods",
+        num_demo_participants=3,
+        app_sequence=['public_goods', 'payment_info'],
+    ),
     dict(
         name='guess_two_thirds',
         display_name="Guess 2/3 of the Average",
@@ -22,22 +28,9 @@ SESSION_CONFIGS = [
     dict(
         name='savings_game',
         display_name='savings game',
-
         num_demo_participants=1,
         app_sequence=['savings_expense_game'],
     ),
-    dict(
-        name='Marathi',
-        display_name='Survey In marathi',
-        num_demo_participants=1,
-        app_sequence=['incomeuncertainty_marathi'],
-    ),
-    dict(
-        name='Hindi',
-        display_name='Survey In Hindi',
-        num_demo_participants=1,
-        app_sequence=['incomeuncertainty_hindi'],
-    )
 
 ]
 
