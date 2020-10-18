@@ -1,29 +1,29 @@
 from os import environ
-DEBUG=False
+# DEBUG=False
 SESSION_CONFIGS = [
+    # dict(
+    #     name='public_goods',
+    #     display_name="Public Goods",
+    #     num_demo_participants=3,
+    #     app_sequence=['public_goods', 'payment_info'],
+    # ),
+    # dict(
+    #     name='guess_two_thirds',
+    #     display_name="Guess 2/3 of the Average",
+    #     num_demo_participants=3,
+    #     app_sequence=['guess_two_thirds', 'payment_info'],
+    # ),
     dict(
-        name='public_goods',
-        display_name="Public Goods",
-        num_demo_participants=3,
-        app_sequence=['public_goods', 'payment_info'],
-    ),
-    dict(
-        name='guess_two_thirds',
-        display_name="Guess 2/3 of the Average",
-        num_demo_participants=3,
-        app_sequence=['guess_two_thirds', 'payment_info'],
-    ),
-    dict(
-        name='depression_optimism_scale',
+        name='depression_scale_marathi',
         display_name='औदासिन्य आणि आशावाद सर्वेक्षण',
         num_demo_participants=1,
-        app_sequence=['depression_optimism_scale'],
+        app_sequence=['depression_scale_marathi'],
     ),
     dict(
-        name='depression_optimism_scale_hindi',
+        name='depression_scale_hindi',
         display_name='औदासिन्य और आशावाद सर्वेक्षण',
         num_demo_participants=1,
-        app_sequence=['depression_optimism_scale_hindi'],
+        app_sequence=['depression_scale_hindi'],
     ),
     dict(
         name='savings_game',

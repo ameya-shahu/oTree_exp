@@ -112,8 +112,8 @@ class Player(BasePlayer):
     # )
 
     occupation = models.IntegerField(
-        label='आपण काय काम करतात?',choices=[
-            [1,"सरकारी नोकरी"],
+        label='आपण काय काम करतात?', choices=[
+            [1, "सरकारी नोकरी"],
             [2, "स्वत: चा व्यवसाय"],
             [3, "घरगुती व्यवसाय"],
             [4, "कारखान्यात कामगार"],
@@ -121,14 +121,15 @@ class Player(BasePlayer):
             [6, "मोठ्या कंपनीत नोकरी"],
             [7, "वैद्यकीय क्षेत्र (वार्ड बोय, नर्स इ.)"],
             [8, "शिक्षक"],
-            [9,"इतर"],
+            [9, "इतर"],
             [10, "नोकरी कधीच नव्हती"]
         ]
     )
-    useofhands=models.BooleanField(label="आपल्या हाताचा वापर करणं हे आपल्या व्यवसायाचा खूप मोठा भाग आहे का? (उदाहरणार्थ: फॅक्टरी कामगार, टेलर ...)",
-                                   widget=widgets.RadioSelect,
-                                   choices=yesNoChoice
-                                   )
+    useofhands = models.BooleanField(
+        label="आपल्या हाताचा वापर करणं हे आपल्या व्यवसायाचा खूप मोठा भाग आहे का? (उदाहरणार्थ: फॅक्टरी कामगार, टेलर ...)",
+        widget=widgets.RadioSelect,
+        choices=yesNoChoice
+    )
 
     isOwnHouse = models.BooleanField(
         label='तुमचे स्वत: चे घर आहे का?',
@@ -136,33 +137,34 @@ class Player(BasePlayer):
         choices=yesNoChoice
     )
 
-hasbankaccount=models.BooleanField(label="आपला बँक अकाउंट आहे का ?",
-                                   widget=widgets.RadioSelect,
-                                   choices=yesNoChoice)
+    hasbankaccount = models.BooleanField(label="आपला बँक अकाउंट आहे का ?",
+                                         widget=widgets.RadioSelect,
+                                         choices=yesNoChoice)
 
-hasFD=models.BooleanField(label="आपला बँक अकाउंट आहे का ?",
-                                   widget=widgets.RadioSelect,
-                                   choices=yesNoChoice)
+    hasFD = models.BooleanField(label="आपला बँक अकाउंट आहे का ?",
+                                widget=widgets.RadioSelect,
+                                choices=yesNoChoice)
 
-hasmutualfunds=models.BooleanField(label="आपला म्युच्युअल फंडस् आहे का ?",
-                                   widget=widgets.RadioSelect,
-                                   choices=yesNoChoice)
+    hasmutualfunds = models.BooleanField(label="आपला म्युच्युअल फंडस् आहे का ?",
+                                         widget=widgets.RadioSelect,
+                                         choices=yesNoChoice)
 
-hasinsurance=models.BooleanField(label="आपल्याकडे विमा आहे का?",
+    hasinsurance = models.BooleanField(label="आपल्याकडे विमा आहे का?",
+                                       widget=widgets.RadioSelect,
+                                       choices=yesNoChoice)
+    gotcovid = models.BooleanField(label="आपल्याला कोवीड  झाला होता का?",
                                    widget=widgets.RadioSelect,
                                    choices=yesNoChoice)
-gotcovid=models.BooleanField(label="आपल्याला कोवीड  झाला होता का?",
-                                   widget=widgets.RadioSelect,
-                                   choices=yesNoChoice)
-notnenoughfood=models.BooleanField(label="गेल्या सहा महिन्यांत अशी वेळ आली आहे का जेव्हा तुमच्याकडे पुरेसे अन्न नव्हते?",
-                                   widget=widgets.RadioSelect,
-                                   choices=yesNoChoice)
-howmanytimes=models.IntegerField(label="किती वेळा असे घडले?",
-                                 choices=[
-                                     [1,"1-2"],
-                                     [2,"3-4"],
-                                     [3,"5-6"],
-                                     [4,"7-8"],
-                                     [5,"8 आणि अधिक"],
-                                     [6,"कधीच असे घडले नाही"]
-                                 ])
+    notnenoughfood = models.BooleanField(
+        label="गेल्या सहा महिन्यांत अशी वेळ आली आहे का जेव्हा तुमच्याकडे पुरेसे अन्न नव्हते?",
+        widget=widgets.RadioSelect,
+        choices=yesNoChoice)
+    howmanytimes = models.IntegerField(label="किती वेळा असे घडले?",
+                                       choices=[
+                                           [1, "1-2"],
+                                           [2, "3-4"],
+                                           [3, "5-6"],
+                                           [4, "7-8"],
+                                           [5, "8 आणि अधिक"],
+                                           [6, "कधीच असे घडले नाही"]
+                                       ])
