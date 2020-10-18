@@ -19,27 +19,139 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ff55e55-eaa2-49c3-b406-38d4b805ea2c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14-Oct-20_11_31__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14-Oct-20_11_31__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15-10-2020_11_05_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15-10-2020_11_05_PM__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15-Oct-20_23_01__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15-Oct-20_23_01__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/field_survey_marathi/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/SES_marathi/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/field_survey_marathi/_builtin/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/SES_marathi/_builtin/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/field_survey_marathi/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/SES_marathi/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/field_survey_marathi/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/SES_marathi/pages.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/field_survey_marathi/templates/field_survey_marathi/MyPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/SES_marathi/templates/field_survey_marathi/MyPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/field_survey_marathi/templates/field_survey_marathi/Results.html" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/SES_marathi/templates/field_survey_marathi/Results.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/field_survey_marathi/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/SES_marathi/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/savings_game/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/savings_game/pages.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/bargaining/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/bargaining/_builtin/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/bargaining/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/bargaining/pages.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/bargaining/templates/bargaining/Introduction.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/bargaining/templates/bargaining/Request.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/bargaining/templates/bargaining/Results.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/bargaining/templates/bargaining/instructions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/bargaining/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/bertrand/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/bertrand/_builtin/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/bertrand/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/bertrand/pages.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/bertrand/templates/bertrand/Decide.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/bertrand/templates/bertrand/Introduction.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/bertrand/templates/bertrand/Results.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/bertrand/templates/bertrand/instructions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/bertrand/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/common_value_auction/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/common_value_auction/_builtin/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/common_value_auction/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/common_value_auction/pages.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/common_value_auction/templates/common_value_auction/Bid.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/common_value_auction/templates/common_value_auction/Introduction.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/common_value_auction/templates/common_value_auction/Results.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/common_value_auction/templates/common_value_auction/instructions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/common_value_auction/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/cournot/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/cournot/_builtin/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/cournot/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/cournot/pages.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/cournot/templates/cournot/Decide.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/cournot/templates/cournot/Introduction.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/cournot/templates/cournot/Results.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/cournot/templates/cournot/instructions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/cournot/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/dictator/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/dictator/_builtin/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/dictator/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/dictator/pages.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/dictator/templates/dictator/Introduction.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/dictator/templates/dictator/Offer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/dictator/templates/dictator/Results.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/dictator/templates/dictator/instructions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/dictator/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/expenditureanxiety_marathi/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/expenditureanxiety_marathi/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/guess_two_thirds/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/guess_two_thirds/_builtin/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/guess_two_thirds/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/guess_two_thirds/pages.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/guess_two_thirds/templates/guess_two_thirds/Guess.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/guess_two_thirds/templates/guess_two_thirds/Introduction.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/guess_two_thirds/templates/guess_two_thirds/Results.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/guess_two_thirds/templates/guess_two_thirds/instructions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/guess_two_thirds/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/matching_pennies/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/matching_pennies/_builtin/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/matching_pennies/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/matching_pennies/pages.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/matching_pennies/templates/matching_pennies/Choice.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/matching_pennies/templates/matching_pennies/ResultsSummary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/matching_pennies/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/prisoner/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/prisoner/_builtin/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/prisoner/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/prisoner/pages.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/prisoner/templates/prisoner/Decision.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/prisoner/templates/prisoner/Introduction.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/prisoner/templates/prisoner/Results.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/prisoner/templates/prisoner/instructions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/prisoner/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods/_builtin/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods/pages.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods/templates/public_goods/Contribute.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods/templates/public_goods/Introduction.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods/templates/public_goods/Results.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods/templates/public_goods/admin_report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods/templates/public_goods/instructions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods_simple/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods_simple/_builtin/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods_simple/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods_simple/pages.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods_simple/templates/public_goods_simple/Contribute.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods_simple/templates/public_goods_simple/Results.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/public_goods_simple/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/traveler_dilemma/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/traveler_dilemma/_builtin/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/traveler_dilemma/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/traveler_dilemma/pages.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/traveler_dilemma/templates/traveler_dilemma/Claim.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/traveler_dilemma/templates/traveler_dilemma/Introduction.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/traveler_dilemma/templates/traveler_dilemma/Results.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/traveler_dilemma/templates/traveler_dilemma/instructions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/traveler_dilemma/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/trust/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/trust/_builtin/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/trust/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/trust/pages.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/trust/templates/trust/Introduction.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/trust/templates/trust/Results.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/trust/templates/trust/Send.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/trust/templates/trust/SendBack.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/trust/templates/trust/instructions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/trust/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/trust_simple/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/trust_simple/_builtin/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/trust_simple/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/trust_simple/pages.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/trust_simple/templates/trust_simple/Results.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/trust_simple/templates/trust_simple/Send.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/trust_simple/templates/trust_simple/SendBack.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/trust_simple/templates/trust_simple/instructions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/trust_simple/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/volunteer_dilemma/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/volunteer_dilemma/_builtin/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/volunteer_dilemma/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/volunteer_dilemma/pages.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/volunteer_dilemma/templates/volunteer_dilemma/Decision.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/volunteer_dilemma/templates/volunteer_dilemma/Introduction.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/volunteer_dilemma/templates/volunteer_dilemma/Results.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/volunteer_dilemma/templates/volunteer_dilemma/instructions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/volunteer_dilemma/tests.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,8 +189,16 @@
       <workItem from="1602605159259" duration="1911000" />
       <workItem from="1602655249030" duration="11763000" />
       <workItem from="1602737985982" duration="9740000" />
-      <workItem from="1602991587101" duration="11150000" />
+      <workItem from="1602991587101" duration="18909000" />
     </task>
+    <task id="LOCAL-00001" summary="incomeuncertainty_marathi added">
+      <created>1603004387941</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603004387941</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,7 +215,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/master" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -108,18 +228,26 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="incomeuncertainty_marathi added" />
+    <option name="LAST_COMMIT_MESSAGE" value="incomeuncertainty_marathi added" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="267" y="24" key="#Inspections" timestamp="1602999092714">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="267" y="24" key="#Inspections/0.0.1280.689@0.0.1280.689" timestamp="1602999092714" />
-    <state x="458" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602655283235">
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2" timestamp="1603015547467">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="458" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.689@0.0.1280.689" timestamp="1602655283235" />
-    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1602745565972">
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1603015547467" />
+    <state x="458" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603004418598">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1602745565972" />
+    <state x="458" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.689@0.0.1280.689" timestamp="1603004418598" />
+    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1603014363852">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1603014363852" />
   </component>
 </project>
