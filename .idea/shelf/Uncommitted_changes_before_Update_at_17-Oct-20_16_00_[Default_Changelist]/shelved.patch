@@ -1,0 +1,167 @@
+Index: oTree_exp/savings_game/pages.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from otree.api import Currency as c, currency_range\r\nfrom ._builtin import Page, WaitPage\r\nfrom .models import Constants\r\n\r\n\r\n# anything that has to be displayed goes into vars_for_template whereas internal calculations\r\n# that do not need to be displayed go into before_next_page\r\n# def is_displayed(self) is a condition on whether that page should be displayed or not - has\r\n# nothing to do with internal calculations and shit\r\n\r\nclass Round1(Page):\r\n    form_model = \"player\"\r\n    form_fields = ['consumption_1' 'savings_1']\r\n\r\n    def vars_for_template(self):\r\n        self.player.total_savings_remaining = self.player.total_savings_remaining + self.player.savings_1\r\n        return {\r\n            \"Total Savings:\": self.player.total_savings_remaining\r\n        }\r\n\r\n\r\nclass Round2(Page):\r\n    form_model = \"player\"\r\n    form_fields = ['consumption_2', 'savings_2']\r\n\r\n    def vars_for_template(self):\r\n        self.player.total_savings_remaining = self.player.total_savings_remaining + self.player.savings_2\r\n        return {\r\n            \"Total Savings:\": self.player.total_savings_remaining\r\n        }\r\n\r\n\r\nclass Round3(Page):\r\n    form_model = \"player\"\r\n    form_fields = ['consumption_3', 'savings_3']\r\n\r\n\r\nclass Round4(Page):\r\n    form_model = \"player\"\r\n    form_fields = ['consumption_4', 'savings_4']\r\n\r\n\r\nclass Round5(Page):\r\n    form_model = \"player\"\r\n    form_fields = ['consumption_5', 'savings_5']\r\n\r\n\r\nclass Round6(Page):\r\n    form_model = \"player\"\r\n    form_fields = ['consumption_6', 'savings_6']\r\n\r\n\r\nclass Round7(Page):\r\n    form_model = \"player\"\r\n    form_fields = ['consumption_7', 'savings_7']\r\n\r\n\r\nclass Round8(Page):\r\n    form_model = \"player\"\r\n    form_fields = ['consumption_8', 'savings_8']\r\n\r\n\r\nclass Round9(Page):\r\n    form_model = \"player\"\r\n    form_fields = ['consumption_9', 'savings_9']\r\n\r\n\r\nclass Round10(Page):\r\n    form_model = \"player\"\r\n    form_fields = ['consumption_10', 'savings_10']\r\n\r\n\r\nclass Round11(Page):\r\n    form_model = \"player\"\r\n    form_fields = ['consumption_11', 'savings_11']\r\n\r\n\r\nclass Round12(Page):\r\n    form_model = \"player\"\r\n    form_fields = ['consumption_12', 'savings_12']\r\n\r\n\r\nclass Round13(Page):\r\n    form_model = \"player\"\r\n    form_fields = ['consumption_13', 'savings_13']\r\n\r\n\r\nclass Round14(Page):\r\n    form_model = \"player\"\r\n    form_fields = ['consumption_14', 'savings_14']\r\n\r\n\r\nclass Round15(Page):\r\n    form_model = \"player\"\r\n    form_fields = ['consumption_15', 'savings_15']\r\n\r\n\r\nclass Round16(Page):\r\n    form_model = \"player\"\r\n    form_fields = ['consumption_16', 'savings_16']\r\n\r\n\r\nclass Round17(Page):\r\n    form_model = \"player\"\r\n    form_fields = ['consumption_17', 'savings_17']\r\n\r\n\r\nclass Round18(Page):\r\n    form_model = \"player\"\r\n    form_fields = ['consumption_18', 'savings_18']\r\n\r\n\r\nclass Round19(Page):\r\n    form_model = \"player\"\r\n    form_fields = ['consumption_19', 'savings_19']\r\n\r\n\r\nclass Round20(Page):\r\n    form_model = \"player\"\r\n    form_fields = ['consumption_20', 'savings_20']\r\n\r\n\r\nclass Round21(Page):\r\n    form_model = \"player\"\r\n    form_fields = ['consumption_21', 'savings_21']\r\n\r\n\r\nclass Round22(Page):\r\n    form_model = \"player\"\r\n    form_fields = ['consumption_22', 'savings_22']\r\n\r\n\r\nclass Round23(Page):\r\n    form_model = \"player\"\r\n    form_fields = ['consumption_23', 'savings_23']\r\n\r\n\r\nclass Round24(Page):\r\n    form_model = \"player\"\r\n    form_fields = ['consumption_24', 'savings_25']\r\n\r\n\r\nclass Round25(Page):\r\n    form_model = \"player\"\r\n    form_fields = ['consumption_25', 'savings_25']\r\n\r\n\r\n# class ResultsWaitPage(WaitPage):\r\n#     pass\r\n\r\n\r\nclass Results(Page):\r\n    form_fields = ['total_savings_remaining', 'total_debt_remaining', 'diff_between_savings_debt']\r\n\r\n\r\npage_sequence = [MyPage, ResultsWaitPage, Results]\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- oTree_exp/savings_game/pages.py	(revision d1b0770a209cb854bab2bd9ec90c6bc7185a4d96)
++++ oTree_exp/savings_game/pages.py	(date 1602930339346)
+@@ -23,6 +23,84 @@
+     form_model = "player"
+     form_fields = ['consumption_2', 'savings_2']
+ 
++# first radio button
++
++# 3 percent per month for 8 months
++if radio_button_1 == 1
++    total_debt_raw_round_4 = debt_taken_round_4 * 1.24
++    monthly_installment_raw_round_4 = total_debt_raw_round_4 / 8
++    monthly_installment_rounded_round_4 = round(monthly_installment_raw_round_4)
++    total_debt_rounded_round_4 = monthly_installment_rounded_round_4 * 8
++
++# 8 percent per year for 10 months
++if radio_button_1 == 2
++    total_debt_raw_round_4 = debt_taken_round_4 * 16/15
++    monthly_installment_raw_round_4 = total_debt_raw_round_4 / 10
++    monthly_installment_rounded_round_4 = round(monthly_installment_raw_round_4)
++    total_debt_rounded_round_4 = monthly_installment_rounded_round_4 * 10
++
++# 10 percent per year for 8 months
++if radio_button_1 == 3
++    total_debt_raw_round_4 = debt_taken_round_4 * 16/15
++    monthly_installment_raw_round_4 = total_debt_raw_round_4 / 8
++    monthly_installment_rounded_round_4 = round(monthly_installment_raw_round_4)
++    total_debt_rounded_round_4 = monthly_installment_rounded_round_4 * 8
++
++# second radio button
++
++#10 percent per year for 10 months
++    if radio_button_2 == 1
++        total_debt_raw_round_12 = debt_taken_round_12 * 22 / 12 * 10
++        monthly_installment_raw_round_12 = total_debt_raw_round_12 / 10
++        monthly_installment_rounded_round_12 = round(monthly_installment_raw_round_12)
++        total_debt_rounded_round_12 = monthly_installment_rounded_round_12 * 10
++
++# 8 percent per year for 12 months
++    if radio_button_2 == 2
++        total_debt_raw_round_12 = debt_taken_round_12 * 27/25
++        monthly_installment_raw_round_12 = total_debt_raw_round_12 / 12
++        monthly_installment_rounded_round_12 = round(monthly_installment_raw_round_12)
++        total_debt_rounded_round_12 = monthly_installment_rounded_round_12 * 12
++
++# 3 percent per month for 12 months
++    if radio_button_2 == 3
++        total_debt_raw_round_12 = debt_taken_round_12 * 1.36
++        monthly_installment_raw_round_12 = total_debt_raw_round_12 / 12
++        monthly_installment_rounded_round_12 = round(monthly_installment_raw_round_12)
++        total_debt_rounded_round_12 = monthly_installment_rounded_round_12 * 12
++
++# third radio button
++
++# 8 percent per year for 6 months
++    if radio_button_3 == 1
++        total_debt_raw_round_19 = debt_taken_round_19 * 26/25
++        monthly_installment_raw_round_19 = total_debt_raw_round_19 / 6
++        monthly_installment_rounded_round_12 = round(monthly_installment_raw_round_19)
++        total_debt_rounded_round_12 = monthly_installment_rounded_round_12 * 6
++
++# 3 percent per month for 6 rounds
++    if radio_button_3 == 2
++        total_debt_raw_round_19 = debt_taken_round_19 * 1.18
++        monthly_installment_raw_round_19 = total_debt_raw_round_19 / 6
++        monthly_installment_rounded_round_12 = round(monthly_installment_raw_round_19)
++        total_debt_rounded_round_12 = monthly_installment_rounded_round_12 * 6
++
++# 10 percent per year for 3 rounds
++    if radio_button_3 == 3
++        total_debt_raw_round_19 = debt_taken_round_19 * 41/45
++        monthly_installment_raw_round_19 = total_debt_raw_round_19 / 6
++        monthly_installment_rounded_round_12 = round(monthly_installment_raw_round_19)
++        total_debt_rounded_round_12 = monthly_installment_rounded_round_12 * 6
++
++if emi_round_5 != monthly_installment_rounded_round_4 & default_number_of_times_round_4 < 3
++    emi difference = monthly_installment_rounded_round_4 - emi_round_5
++    default_number_of_times_round_4 +=
++elif: emi_round_5 != monthly_installment_rounded_round_4 & default_number_of_times_round_4 = 3
++# freeze the account
++else
++    pass
++
++
+     def vars_for_template(self):
+         self.player.total_savings_remaining = self.player.total_savings_remaining + self.player.savings_2
+         return {
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"BranchesTreeState\">\r\n    <expand>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n    </expand>\r\n    <select>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"BRANCH:origin/master\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n    </select>\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"7ff55e55-eaa2-49c3-b406-38d4b805ea2c\" name=\"Default Changelist\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/.gitignore\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/dataSources.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/oTree_exp.iml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/oTree_exp.iml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/oTree_exp/settings.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/oTree_exp/settings.py\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"JupyterTrust\" id=\"07f7f5f1-dc9c-46c7-9338-d18b0677ec5a\" />\r\n  <component name=\"ProjectId\" id=\"1ipWfyMY7qlw048QJxP2LrXcFO2\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\r\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\r\n    <property name=\"node.js.path.for.package.eslint\" value=\"project\" />\r\n    <property name=\"node.js.path.for.package.tslint\" value=\"project\" />\r\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\r\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"7ff55e55-eaa2-49c3-b406-38d4b805ea2c\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1602605121137</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1602605121137</updated>\r\n      <workItem from=\"1602605159259\" duration=\"1911000\" />\r\n      <workItem from=\"1602655249030\" duration=\"11763000\" />\r\n      <workItem from=\"1602737985982\" duration=\"9740000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"origin/master\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"WindowStateProjectService\">\r\n    <state x=\"267\" y=\"24\" key=\"#Inspections\" timestamp=\"1602745715054\">\r\n      <screen x=\"0\" y=\"0\" width=\"1280\" height=\"689\" />\r\n    </state>\r\n    <state x=\"267\" y=\"24\" key=\"#Inspections/0.0.1280.689@0.0.1280.689\" timestamp=\"1602745715054\" />\r\n    <state x=\"458\" y=\"259\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2\" timestamp=\"1602655283235\">\r\n      <screen x=\"0\" y=\"0\" width=\"1280\" height=\"689\" />\r\n    </state>\r\n    <state x=\"458\" y=\"259\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.689@0.0.1280.689\" timestamp=\"1602655283235\" />\r\n    <state x=\"303\" y=\"10\" width=\"672\" height=\"678\" key=\"search.everywhere.popup\" timestamp=\"1602745565972\">\r\n      <screen x=\"0\" y=\"0\" width=\"1280\" height=\"689\" />\r\n    </state>\r\n    <state x=\"303\" y=\"10\" width=\"672\" height=\"678\" key=\"search.everywhere.popup/0.0.1280.689@0.0.1280.689\" timestamp=\"1602745565972\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision d1b0770a209cb854bab2bd9ec90c6bc7185a4d96)
++++ .idea/workspace.xml	(date 1602930611454)
+@@ -27,12 +27,8 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="7ff55e55-eaa2-49c3-b406-38d4b805ea2c" name="Default Changelist" comment="">
+-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/oTree_exp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/oTree_exp.iml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/oTree_exp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/settings.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/oTree_exp/savings_game/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/savings_game/pages.py" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -69,8 +65,18 @@
+       <updated>1602605121137</updated>
+       <workItem from="1602605159259" duration="1911000" />
+       <workItem from="1602655249030" duration="11763000" />
+-      <workItem from="1602737985982" duration="9740000" />
++      <workItem from="1602737985982" duration="10717000" />
++      <workItem from="1602908445022" duration="8106000" />
++      <workItem from="1602929222711" duration="1378000" />
++    </task>
++    <task id="LOCAL-00001" summary="added savings_game">
++      <created>1602783263004</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1602783263005</updated>
+     </task>
++    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -99,16 +105,24 @@
+       </map>
+     </option>
+     <option name="oldMeFiltersMigrated" value="true" />
++  </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="added savings_game" />
++    <option name="LAST_COMMIT_MESSAGE" value="added savings_game" />
+   </component>
+   <component name="WindowStateProjectService">
+-    <state x="267" y="24" key="#Inspections" timestamp="1602745715054">
++    <state x="267" y="24" key="#Inspections" timestamp="1602914577213">
++      <screen x="0" y="0" width="1280" height="689" />
++    </state>
++    <state x="267" y="24" key="#Inspections/0.0.1280.689@0.0.1280.689" timestamp="1602914577213" />
++    <state x="233" y="78" key="Vcs.Push.Dialog.v2" timestamp="1602783327068">
+       <screen x="0" y="0" width="1280" height="689" />
+     </state>
+-    <state x="267" y="24" key="#Inspections/0.0.1280.689@0.0.1280.689" timestamp="1602745715054" />
+-    <state x="458" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602655283235">
++    <state x="233" y="78" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1602783327068" />
++    <state x="458" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602783078889">
+       <screen x="0" y="0" width="1280" height="689" />
+     </state>
+-    <state x="458" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.689@0.0.1280.689" timestamp="1602655283235" />
++    <state x="458" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.689@0.0.1280.689" timestamp="1602783078889" />
+     <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1602745565972">
+       <screen x="0" y="0" width="1280" height="689" />
+     </state>

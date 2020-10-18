@@ -23,6 +23,84 @@ class Round2(Page):
     form_model = "player"
     form_fields = ['consumption_2', 'savings_2']
 
+# first radio button
+
+# 3 percent per month for 8 months
+if radio_button_1 == 1
+    total_debt_raw_round_4 = debt_taken_round_4 * 1.24
+    monthly_installment_raw_round_4 = total_debt_raw_round_4 / 8
+    monthly_installment_rounded_round_4 = round(monthly_installment_raw_round_4)
+    total_debt_rounded_round_4 = monthly_installment_rounded_round_4 * 8
+
+# 8 percent per year for 10 months
+if radio_button_1 == 2
+    total_debt_raw_round_4 = debt_taken_round_4 * 16/15
+    monthly_installment_raw_round_4 = total_debt_raw_round_4 / 10
+    monthly_installment_rounded_round_4 = round(monthly_installment_raw_round_4)
+    total_debt_rounded_round_4 = monthly_installment_rounded_round_4 * 10
+
+# 10 percent per year for 8 months
+if radio_button_1 == 3
+    total_debt_raw_round_4 = debt_taken_round_4 * 16/15
+    monthly_installment_raw_round_4 = total_debt_raw_round_4 / 8
+    monthly_installment_rounded_round_4 = round(monthly_installment_raw_round_4)
+    total_debt_rounded_round_4 = monthly_installment_rounded_round_4 * 8
+
+# second radio button
+
+#10 percent per year for 10 months
+    if radio_button_2 == 1
+        total_debt_raw_round_12 = debt_taken_round_12 * 22 / 12 * 10
+        monthly_installment_raw_round_12 = total_debt_raw_round_12 / 10
+        monthly_installment_rounded_round_12 = round(monthly_installment_raw_round_12)
+        total_debt_rounded_round_12 = monthly_installment_rounded_round_12 * 10
+
+# 8 percent per year for 12 months
+    if radio_button_2 == 2
+        total_debt_raw_round_12 = debt_taken_round_12 * 27/25
+        monthly_installment_raw_round_12 = total_debt_raw_round_12 / 12
+        monthly_installment_rounded_round_12 = round(monthly_installment_raw_round_12)
+        total_debt_rounded_round_12 = monthly_installment_rounded_round_12 * 12
+
+# 3 percent per month for 12 months
+    if radio_button_2 == 3
+        total_debt_raw_round_12 = debt_taken_round_12 * 1.36
+        monthly_installment_raw_round_12 = total_debt_raw_round_12 / 12
+        monthly_installment_rounded_round_12 = round(monthly_installment_raw_round_12)
+        total_debt_rounded_round_12 = monthly_installment_rounded_round_12 * 12
+
+# third radio button
+
+# 8 percent per year for 6 months
+    if radio_button_3 == 1
+        total_debt_raw_round_19 = debt_taken_round_19 * 26/25
+        monthly_installment_raw_round_19 = total_debt_raw_round_19 / 6
+        monthly_installment_rounded_round_12 = round(monthly_installment_raw_round_19)
+        total_debt_rounded_round_12 = monthly_installment_rounded_round_12 * 6
+
+# 3 percent per month for 6 rounds
+    if radio_button_3 == 2
+        total_debt_raw_round_19 = debt_taken_round_19 * 1.18
+        monthly_installment_raw_round_19 = total_debt_raw_round_19 / 6
+        monthly_installment_rounded_round_12 = round(monthly_installment_raw_round_19)
+        total_debt_rounded_round_12 = monthly_installment_rounded_round_12 * 6
+
+# 10 percent per year for 3 rounds
+    if radio_button_3 == 3
+        total_debt_raw_round_19 = debt_taken_round_19 * 41/45
+        monthly_installment_raw_round_19 = total_debt_raw_round_19 / 6
+        monthly_installment_rounded_round_12 = round(monthly_installment_raw_round_19)
+        total_debt_rounded_round_12 = monthly_installment_rounded_round_12 * 6
+
+if emi_round_5 != monthly_installment_rounded_round_4 & default_number_of_times_round_4 < 3
+    emi difference = monthly_installment_rounded_round_4 - emi_round_5
+    default_number_of_times_round_4 +=
+elif: emi_round_5 != monthly_installment_rounded_round_4 & default_number_of_times_round_4 = 3
+# freeze the account
+else
+    pass
+
+
     def vars_for_template(self):
         self.player.total_savings_remaining = self.player.total_savings_remaining + self.player.savings_2
         return {

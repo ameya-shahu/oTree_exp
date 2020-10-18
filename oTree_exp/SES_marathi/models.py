@@ -19,7 +19,7 @@ Your app description
 
 
 class Constants(BaseConstants):
-    name_in_url = 'field_survey_marathi'
+    name_in_url = 'SES_marathi'
     players_per_group = None
     num_rounds = 1
 
@@ -76,12 +76,9 @@ class Player(BasePlayer):
             ['Hinduism', 'हिंदू धर्म'],
             ['Buddhism', 'बौद्ध धर्म'],
             ['Sikhism', 'शीख धर्म'],
-            ['Islam', 'इस्लाम धर्म']
+            ['Islam', 'इस्लाम धर्म'],
+            ['Christianity', 'ख्रिश्चन धर्म']
         ]
-    )
-
-    cast = models.StringField(
-        label='तुमची जात कोणती?'
     )
 
     language = models.StringField(
@@ -119,7 +116,7 @@ class Player(BasePlayer):
     )
 
     totalWorkingPeople = models.IntegerField(
-        label='आज किती लोक कामावर जातात?'
+        label='आज किती लोक कामावर गेले?'
     )
 
     preLockdownWorkingPeople = models.IntegerField(
