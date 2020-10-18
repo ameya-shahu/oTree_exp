@@ -21,27 +21,28 @@
 {% endblock %}
 
 {% block app_scripts %}
-    {% if fromTotalSavingChoice %}
     <script>
-    // script to hide form fields depend on choices from radio button
+        const hideLoanInput = function () {
+            $('label[for="id_fromSavingAmt"]').hide();
+            $('input[name="fromSavingAmt"]').hide();
+
+            $('label[for="id_fromLoanAmount"]').hide();
+            $('input[name="fromLoanAmount"]').hide();
+        };
+        const showLoanInput = function () {
+            $('label[for="id_fromSavingAmt"]').show();
+            $('input[name="fromSavingAmt"]').show();
+
+            $('label[for="id_fromLoanAmount"]').show();
+            $('input[name="fromLoanAmount"]').show();
+        };
+
+        // script to hide form fields depend on choices from radio button
     $('input[name="debtChoice"]').on("click", function(e) {
        console.log('JavaScript is executing');
        let selected = $("input[name='debtChoice']:checked").val();
        console.log(selected);
-       if (selected === '{{ fromTotalSavingChoice }}'){
-           $('label[for="id_fromSavingAmt"]').hide();
-           $('input[name="fromSavingAmt"]').hide();
-
-           $('label[for="id_fromLoanAmount"]').hide();
-           $('input[name="fromLoanAmount"]').hide();
-       }else{
-           $('label[for="id_fromSavingAmt"]').show();
-           $('input[name="fromSavingAmt"]').show();
-
-           $('label[for="id_fromLoanAmount"]').show();
-           $('input[name="fromLoanAmount"]').show();
-       }
+       (selected === '0') ? hideLoanInput() : showLoanInput();
     })
     </script>
-    {% endif %}
 {% endblock %}

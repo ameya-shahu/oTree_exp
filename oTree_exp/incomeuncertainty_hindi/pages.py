@@ -1,8 +1,10 @@
+from otree.api import Currency as c, currency_range
 from ._builtin import Page, WaitPage
+from .models import Constants
 
 
 class SurveyFormBase(Page):
-    template_name = 'incomeuncertainty_marathi/MyPage.html'
+    template_name = 'incomeuncertainty_hindi/MyPage.html'
     form_model = 'player'
 
 

@@ -22,14 +22,32 @@ Your app description
 class Constants(BaseConstants):
     name_in_url = 'savings_expense_game'
     players_per_group = None
-    num_rounds = 25
-
+    num_rounds = 10
+    reqConsumption = 6000
+    debtRound = [2, 4, 6]
     # define round at which emergency fund to shown
     # with emergency func amount
     emergedFund = {  # round : func
-        4: 10000,
-        12: 45000,
-        19: 10000
+        debtRound[0]: 10000,
+        debtRound[1]: 45000,
+        debtRound[2]: 10000
+    }
+    debtChoice = {
+        debtRound[0]: [
+            {'interest': 3, 'type': 'M', 'rounds': 8},
+            {'interest': 8, 'type': 'Y', 'rounds': 10},
+            {'interest': 10, 'type': 'Y', 'rounds': 8},
+        ],  # Y stands for yearly interest and M stands for monthly interest
+        debtRound[1]: [
+            {'interest': 10, 'type': 'Y', 'rounds': 10},
+            {'interest': 8, 'type': 'Y', 'rounds': 12},
+            {'interest': 3, 'type': 'M', 'rounds': 12},
+        ],
+        debtRound[2]: [
+            {'interest': 8, 'type': 'Y', 'rounds': 6},
+            {'interest': 3, 'type': 'M', 'rounds': 6},
+            {'interest': 10, 'type': 'Y', 'rounds': 3},
+        ],
     }
 
     salaryFund = {
@@ -52,13 +70,17 @@ class Subsession(BaseSubsession):
             p.participant.vars['debt_2_amount'] = 0
             p.participant.vars['debt_3_amount'] = 0
 
-            p.participant.vars['em'] = 0
+            p.participant.vars['debt_1_round'] = 0
             p.participant.vars['debt_2_round'] = 0
             p.participant.vars['debt_3_round'] = 0
 
             p.participant.vars['emi_1'] = 0
             p.participant.vars['emi_2'] = 0
             p.participant.vars['emi_3'] = 0
+
+            p.participant.vars['debt_1_limit'] = 3
+            p.participant.vars['debt_2_limit'] = 3
+            p.participant.vars['debt_3_limit'] = 3
 
             p.participant.vars['savings_color'] = '#34ce57'
 
@@ -77,7 +99,6 @@ class Player(BasePlayer):
     debtChoice = models.StringField(
         label=PLAYER_DEBTCHOICE_LABEL,
         widget=widgets.RadioSelect,
-        choices=PLAYER_DEBTCHOICE_S,
     )
 
     fromSavingAmt = models.IntegerField(
@@ -101,3 +122,18 @@ class Player(BasePlayer):
     EMI3 = models.IntegerField(
         blank=True
     )
+
+    def debtChoice_choices(self):
+        debtOpt = Constants.debtChoice[self.round_number]
+
+        choices = [
+            [0, PLAYER_DEBTCHOICE_S[0]],
+        ]
+
+        for i, opt in enumerate(debtOpt):
+            choice = [i + 1, PLAYER_DEBTCHOICE_S[1].format(opt["interest"], "Month" if opt["type"] == "M" else "Year",
+                                                           opt["rounds"])]
+            # choice = f'{opt["interest"]}% per {"Month" if opt["type"] == "M" else "Year"}, paid over {opt["rounds"]} rounds'
+            choices.append(choice)
+
+        return choices
