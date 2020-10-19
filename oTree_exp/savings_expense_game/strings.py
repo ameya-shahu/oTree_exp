@@ -13,13 +13,13 @@ PG_MY_CONSUME_LESS_ERROR = 'आपले  खर्च {} रुपयांप�
 
 # debt choice form strings
 PLAYER_DEBTCHOICE_S = [
-    'Expend total ammount from savings',
-    '{0}% per {1}, paid over {2} rounds',
+    'बचतीतून एकूण रक्कम खर्च करा',
+    '{0} प्रति {1}, {2} फेऱयांमध्ये परत दिले',
     '8% per year, paid over 12 rounds',
     '10% per year, paid over 10 rounds',
 ]
 
-PLAYER_DEBTCHOICE_LABEL = 'Which option will you chose to carry your expenses?'
+PLAYER_DEBTCHOICE_LABEL = 'आपला खर्च उचलण्यासाठी आपण कोणता पर्याय निवडला आहे?'
 PLAYER_FROM_AMT_LABEL = 'आपण बचतीतून किती पैसे काढून घ्याल'
 PLAYER_LOAN_AMT_LABEL = 'कर्ज म्हणून तुम्ही किती रुपये घ्याल?'
 

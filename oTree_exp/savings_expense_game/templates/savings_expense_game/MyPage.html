@@ -31,7 +31,7 @@
         <div class="row mb-4">
             <div class="col">
                 <p>
-                    तुम्हाला {{ roundSalary | intcomma }} रुपये मिळाले, तुम्ही किती खर्च कराल आणि किती बचत कराल?
+                    तुम्हाला {{ roundSalary }} रुपये मिळाले, तुम्ही किती खर्च कराल आणि किती बचत कराल?
                 </p>
 
                 {% formfields %}
@@ -43,7 +43,7 @@
                             <div class="card text-center w-50">
                                 <div class="card-body">
                                     <h5 class="card-title"><b>आतापर्यंत एकूण बचत</b></h5>
-                                    <p class="card-text"> <b>रुपये {{ participant.vars.totalSavings | intcomma }}</b></p>
+                                    <p class="card-text"> <b>रुपये {{ participant.vars.totalSavings }}</b></p>
                                 </div>
                             </div>
                         </div>
@@ -51,7 +51,7 @@
                             <div class="card text-center w-50">
                                 <div class="card-body">
                                     <h5 class="card-title"><b>आतापर्यंत एकूण कर्ज</b></h5>
-                                    <p class="card-text"> <b>रुपये {{ participant.vars.totalDebt | intcomma }}</b></p>
+                                    <p class="card-text"> <b>रुपये {{ participant.vars.totalDebt }}</b></p>
                                 </div>
                             </div>
                         </div>
@@ -80,14 +80,14 @@
                           <tbody>
                             <tr>
                               <th scope="row">1</th>
-                              <td>{{ participant.vars.debt_1_amount | intcomma }}</td>
+                              <td>{{ participant.vars.debt_1_amount }}</td>
                               <td>{{ participant.vars.emi_1 }}</td>
                               <td>{{ participant.vars.debt_1_round }}</td>
                             </tr>
                             {% if participant.vars.emi_2 > 0 %}
                                 <tr>
                                   <th scope="row">2</th>
-                                  <td>{{ participant.vars.debt_2_amount | intcomma }}</td>
+                                  <td>{{ participant.vars.debt_2_amount }}</td>
                                   <td>{{ participant.vars.emi_2 }}</td>
                                   <td>{{ participant.vars.debt_2_round }}</td>
                                 </tr>
@@ -96,7 +96,7 @@
                             {% if participant.vars.emi_3 > 0 %}
                                 <tr>
                                   <th scope="row">3</th>
-                                  <td>{{ participant.vars.debt_3_amount | intcomma }}</td>
+                                  <td>{{ participant.vars.debt_3_amount }}</td>
                                   <td>{{ participant.vars.emi_3 }}</td>
                                   <td>{{ participant.vars.debt_3_round }}</td>
                                 </tr>
@@ -114,9 +114,9 @@
 {% block app_scripts %}
     <script>
         $(document).ready(function (){
-            $('label[for="id_EMI1"]').html('पहिल्या कर्जाची ईएमआय रुपये {{ participant.vars.emi_1 | intcomma }} :');
-            $('label[for="id_EMI2"]').html('तुमच्या दुसर्‍या कर्जाची ईएमआय रुपये {{ participant.vars.emi_2 | intcomma}} :');
-            $('label[for="id_EMI3"]').html('तुमच्या तिसर्‍या कर्जाची ईएमआय रुपये {{ participant.vars.emi_3 | intcomma}} :');
+            $('label[for="id_EMI1"]').html('पहिल्या कर्जाची ईएमआय रुपये {{ participant.vars.emi_1 }} :');
+            $('label[for="id_EMI2"]').html('तुमच्या दुसर्‍या कर्जाची ईएमआय रुपये {{ participant.vars.emi_2 }} :');
+            $('label[for="id_EMI3"]').html('तुमच्या तिसर्‍या कर्जाची ईएमआय रुपये {{ participant.vars.emi_3 }} :');
         });
     </script>
 {% endblock %}

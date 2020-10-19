@@ -4,7 +4,7 @@ from .models import Constants
 
 
 class SurveyFormBase(Page):
-    template_name = 'expenditure_anxiety_marathi/MyPage.html'
+    template_name = 'expenditureanxiety_marathi/MyPage.html'
     form_model = 'player'
 
 
@@ -51,7 +51,7 @@ class electricity_goneup(SurveyFormBase):
 
 
 class mobile_monthly(SurveyFormBase):
-    form_fields = ['mobile_monthly'],
+    form_fields = ['mobile_monthly']
 
 
 class mobile_goneup(SurveyFormBase):
@@ -124,6 +124,7 @@ class emergency500000rupees(SurveyFormBase):
 
 class optimistic(SurveyFormBase):
     form_fields = ['optimistic']
+
 
 class Results(Page):
     pass

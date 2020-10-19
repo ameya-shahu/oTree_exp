@@ -47,7 +47,7 @@ class Player(BasePlayer):
                                            min=1,
                                            max=10,
                                            )
-    areyouemployed = models.IntegerField(label="तुम्ही सध्या व्यवसाय किंवा नोकरी करत आहात का?",
+    areyouemployed = models.BooleanField(label="तुम्ही सध्या व्यवसाय किंवा नोकरी करत आहात का?",
                                          choices=yesNoChoice)
     howmanymonthsago = models.IntegerField(
         label="जर व्यवसाय किंवा नोकरी नाही, तर, किती महिन्यांपूर्वी आपण व्यवसाय किंवा नोकरी गमावली?",
@@ -75,7 +75,7 @@ class Player(BasePlayer):
         [4, "1501-2000"],
         [5, "2001 आणि अधिक"]
     ])
-    groceries_gonedown = models.IntegerField(label="आपल्याला लोकडाऊनच्या आधी इतकं किराणा सामान आज कल परवडतं का?",
+    groceries_gonedown = models.BooleanField(label="आपल्याला लोकडाऊनच्या आधी इतकं किराणा सामान आज कल परवडतं का?",
                                              choices=yesNoChoice)
 
     electricity_monthly = models.IntegerField(label="आपण दर महिना विजेवर किती खर्च करता?", choices=[
@@ -87,15 +87,15 @@ class Player(BasePlayer):
     [6, "2501-5000"],
     [7, "5001 आणि अधिक"]])
 
-    electricity_goneup = models.IntegerField(label="मागील तीन महिन्यांत विजेवरचा खर्च वाढला आहे?", choices=yesNoChoice)
+    electricity_goneup = models.BooleanField(label="मागील तीन महिन्यांत विजेवरचा खर्च वाढला आहे?", choices=yesNoChoice)
     mobile_monthly = models.IntegerField(label="आपण दरमहा मोबाइलवर किती खर्च करता?", choices=[
     [1, "200-500"],
     [2, "501-1000"],
     [3, "1001-1500"],
     [4, "1501-2000"],
     [5, "2001 आणि अधिक"]])
-    mobile_goneup = models.IntegerField(label="मागील तीन महिन्यांत मोबाईलवरचा खर्च वाढला आहे?", choices=yesNoChoice)
-    current_conditions = models.IntegerField(
+    mobile_goneup = models.BooleanField(label="मागील तीन महिन्यांत मोबाईलवरचा खर्च वाढला आहे?", choices=yesNoChoice)
+    current_conditions = models.BooleanField(
     label="जर सध्याची आर्थिक परिस्थिती अशीच चालू राहिली तर, आपण किराणा सामान, वीज आणि मोबाइलसाठी पैसे देणे चालू ठेवू शकता असे आपल्याला वाटते का?",
     choices=yesNoChoice)
 
@@ -137,10 +137,10 @@ class Player(BasePlayer):
     [8, "8001-10000"],
     [9, "10001 आणि अधिक"]
 ])
-    doyouthinkthatisenough = models.IntegerField(
+    doyouthinkthatisenough = models.BooleanField(
     label="जर लॉकडाउन अधिक काळ चालला तर आपल्याला वाटतं का कि ती रक्कम पुरेशी आहे?",
     choices=yesNoChoice)
-    celebratediwali = models.IntegerField(label="आपणास असे वाटते की आपण यावर्षी दिवाळी, ईद किंवा क्रिसमस साजरा कराल?",
+    celebratediwali = models.BooleanField(label="आपणास असे वाटते की आपण यावर्षी दिवाळी, ईद किंवा क्रिसमस साजरा कराल?",
                                       choices=yesNoChoice)
 
     whatwillyouspendon = models.IntegerField(label="कशावर खर्च करू शकाल?",choices=[[1, "खाद्य पदार्थ"],
@@ -160,9 +160,9 @@ class Player(BasePlayer):
     [8, "8001-10000"],
     [9, "10001 आणि अधिक"]
 ])
-    enoughfoodfortwomeals = models.IntegerField(
+    enoughfoodfortwomeals = models.BooleanField(
     label="सध्या घरात असलेल्या प्रत्येकासाठी दोनदा जेवणासाठी पुरेसे भोजन आहे का?", choices=yesNoChoice)
-    howlongcanyouensurefood = models.IntegerField(
+    howlongcanyouensurefood = models.BooleanField(
     label="लॉकडाउन अधिक काळ चालला तर आपल्याला वाटते का कि आपल्या कुटुंबाला २ वेळचं जेवण मिळत राहील?",
     choices=yesNoChoice)
     emergency1000rupees = models.IntegerField(
@@ -206,7 +206,7 @@ class Player(BasePlayer):
     ])
 
     emergency500000rupees = models.IntegerField(
-    label="आपल्याला त्वरित 1,00,000 रुपयांची आवश्यकता असल्यास, उदाहरणार्थ अपघातानंतर खूप गंभीर शस्त्रक्रिया करावी लागल्यास, आपल्याला ते कुठे ममिळतील?",
+    label="आपल्याला त्वरित 5,00,000 रुपयांची आवश्यकता असल्यास, उदाहरणार्थ अपघातानंतर खूप गंभीर शस्त्रक्रिया करावी लागल्यास, आपल्याला ते कुठे ममिळतील?",
     choices=[
         [1, "माझ्याकडे आहेत"],
         [2, "घरातल्यांना विचारून"],
