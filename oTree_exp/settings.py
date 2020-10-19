@@ -31,7 +31,18 @@ SESSION_CONFIGS = [
         num_demo_participants=1,
         app_sequence=['savings_expense_game'],
     ),
-
+    dict(
+        name='control_hindi',
+        display_name='नियंत्रण सर्वेक्षण (हिंदी)',
+        num_demo_participants=1,
+        app_sequence=['control_hindi'],
+    ),
+    dict(
+        name='control_marathi',
+        display_name='नियंत्रण सर्वेक्षण (मराठी)',
+        num_demo_participants=1,
+        app_sequence=['control_marathi'],
+    ),
 ]
 
 # if you set a property in SESSION_CONFIG_DEFAULTS, it will be inherited by all configs

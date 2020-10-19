@@ -5,7 +5,7 @@ from .models import Constants
 
 # this class will define user-define template for all the questions and model
 class SurveyFormBase(Page):
-    template_name = 'control_marathi/MyPage.html'
+    template_name = 'control_hindi/MyPage.html'
     form_model = 'player'
 
 
@@ -114,8 +114,8 @@ class optimistic(SurveyFormBase):
 
 
 page_sequence = [doyouwatchbollywood,
-                 favactor1, favactor2
-    , favactor3, favactor4, favactor5,
+                 favactor1, favactor2,
+                 favactor3, favactor4, favactor5,
                  favactress1, favactress2, favactress3,
                  favmovie1, favmovie2, favmovie3,
                  doyoulikesongs,
