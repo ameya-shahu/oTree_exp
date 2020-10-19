@@ -20,37 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07f7e991-bb89-4473-beaa-a095df466072" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/oTree_exp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/oTree_exp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14-Oct-20_11_31_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14-Oct-20_11_31__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15-10-2020_11_05_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15-10-2020_11_05_PM__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15-Oct-20_23_01_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15-Oct-20_23_01__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17-Oct-20_16_00_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17-Oct-20_16_00__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-10-2020_06_17_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-10-2020_06_17_PM__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-10-2020_12_30_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-10-2020_12_30_PM__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-Oct-20_18_33_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18-Oct-20_18_33__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/SES_marathi/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/SES_marathi/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/control_marathi/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/control_marathi/pages.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/depression_optimism_scale/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/depression_optimism_scale/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/depression_optimism_scale_hindi/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/depression_scale_hindi/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/depression_optimism_scale_hindi/_builtin/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/depression_scale_hindi/_builtin/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/depression_optimism_scale_hindi/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/depression_scale_hindi/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/depression_optimism_scale_hindi/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/depression_scale_hindi/pages.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/depression_optimism_scale_hindi/templates/depression_optimism_scale_hindi/MyPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/depression_scale_hindi/templates/depression_optimism_scale_hindi/MyPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/depression_optimism_scale_hindi/templates/depression_optimism_scale_hindi/Results.html" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/depression_scale_hindi/templates/depression_optimism_scale_hindi/Results.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/depression_optimism_scale_hindi/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/depression_scale_hindi/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/expenditureanxiety_marathi/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/expenditureanxiety_marathi/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +42,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -92,8 +64,17 @@
       <option name="presentableId" value="Default" />
       <updated>1603037276898</updated>
       <workItem from="1603037379048" duration="3602000" />
-      <workItem from="1603041375916" duration="2012000" />
+      <workItem from="1603041375916" duration="2563000" />
+      <workItem from="1603090158986" duration="2625000" />
     </task>
+    <task id="LOCAL-00001" summary="control_marathi pages added">
+      <created>1603043598566</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603043598566</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,6 +92,10 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="control_marathi pages added" />
+    <option name="LAST_COMMIT_MESSAGE" value="control_marathi pages added" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="233" y="4" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603038892687">
       <screen x="0" y="0" width="1280" height="689" />
@@ -124,5 +109,13 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1603040245661" />
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2" timestamp="1603043605980">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1603043605980" />
+    <state x="458" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603095991986">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="458" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.689@0.0.1280.689" timestamp="1603095991986" />
   </component>
 </project>
