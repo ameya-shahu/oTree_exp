@@ -17,7 +17,7 @@ Your app description
 
 
 class Constants(BaseConstants):
-    name_in_url = 'depression_optimism_scale'
+    name_in_url = 'depression_scale_marathi'
     players_per_group = None
     num_rounds = 1
 
@@ -31,24 +31,14 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    # First Page model
-    name = models.StringField(label='नाव प्रविष्ट करा')
-    age = models.IntegerField(label='आपले वय प्रविष्ट करा')
-    gender = models.StringField(label='आपले लिंग प्रविष्ट करा',
-                                choices=[['Male', 'पुरुष'],
-                                         ['female', 'महिला']],
-                                widget=widgets.RadioSelect,)
-
-    # Second Page model
+# Second Page model
     sadness = models.IntegerField(
-        label='दु: ख:',
-        widget=widgets.RadioSelect,
-        choices=[
-            [0, 'मला वाईट वाटत नाही.'],
-            [1, 'मला बर्‍याच वेळा वाईट वाटते.'],
-            [2, 'मी नेहमीच दु: खी असतो.'],
-            [3, 'मी इतका दु: खी किंवा दुःखी आहे की मी ते सहन करू शकत नाही.']
-        ]
+         label='दु: ख:', widget=widgets.RadioSelect,
+        choices=[ [0, 'मला वाईट वाटत नाही.'],
+                  [1, 'मला बर्‍याच वेळा वाईट वाटते.'],
+                  [2, 'मी नेहमीच दु: खी असतो.'],
+                  [3, 'मी इतका दु: खी किंवा दुःखी आहे की मी ते सहन करू शकत नाही.']
+                  ]
     )
 
     # Third Page model

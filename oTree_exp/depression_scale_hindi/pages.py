@@ -5,7 +5,7 @@ from .models import Constants
 
 # this class will define user-define template for all the questions and model
 class SurveyFormBase(Page):
-    template_name = 'depression_optimism_scale/MyPage.html'
+    template_name = 'depression_scale_hindi/MyPage.html'
     form_model = 'player'
 
 
