@@ -15,8 +15,6 @@ SurveyFormBase. This will avoid to create all the template for individual
 classes '''
 
 
-class InfoPage(SurveyFormBase):
-    form_fields = ['name', 'age', 'gender']
 
 
 class Sadness(SurveyFormBase):
@@ -107,7 +105,6 @@ class Results(Page):
 
 
 page_sequence = [
-    InfoPage,
     Sadness,
     Pessimistic,
     Setbacks,

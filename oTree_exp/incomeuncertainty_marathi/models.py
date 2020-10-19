@@ -19,7 +19,7 @@ Your app description
 
 
 class Constants(BaseConstants):
-    name_in_url = 'SES_marathi'
+    name_in_url = 'incomeuncertainty_marathi'
     players_per_group = None
     num_rounds = 1
 

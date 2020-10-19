@@ -1,47 +1,33 @@
 from os import environ
-# DEBUG=False
+#DEBUG=False
 SESSION_CONFIGS = [
-    # dict(
-    #     name='public_goods',
-    #     display_name="Public Goods",
-    #     num_demo_participants=3,
-    #     app_sequence=['public_goods', 'payment_info'],
-    # ),
-    # dict(
-    #     name='guess_two_thirds',
-    #     display_name="Guess 2/3 of the Average",
-    #     num_demo_participants=3,
-    #     app_sequence=['guess_two_thirds', 'payment_info'],
-    # ),
-    dict(
-        name='depression_scale_marathi',
-        display_name='औदासिन्य आणि आशावाद सर्वेक्षण',
-        num_demo_participants=1,
-        app_sequence=['depression_scale_marathi'],
-    ),
-    dict(
-        name='depression_scale_hindi',
-        display_name='औदासिन्य और आशावाद सर्वेक्षण',
-        num_demo_participants=1,
-        app_sequence=['depression_scale_hindi'],
-    ),
-    dict(
-        name='savings_game',
-        display_name='savings game',
-        num_demo_participants=1,
-        app_sequence=['savings_expense_game'],
-    ),
-    dict(
-        name='control_hindi',
-        display_name='नियंत्रण सर्वेक्षण (हिंदी)',
-        num_demo_participants=1,
-        app_sequence=['control_hindi'],
-    ),
     dict(
         name='control_marathi',
-        display_name='नियंत्रण सर्वेक्षण (मराठी)',
+        display_name='experiment with control - marathi',
         num_demo_participants=1,
-        app_sequence=['control_marathi'],
+        app_sequence=['depression_scale_marathi', 'instructions_marathi',
+                      'control_marathi', 'savings_expense_game', 'SES_marathi'],
+    ),
+    dict(
+        name='hybrid_marathi',
+        display_name='experiment with hybrid questions - marathi',
+        num_demo_participants=1,
+        app_sequence=['depression_scale_marathi', 'instructions_marathi',
+                      'hybrid_marathi', 'savings_expense_game', 'SES_marathi'],
+    ),
+    dict(
+        name='expenditure_anxiety_marathi',
+        display_name='experiment with expenditure anxiety - marathi',
+        num_demo_participants=1,
+        app_sequence=['depression_scale_marathi', 'instructions_marathi',
+                      'expenditureanxiety_marathi', 'savings_expense_game', 'SES_marathi'],
+    ),
+    dict(
+        name='income_uncertainty_marathi',
+        display_name='experiment with income uncertainty - marathi',
+        num_demo_participants=1,
+        app_sequence=['depression_scale_marathi','instructions_marathi',
+                      'incomeuncertainty_marathi','savings_expense_game','SES_marathi'],
     ),
 ]
 
@@ -64,9 +50,8 @@ USE_POINTS = True
 
 ROOMS = [
     dict(
-        name='econ101',
-        display_name='Econ 101 class',
-        participant_label_file='_rooms/econ101.txt',
+        name='exp_room',
+        display_name='exp_room',
     ),
     dict(name='live_demo', display_name='Room for live demo (no participant labels)'),
 ]

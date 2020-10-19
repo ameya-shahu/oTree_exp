@@ -77,6 +77,6 @@ page_sequence = [hungerRate,
                  hasmutualfunds,
                  hasinsurance,
                  gotcovid,
-                 notenoughfood,
+                 notnenoughfood,
                  howmanytimes
                  ]

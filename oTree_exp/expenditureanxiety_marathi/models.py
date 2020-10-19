@@ -19,7 +19,7 @@ Your app description
 
 
 class Constants(BaseConstants):
-    name_in_url = 'incomeuncertainty_marathi'
+    name_in_url = 'expenditureanxiety_marathi'
     players_per_group = None
     num_rounds = 1
 
@@ -143,12 +143,11 @@ class Player(BasePlayer):
     celebratediwali = models.IntegerField(label="आपणास असे वाटते की आपण यावर्षी दिवाळी, ईद किंवा क्रिसमस साजरा कराल?",
                                       choices=yesNoChoice)
 
-    whatwillyouspendon = models.IntegerField(label="कशावर खर्च करू शकाल?", widget=widgets.checkbox, choices=[
-    [1, "खाद्य पदार्थ"],
-    [2, "मुलांसाठी कपडे"],
-    [3, "सगळ्यांसाठी कपडे"],
-    [4, "सोनं, चांदी, इ"]
-])
+    whatwillyouspendon = models.IntegerField(label="कशावर खर्च करू शकाल?",choices=[[1, "खाद्य पदार्थ"],
+                                                                       [2, "मुलांसाठी कपडे"],
+                                                                       [3, "सगळ्यांसाठी कपडे"],
+                                                                       [4, "सोनं, चांदी, इ"]
+                                                                       ])
 
     howmuchcanyouspend = models.IntegerField(label="अंदाजे आपण किती खर्च करू शकता असे वाटते?", choices=[
     [1, "200-500"],

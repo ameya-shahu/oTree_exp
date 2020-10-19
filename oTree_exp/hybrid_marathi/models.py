@@ -26,6 +26,11 @@ yesNoChoice = [
     [True, 'होय'],
     [False, 'नाही'],
 ]
+class Subsession(BaseSubsession):
+    pass
+
+class Group(BaseGroup):
+    pass
 
 class Player(BasePlayer):
     howmanypeople = models.IntegerField(label="आपल्या कुटुंबातील किती लोक आहेत?",
