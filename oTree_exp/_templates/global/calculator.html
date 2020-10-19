@@ -75,7 +75,7 @@
                     <input class="form-group btn btn-danger bttn" type="button" name="bttnmulti" value="*" onclick="calC(bttnmulti.value);"><br/>
                     <input class="form-group btn btn-default bttn" type="button" name="bttndot" value="." onclick="calC(bttndot.value);">
                     <input class="form-group btn btn-default bttn" type="button" name="bttn0" value="0" onclick="calC(bttn0.value);">
-                    <input class="form-group btn btn-danger bttn" style="visibility:hidden" type="button" name="bttnmod" value="%" onclick="calC(bttnmod.value);"> <!-- this button is hidden-->
+                    <input class="form-group btn btn-info bttn" type="button" name="bttnmod" value="⟵" onclick="clearLastDigit();"> <!-- this button is hidden-->
                     <input class="form-group btn btn-danger bttn" type="button" name="bttndiv" value="/" onclick="calC(bttndiv.value);"><br/>
 
                     <!-- calling new reset function -->
@@ -98,6 +98,10 @@
     form.panel.value = form.panel.value + c;
 
 
+}
+
+function clearLastDigit(){
+        form.panel.value = form.panel.value.slice(0,-1);
 }
 
 

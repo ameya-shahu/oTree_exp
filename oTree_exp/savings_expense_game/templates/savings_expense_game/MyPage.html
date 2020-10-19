@@ -1,12 +1,6 @@
 {% extends "global/Page.html" %}
 {% load humanize %}
 {% load otree %}
-
-
-{% block title %}
-    Saving and expense ( फेरी क्रमांक - {{ subsession.round_number }})
-{% endblock %}
-
 {% block global_styles  %}
     <style>
         .otree-body {
@@ -25,6 +19,12 @@
     </style>
 {% endblock %}
 
+{% block title %}
+    Saving and expense ( फेरी क्रमांक - {{ subsession.round_number }})
+{% endblock %}
+
+
+
 
 {% block content %}
 
@@ -36,6 +36,25 @@
 
                 {% formfields %}
                 {% next_button %}
+
+                {% if loanfault.loan1Fault %}
+                <div class="alert alert-warning" id ="loan1fault" role="alert">
+                    तुम्ही आदर्शपेक्षा कमी पहिले कर्ज दिले.
+                </div>
+                {% endif %}
+
+                {% if loanfault.loan2Fault  %}
+                <div class="alert alert-warning" id ="loan2fault" role="alert">
+                    तुम्ही आदर्शपेक्षा कमी दुसरे कर्ज दिले.
+                </div>
+                {% endif %}
+
+                {% if loanfault.loan3Fault  %}
+                <div class="alert alert-warning" id ="loan3fault" role="alert">
+                    तुम्ही आदर्शपेक्षा कमी तिसरे कर्ज दिले.
+                </div>
+                {% endif %}
+
 
                 {% if subsession.round_number != 1 %}
                     <div class="row">

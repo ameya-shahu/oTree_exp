@@ -84,6 +84,12 @@ class Subsession(BaseSubsession):
 
             p.participant.vars['savings_color'] = '#34ce57'
 
+            p.participant.vars['set_warning'] = {
+                'loan1Fault': False,
+                'loan2Fault': False,
+                'loan3Fault': False,
+            }
+
 
 class Group(BaseGroup):
     pass
@@ -112,7 +118,8 @@ class Player(BasePlayer):
     faultLoan3 = models.BooleanField()  # not to show on form
 
     fromSavingAmt = models.IntegerField(
-        label=PLAYER_FROM_AMT_LABEL
+        label=PLAYER_FROM_AMT_LABEL,
+        blank=True
     )
 
     fromLoanAmount = models.IntegerField(
@@ -140,8 +147,9 @@ class Player(BasePlayer):
         ]
 
         for i, opt in enumerate(debtOpt):
-            choice = [i + 1, PLAYER_DEBTCHOICE_S[1].format(opt["interest"], "मासिक" if opt["type"] == "M" else "वार्षिक",
-                                                           opt["rounds"])]
+            choice = [i + 1,
+                      PLAYER_DEBTCHOICE_S[1].format(opt["interest"], "मासिक" if opt["type"] == "M" else "वार्षिक",
+                                                    opt["rounds"])]
             # choice = f'{opt["interest"]}% per {"Month" if opt["type"] == "M" else "Year"}, paid over {opt["rounds"]} rounds'
             choices.append(choice)
 

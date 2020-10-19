@@ -27,7 +27,10 @@ def calculateLoan(amount, intrestPerRound, noOfRounds):
 
 
 def calculateEmi(loanAmount, rounds):
-    return int(loanAmount / rounds)
+    try:
+        return int(loanAmount / rounds)
+    except ZeroDivisionError:
+        return loanAmount
 
 
 class MyPage(Page):
@@ -51,8 +54,15 @@ class MyPage(Page):
 
     def vars_for_template(self):
         # pass question depend on the round number
+        loanFault = self.participant.vars['set_warning']
+        self.participant.vars['set_warning'] = {
+            'loan1Fault': False ,
+            'loan2Fault': False,
+            'loan3Fault': False,
+        }
         return {
             'roundSalary': Constants.salaryFund[self.round_number],
+            'loanfault': loanFault
         }
 
     def before_next_page(self):
@@ -68,11 +78,12 @@ class MyPage(Page):
             self.participant.vars['debt_1_amount'] -= self.player.EMI1
             self.player.loan1Pending = self.participant.vars['debt_1_amount']  # save loan1 pending to database
             self.participant.vars['debt_1_round'] -= 1
-            reduceDebt -= self.player.EMI1
+            reduceDebt += self.player.EMI1
             # if less than ideal emi paid by user then recalculate emi
             if self.player.EMI1 < self.participant.vars['emi_1']:
                 self.participant.vars['emi_1'] = calculateEmi(self.participant.vars['debt_1_amount'],
                                                               self.participant.vars['debt_1_round'])
+                self.participant.vars['set_warning']['loan1Fault'] = True
                 self.participant.vars['debt_1_limit'] -= 1
                 self.player.faultLoan1 = True
 
@@ -80,10 +91,11 @@ class MyPage(Page):
             self.participant.vars['debt_2_amount'] -= self.player.EMI2
             self.player.loan2Pending = self.participant.vars['debt_2_amount']
             self.participant.vars['debt_2_round'] -= 1
-            reduceDebt -= self.player.EMI2
+            reduceDebt += self.player.EMI2
             if self.player.EMI2 < self.participant.vars['emi_2']:
                 self.participant.vars['emi_2'] = calculateEmi(self.participant.vars['debt_2_amount'],
                                                               self.participant.vars['debt_2_round'])
+                self.participant.vars['set_warning']['loan2Fault'] = True
                 self.participant.vars['debt_2_limit'] -= 1
                 self.player.faultLoan2 = True
 
@@ -91,13 +103,15 @@ class MyPage(Page):
             self.participant.vars['debt_3_amount'] -= self.player.EMI3
             self.player.loan3Pending = self.participant.vars['debt_3_amount']
             self.participant.vars['debt_3_round'] -= 1
-            reduceDebt -= self.player.EMI3
+            reduceDebt += self.player.EMI3
             if self.player.EMI3 < self.participant.vars['emi_3']:
                 self.participant.vars['emi_3'] = calculateEmi(self.participant.vars['debt_3_amount'],
                                                               self.participant.vars['debt_3_round'])
+                self.participant.vars['set_warning']['loan3Fault'] = True
                 self.participant.vars['debt_3_limit'] -= 1
                 self.player.faultLoan3 = True
 
+        print(reduceDebt)
         self.participant.vars['totalDebt'] -= int(reduceDebt)
         self.player.totalDebts = self.participant.vars['totalDebt']
 
@@ -160,44 +174,47 @@ class DebtChoicePage(Page):
                 return PG_DEBTCHOICE_LESS_SAVINGS_ERROR
 
     def before_next_page(self):
-        # if expenditure is chose as from totalSaving then set fromSavingAmt = emergencyFund
-        if self.player.debtChoice == int(self.player.debtChoice):
-            # at round when emergencyFund appear, set field related to it.
-            self.player.fromSavingAmt = Constants.emergedFund[self.round_number]
-            self.player.fromLoanAmount = 0
+        if self.is_displayed():
+            # if expenditure is chose as from totalSaving then set fromSavingAmt = emergencyFund
+            if int(self.player.debtChoice) == 0:
+                # at round when emergencyFund appear, set field related to it.
+                self.player.fromSavingAmt = Constants.emergedFund[self.round_number]
+                self.player.fromLoanAmount = 0
 
-        # else create debt according selected option
-        else:
-            chooseOpt = int(self.player.debtChoice)
-            loanAmt = int(self.player.fromLoanAmount)
+            # else create debt according selected option
+            else:
+                chooseOpt = int(self.player.debtChoice)
+                loanAmt = int(self.player.fromLoanAmount)
 
-            debtDetails = Constants.debtChoice[self.round_number][
-                chooseOpt - 1]  # get details of debt from  Constants class
-            interest = debtDetails['interest'] if debtDetails['type'] == 'M' else debtDetails[
-                                                                                      'interest'] / 12  # calculate monthly intrest
-            totalAmount = calculateLoan(loanAmt, interest, debtDetails['rounds'])
+                debtDetails = Constants.debtChoice[self.round_number][
+                    chooseOpt - 1]  # get details of debt from  Constants class
+                interest = debtDetails['interest'] if debtDetails['type'] == 'M' else debtDetails[
+                                                                                          'interest'] / 12  # calculate monthly intrest
+                totalAmount = calculateLoan(loanAmt, interest, debtDetails['rounds'])
 
-            print('[interest]-', interest)
+                print('[interest]-', interest)
 
-            NewDebt = {
-                'amountRemaining': totalAmount,
-                'emiRoundRemaining': debtDetails['rounds'],
-                'emiAmount': calculateEmi(totalAmount, debtDetails['rounds'])
-            }
+                NewDebt = {
+                    'amountRemaining': totalAmount,
+                    'emiRoundRemaining': debtDetails['rounds'],
+                    'emiAmount': calculateEmi(totalAmount, debtDetails['rounds'])
+                }
 
-            print(NewDebt)
+                print(NewDebt)
 
-            self.setLoan(NewDebt)
-            self.player.debtChoice = PLAYER_DEBTCHOICE_S[1].format(debtDetails["interest"],
-                                                                   "Month" if debtDetails["type"] == "M" else "Year",
-                                                                   debtDetails["rounds"])
+                self.setLoan(NewDebt)
+                self.player.debtChoice = PLAYER_DEBTCHOICE_S[1].format(debtDetails["interest"],
+                                                                       "Month" if debtDetails[
+                                                                                      "type"] == "M" else "Year",
+                                                                       debtDetails["rounds"])
 
-            self.participant.vars['totalDebt'] += NewDebt['amountRemaining']
+                self.participant.vars['totalDebt'] += NewDebt['amountRemaining']
 
-        # subtract 'fromSavingAmt' from cumulative totalSavings
-        self.participant.vars['totalSavings'] -= self.player.fromSavingAmt
-        self.player.totalSavings = self.participant.vars['totalSavings']  # save modified totalsaving to player database
-        self.participant.vars['savings_color'] = '#f50707'  # red color as savings decreased
+            # subtract 'fromSavingAmt' from cumulative totalSavings
+            self.participant.vars['totalSavings'] -= self.player.fromSavingAmt
+            self.player.totalSavings = self.participant.vars[
+                'totalSavings']  # save modified totalsaving to player database
+            self.participant.vars['savings_color'] = '#f50707'  # red color as savings decreased
 
     def setLoan(self, newDebt):
         if self.participant.vars['emi_1'] == 0:

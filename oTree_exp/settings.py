@@ -30,6 +30,12 @@ SESSION_CONFIGS = [
         app_sequence=['welcome_screen', 'depression_scale_marathi', 'instruction_display_marathi','instructions_marathi',
                       'incomeuncertainty_marathi', 'savings_expense_game', 'SES_marathi'],
     ),
+    dict(
+        name='expend',
+        display_name='expend',
+        num_demo_participants=20,
+        app_sequence=['savings_expense_game'],
+    ),
 ]
 
 # if you set a property in SESSION_CONFIG_DEFAULTS, it will be inherited by all configs
