@@ -58,6 +58,7 @@ class MyPage(Page):
     def before_next_page(self):
         # add entered saving to cumulative savings variable
         self.participant.vars['totalSavings'] += int(self.player.savings)
+        self.player.totalSavings = self.participant.vars['totalSavings']
         self.participant.vars['savings_color'] = '#34ce57'  # green color as savings increased
 
         reduceDebt = 0
@@ -65,33 +66,40 @@ class MyPage(Page):
         # verify EMIs
         if 'EMI1' in self.fieldList:
             self.participant.vars['debt_1_amount'] -= self.player.EMI1
+            self.player.loan1Pending = self.participant.vars['debt_1_amount']  # save loan1 pending to database
             self.participant.vars['debt_1_round'] -= 1
             reduceDebt -= self.player.EMI1
             # if less than ideal emi paid by user then recalculate emi
             if self.player.EMI1 < self.participant.vars['emi_1']:
                 self.participant.vars['emi_1'] = calculateEmi(self.participant.vars['debt_1_amount'],
                                                               self.participant.vars['debt_1_round'])
-                self.participant.vars['debt_1_limit']-=1
+                self.participant.vars['debt_1_limit'] -= 1
+                self.player.faultLoan1 = True
 
         if 'EMI2' in self.fieldList:
             self.participant.vars['debt_2_amount'] -= self.player.EMI2
+            self.player.loan2Pending = self.participant.vars['debt_2_amount']
             self.participant.vars['debt_2_round'] -= 1
             reduceDebt -= self.player.EMI2
             if self.player.EMI2 < self.participant.vars['emi_2']:
                 self.participant.vars['emi_2'] = calculateEmi(self.participant.vars['debt_2_amount'],
                                                               self.participant.vars['debt_2_round'])
                 self.participant.vars['debt_2_limit'] -= 1
+                self.player.faultLoan2 = True
 
         if 'EMI3' in self.fieldList:
             self.participant.vars['debt_3_amount'] -= self.player.EMI3
+            self.player.loan3Pending = self.participant.vars['debt_3_amount']
             self.participant.vars['debt_3_round'] -= 1
             reduceDebt -= self.player.EMI3
             if self.player.EMI3 < self.participant.vars['emi_3']:
                 self.participant.vars['emi_3'] = calculateEmi(self.participant.vars['debt_3_amount'],
                                                               self.participant.vars['debt_3_round'])
                 self.participant.vars['debt_3_limit'] -= 1
+                self.player.faultLoan3 = True
 
         self.participant.vars['totalDebt'] -= int(reduceDebt)
+        self.player.totalDebts = self.participant.vars['totalDebt']
 
     def error_message(self, values):
         # return error if cosume amount is less than set standard
@@ -188,31 +196,42 @@ class DebtChoicePage(Page):
 
         # subtract 'fromSavingAmt' from cumulative totalSavings
         self.participant.vars['totalSavings'] -= self.player.fromSavingAmt
+        self.player.totalSavings = self.participant.vars['totalSavings']  # save modified totalsaving to player database
         self.participant.vars['savings_color'] = '#f50707'  # red color as savings decreased
 
     def setLoan(self, newDebt):
         if self.participant.vars['emi_1'] == 0:
             self.participant.vars['emi_1'] = newDebt['emiAmount']
+            self.player.loan1Pending = newDebt['emiAmount']  # modify loan1 in player field
             self.participant.vars['debt_1_amount'] = newDebt['amountRemaining']
             self.participant.vars['debt_1_round'] = newDebt['emiRoundRemaining']
 
         elif self.participant.vars['emi_2'] == 0:
             self.participant.vars['emi_2'] = newDebt['emiAmount']
+            self.player.loan2Pending = newDebt['emiAmount']  # modify loan2 in player field
             self.participant.vars['debt_2_amount'] = newDebt['amountRemaining']
             self.participant.vars['debt_2_round'] = newDebt['emiRoundRemaining']
 
         elif self.participant.vars['emi_3'] == 0:
             self.participant.vars['emi_3'] = newDebt['emiAmount']
+            self.player.loan3Pending = newDebt['emiAmount']  # modify loan3 in player field
             self.participant.vars['debt_3_amount'] = newDebt['amountRemaining']
             self.participant.vars['debt_3_round'] = newDebt['emiRoundRemaining']
 
 
-class ResultsWaitPage(WaitPage):
-    pass
-
-
 class Results(Page):
-    pass
+    def is_displayed(self):
+        return Constants.debtRound[-1] == self.round_number
+
+    def vars_for_template(self):
+        if self.participant.vars['debt_1_limit'] <= 0:
+            self.participant.vars['totalSavings'] -= self.participant.vars['debt_1_amount']
+
+        if self.participant.vars['debt_1_limit'] <= 0:
+            self.participant.vars['totalSavings'] -= self.participant.vars['debt_1_amount']
+
+        if self.participant.vars['debt_1_limit'] <= 0:
+            self.participant.vars['totalSavings'] -= self.participant.vars['debt_1_amount']
 
 
 page_sequence = [MyPage, DebtChoicePage, ]
