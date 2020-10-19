@@ -1,33 +1,34 @@
 from os import environ
-#DEBUG=False
+
+# DEBUG=False
 SESSION_CONFIGS = [
     dict(
         name='control_marathi',
         display_name='experiment with control - marathi',
         num_demo_participants=1,
-        app_sequence=['depression_scale_marathi', 'instructions_marathi',
+        app_sequence=['welcome_screen', 'depression_scale_marathi', 'instruction_display_marathi','instructions_marathi',
                       'control_marathi', 'savings_expense_game', 'SES_marathi'],
     ),
     dict(
         name='hybrid_marathi',
         display_name='experiment with hybrid questions - marathi',
         num_demo_participants=1,
-        app_sequence=['depression_scale_marathi', 'instructions_marathi',
+        app_sequence=['welcome_screen', 'depression_scale_marathi', 'instruction_display_marathi','instructions_marathi',
                       'hybrid_marathi', 'savings_expense_game', 'SES_marathi'],
     ),
     dict(
         name='expenditure_anxiety_marathi',
         display_name='experiment with expenditure anxiety - marathi',
         num_demo_participants=1,
-        app_sequence=['depression_scale_marathi', 'instructions_marathi',
+        app_sequence=['welcome_screen', 'depression_scale_marathi', 'instruction_display_marathi','instructions_marathi',
                       'expenditureanxiety_marathi', 'savings_expense_game', 'SES_marathi'],
     ),
     dict(
         name='income_uncertainty_marathi',
         display_name='experiment with income uncertainty - marathi',
         num_demo_participants=1,
-        app_sequence=['depression_scale_marathi','instructions_marathi',
-                      'incomeuncertainty_marathi','savings_expense_game','SES_marathi'],
+        app_sequence=['welcome_screen', 'depression_scale_marathi', 'instruction_display_marathi','instructions_marathi',
+                      'incomeuncertainty_marathi', 'savings_expense_game', 'SES_marathi'],
     ),
 ]
 

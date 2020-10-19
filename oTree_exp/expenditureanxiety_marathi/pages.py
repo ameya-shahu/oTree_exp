@@ -125,6 +125,9 @@ class emergency500000rupees(SurveyFormBase):
 class optimistic(SurveyFormBase):
     form_fields = ['optimistic']
 
+class Results(Page):
+    pass
+
 
 page_sequence = [howmanypeople,
                  howmanydependent,
@@ -153,4 +156,6 @@ page_sequence = [howmanypeople,
                  emergency50000rupees,
                  emergency100000rupees,
                  emergency500000rupees,
-                 optimistic]
+                 optimistic,
+                 Results
+                 ]

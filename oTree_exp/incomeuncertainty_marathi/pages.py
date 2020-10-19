@@ -126,7 +126,7 @@ class Optimistic(SurveyFormBase):
     form_fields = ['optimistic']
 
 
-class ResultsWaitPage(WaitPage):
+class Results(Page):
     pass
 
 
@@ -160,5 +160,6 @@ page_sequence = [
     Competitiontofind,
     Physicallywell,
     Covidhealth,
-    Optimistic
+    Optimistic,
+    Results
 ]

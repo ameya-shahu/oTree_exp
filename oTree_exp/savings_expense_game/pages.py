@@ -233,5 +233,11 @@ class Results(Page):
         if self.participant.vars['debt_1_limit'] <= 0:
             self.participant.vars['totalSavings'] -= self.participant.vars['debt_1_amount']
 
+        self.player.totalSavings = self.participant.vars['totalSavings']
 
-page_sequence = [MyPage, DebtChoicePage, ]
+        return dict(
+            totalSavings=self.participant.vars,
+        )
+
+
+page_sequence = [MyPage, DebtChoicePage, Results]

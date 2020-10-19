@@ -112,6 +112,9 @@ class howmuchyouliked(SurveyFormBase):
 class optimistic(SurveyFormBase):
     form_fields = ['optimistic']
 
+class Results(Page):
+    pass
+
 
 page_sequence = [doyouwatchbollywood,
                  favactor1, favactor2
@@ -126,5 +129,6 @@ page_sequence = [doyouwatchbollywood,
                  onlineorontv,
                  lasttvshow,
                  howmuchyouliked,
-                 optimistic
+                 optimistic,
+                 Results
                  ]

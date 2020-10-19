@@ -1,6 +1,22 @@
 {% extends "global/Page.html" %}
 {% load otree %}
-
+{% block global_styles  %}
+    <style>
+        .otree-body {
+            max-width:2000px;
+        }
+         .table-info, .table-info>td, .table-info>th {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+             font-weight: normal;
+        }
+         .card-text{
+             color: {{ participant.vars.savings_color }};
+             font-size: x-large;
+         }
+    </style>
+{% endblock %}
 
 {% block title %}
     Saving and expense ( फेरी क्रमांक - {{ subsession.round_number }})
@@ -13,9 +29,25 @@
     </p>
 
     {% formfields %}
+
     {% if subsession.round_number != 1 %}
-    <p>आतापर्यंत एकूण बचत - {{ participant.vars.totalSavings }}</p>
+                    <div class="card text-center w-50">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>आतापर्यंत एकूण बचत</b></h5>
+                            <p class="card-text"> <b>रुपये {{ participant.vars.totalSavings | intcomma }}</b></p>
+                        </div>
+                    </div>
+
+                     <div class="card text-center w-50">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>आतापर्यंत एकूण कर्ज</b></h5>
+                            <p class="card-text"> <b>रुपये {{ participant.vars.totalDebt | intcomma }}</b></p>
+                        </div>
+                    </div>
+
     {% endif %}
+
+
     {% next_button %}
 
 {% endblock %}
