@@ -101,6 +101,16 @@ class Player(BasePlayer):
         widget=widgets.RadioSelect,
     )
 
+    totalSavings = models.IntegerField()  # not to show on form
+    totalDebts = models.IntegerField()  # not to show on form
+    loan1Pending = models.IntegerField()  # not to show on form
+    loan2Pending = models.IntegerField()  # not to show on form
+    loan3Pending = models.IntegerField()  # not to show on form
+
+    faultLoan1 = models.BooleanField()  # not to show on form
+    faultLoan2 = models.BooleanField()  # not to show on form
+    faultLoan3 = models.BooleanField()  # not to show on form
+
     fromSavingAmt = models.IntegerField(
         label=PLAYER_FROM_AMT_LABEL,
         blank=True
