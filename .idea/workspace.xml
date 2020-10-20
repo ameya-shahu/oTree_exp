@@ -28,21 +28,8 @@
   <component name="ChangeListManager">
     <list default="true" id="07f7e991-bb89-4473-beaa-a095df466072" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/SES_marathi/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/SES_marathi/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/control_marathi/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/control_marathi/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/control_marathi/templates/control_marathi/Results.html" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/control_marathi/templates/control_marathi/Results.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oTree_exp/depression_scale_marathi/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/depression_scale_marathi/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/expenditureanxiety_marathi/templates/expenditureanxiety_marathi/Results.html" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/expenditureanxiety_marathi/templates/expenditureanxiety_marathi/Results.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/hybrid_marathi/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/hybrid_marathi/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/hybrid_marathi/templates/hybrid_marathi/Results.html" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/hybrid_marathi/templates/hybrid_marathi/Results.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/incomeuncertainty_marathi/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/incomeuncertainty_marathi/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/incomeuncertainty_marathi/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/incomeuncertainty_marathi/pages.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/incomeuncertainty_marathi/templates/incomeuncertainty_marathi/Results.html" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/incomeuncertainty_marathi/templates/incomeuncertainty_marathi/Results.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/instructions_marathi/templates/instructions_marathi/Results.html" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/instructions_marathi/templates/instructions_marathi/Results.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/savings_expense_game/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/savings_expense_game/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/savings_expense_game/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/savings_expense_game/pages.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/savings_expense_game/templates/savings_expense_game/Results.html" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/savings_expense_game/templates/savings_expense_game/Results.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/depression_scale_marathi/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/depression_scale_marathi/pages.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603127546367</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="pilot-1 changes added">
+      <created>1603197133002</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1603197133002</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,7 +130,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="control_marathi pages added" />
     <MESSAGE value="final changes added" />
-    <option name="LAST_COMMIT_MESSAGE" value="final changes added" />
+    <MESSAGE value="pilot-1 changes added" />
+    <option name="LAST_COMMIT_MESSAGE" value="pilot-1 changes added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="233" y="4" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603038892687">
@@ -155,10 +150,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1603126233737" />
-    <state x="233" y="78" key="Vcs.Push.Dialog.v2" timestamp="1603127666943">
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2" timestamp="1603197144105">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="233" y="78" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1603127666943" />
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1603197144105" />
     <state x="458" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603133024127">
       <screen x="0" y="0" width="1280" height="689" />
     </state>

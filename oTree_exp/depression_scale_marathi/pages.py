@@ -37,28 +37,28 @@ class Guilty(SurveyFormBase):
     form_fields = ['guilty']
 
 
-class ToBePunished(SurveyFormBase):
-    form_fields = ['toBePunished']
+# class ToBePunished(SurveyFormBase):
+#     form_fields = ['toBePunished']
 
 
 class SelfDoubt(SurveyFormBase):
     form_fields = ['selfDoubt']
 
 
-class SelfCriticism(SurveyFormBase):
-    form_fields = ['selfCriticism']
+# class SelfCriticism(SurveyFormBase):
+#     form_fields = ['selfCriticism']
 
 
 class Crying(SurveyFormBase):
     form_fields = ['crying']
 
 
-class Protest(SurveyFormBase):
-    form_fields = ['protest']
+# class Protest(SurveyFormBase):
+#     form_fields = ['protest']
 
 
-class InterestLoss(SurveyFormBase):
-    form_fields = ['interestLoss']
+# class InterestLoss(SurveyFormBase):
+#     form_fields = ['interestLoss']
 
 
 class Uncertainty(SurveyFormBase):
@@ -69,16 +69,16 @@ class Unemployment(SurveyFormBase):
     form_fields = ['unemployment']
 
 
-class LessEnergetic(SurveyFormBase):
-    form_fields = ['lessEnergetic']
+# class LessEnergetic(SurveyFormBase):
+#     form_fields = ['lessEnergetic']
 
 
-class SleepPattern(SurveyFormBase):
-    form_fields = ['sleepPattern']
+# class SleepPattern(SurveyFormBase):
+#     form_fields = ['sleepPattern']
 
 
-class Irritation(SurveyFormBase):
-    form_fields = ['irritation']
+# class Irritation(SurveyFormBase):
+#     form_fields = ['irritation']
 
 
 class Hunger(SurveyFormBase):
@@ -110,19 +110,19 @@ page_sequence = [
     Setbacks,
     LessJoy,
     Guilty,
-    ToBePunished,
+    # ToBePunished,
     SelfDoubt,
-    SelfCriticism,
+    # SelfCriticism,
     Crying,
-    Protest,
-    InterestLoss,
+    # Protest,
+    # InterestLoss,
     Uncertainty,
     Unemployment,
-    LessEnergetic,
-    SleepPattern,
-    Irritation,
-    Hunger,
+    # LessEnergetic,
+    # SleepPattern,
+    # Irritation,
+    # Hunger,
     Concentration,
-    Tiredness,
+    # Tiredness,
     Results,
 ]
