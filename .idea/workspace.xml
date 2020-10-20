@@ -19,28 +19,26 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07f7e991-bb89-4473-beaa-a095df466072" name="Default Changelist" comment="">
+    <list default="true" id="e38f25ca-5bb9-4831-ba04-799a123e8137" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/depression_scale_marathi/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/depression_scale_marathi/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/depression_scale_marathi/templates/depression_scale_marathi/MyPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/depression_scale_marathi/templates/depression_scale_marathi/MyPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/expenditureanxiety_marathi/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/expenditureanxiety_marathi/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/SES_marathi/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/SES_marathi/pages.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/SES_marathi/templates/SES_marathi/MyPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/SES_marathi/templates/SES_marathi/MyPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oTree_exp/expenditureanxiety_marathi/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/expenditureanxiety_marathi/pages.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/expenditureanxiety_marathi/templates/expenditureanxiety_marathi/MyPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/expenditureanxiety_marathi/templates/expenditureanxiety_marathi/MyPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/instruction_display_marathi/templates/instruction_display_marathi/MyPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/instruction_display_marathi/templates/instruction_display_marathi/MyPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/instruction_display_marathi/templates/instruction_display_marathi/Results.html" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/instruction_display_marathi/templates/instruction_display_marathi/Results.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/hybrid_marathi/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/hybrid_marathi/pages.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/hybrid_marathi/templates/hybrid_marathi/MyPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/hybrid_marathi/templates/hybrid_marathi/MyPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/incomeuncertainty_marathi/templates/incomeuncertainty_marathi/MyPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/incomeuncertainty_marathi/templates/incomeuncertainty_marathi/MyPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oTree_exp/savings_expense_game/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/savings_expense_game/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oTree_exp/savings_expense_game/pages.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/savings_expense_game/pages.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oTree_exp/savings_expense_game/strings.py" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/savings_expense_game/strings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oTree_exp/savings_expense_game/templates/savings_expense_game/DebtChoicePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/savings_expense_game/templates/savings_expense_game/DebtChoicePage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oTree_exp/savings_expense_game/templates/savings_expense_game/MyPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/savings_expense_game/templates/savings_expense_game/MyPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oTree_exp/savings_expense_game/templates/savings_expense_game/Results.html" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/savings_expense_game/templates/savings_expense_game/Results.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oTree_exp/welcome_screen/templates/welcome_screen/MyPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/oTree_exp/welcome_screen/templates/welcome_screen/MyPage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +51,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="JupyterTrust" id="07f7f5f1-dc9c-46c7-9338-d18b0677ec5a" />
+  <component name="JupyterTrust" id="ab1ec63f-9625-4e95-b18c-1970535ecf64" />
   <component name="ProjectId" id="1j3ebriiVWfj2EDA8uQjKBQT3wm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -77,7 +75,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="07f7e991-bb89-4473-beaa-a095df466072" name="Default Changelist" comment="" />
+      <changelist id="e38f25ca-5bb9-4831-ba04-799a123e8137" name="Default Changelist" comment="" />
       <created>1603037276898</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -85,7 +83,9 @@
       <workItem from="1603037379048" duration="3602000" />
       <workItem from="1603041375916" duration="2563000" />
       <workItem from="1603090158986" duration="2625000" />
-      <workItem from="1603117413731" duration="13083000" />
+      <workItem from="1603117413731" duration="7442000" />
+      <workItem from="1603138977163" duration="5507000" />
+      <workItem from="1603165705818" duration="3932000" />
     </task>
     <task id="LOCAL-00001" summary="control_marathi pages added">
       <created>1603043598566</created>
@@ -94,14 +94,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603043598566</updated>
     </task>
-    <task id="LOCAL-00002" summary="final changes added">
-      <created>1603127546367</created>
+    <task id="LOCAL-00002" summary="updated saving games, templates and added instructions">
+      <created>1603132845548</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1603127546367</updated>
+      <updated>1603132845548</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="saving games bugs fixes">
+      <created>1603144323562</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1603144323562</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,7 +125,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/master" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -133,8 +140,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="control_marathi pages added" />
-    <MESSAGE value="final changes added" />
-    <option name="LAST_COMMIT_MESSAGE" value="final changes added" />
+    <MESSAGE value="updated saving games, templates and added instructions" />
+    <MESSAGE value="saving games bugs fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="saving games bugs fixes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="233" y="4" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603038892687">
@@ -149,17 +157,34 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="421" y="86" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1603037712563" />
+    <state x="129" y="59" key="MergeDialog" timestamp="1603137964616">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="129" y="59" key="MergeDialog/0.0.1366.768@0.0.1366.768" timestamp="1603137964616" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1603126233737">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1603126233737" />
-    <state x="233" y="78" key="Vcs.Push.Dialog.v2" timestamp="1603127666943">
-      <screen x="0" y="0" width="1280" height="689" />
+    <state x="1716" y="122" key="Vcs.Push.Dialog.v2" timestamp="1603144336218">
+      <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="233" y="78" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1603127666943" />
-    <state x="458" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603133024127">
-      <screen x="0" y="0" width="1280" height="689" />
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1603112336071" />
+    <state x="1716" y="122" key="Vcs.Push.Dialog.v2/0.0.1366.768/1366.0.1920.1080@1366.0.1920.1080" timestamp="1603144336218" />
+    <state x="66" y="86" width="1182" height="584" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1603137059829">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="458" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.689@0.0.1280.689" timestamp="1603133024127" />
+    <state x="66" y="86" width="1182" height="584" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.768@0.0.1366.768" timestamp="1603137059829" />
+    <state x="489" y="289" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603137938711">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="458" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.689@0.0.1280.689" timestamp="1603123353118" />
+    <state x="489" y="289" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.768@0.0.1366.768" timestamp="1603137938711" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1603135059558">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1603135059558" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/oTree_exp$pages.coverage" NAME="pages Coverage Results" MODIFIED="1603033089676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/oTree_exp/SES_marathi" />
   </component>
 </project>

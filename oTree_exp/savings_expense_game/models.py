@@ -127,17 +127,11 @@ class Player(BasePlayer):
         blank=True
     )
 
-    EMI1 = models.IntegerField(
-        blank=True
-    )
+    EMI1 = models.IntegerField()
 
-    EMI2 = models.IntegerField(
-        blank=True
-    )
+    EMI2 = models.IntegerField()
 
-    EMI3 = models.IntegerField(
-        blank=True
-    )
+    EMI3 = models.IntegerField()
 
     def debtChoice_choices(self):
         debtOpt = Constants.debtChoice[self.round_number]

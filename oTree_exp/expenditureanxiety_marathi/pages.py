@@ -126,6 +126,10 @@ class optimistic(SurveyFormBase):
     form_fields = ['optimistic']
 
 
+class ResultsWaitPage(WaitPage):
+    pass
+
+
 class Results(Page):
     pass
 
@@ -158,5 +162,5 @@ page_sequence = [howmanypeople,
                  emergency100000rupees,
                  emergency500000rupees,
                  optimistic,
-                 Results
+                 Results,
                  ]

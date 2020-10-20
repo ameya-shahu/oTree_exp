@@ -13,7 +13,7 @@
              font-weight: normal;
         }
          .card-text{
-             color: {{ participant.vars.savings_color }};
+             color: #28a745;
              font-size: x-large;
          }
     </style>
@@ -39,19 +39,19 @@
 
                 {% if loanfault.loan1Fault %}
                 <div class="alert alert-warning" id ="loan1fault" role="alert">
-                    तुम्ही आदर्शपेक्षा कमी पहिले कर्ज दिले.
+                    तुम्ही आदर्शपेक्षा कमी पहिले कर्ज दिले. आता आपण पहिले कर्ज फक्त {{ participant.vars.debt_1_limit }} वेळा फॉल्ट करू शकता.
                 </div>
                 {% endif %}
 
                 {% if loanfault.loan2Fault  %}
                 <div class="alert alert-warning" id ="loan2fault" role="alert">
-                    तुम्ही आदर्शपेक्षा कमी दुसरे कर्ज दिले.
+                    तुम्ही आदर्शपेक्षा कमी दुसरे कर्ज दिले. आता आपण दुसरे कर्ज फक्त {{ participant.vars.debt_2_limit }} वेळा फॉल्ट करू शकता.
                 </div>
                 {% endif %}
 
                 {% if loanfault.loan3Fault  %}
                 <div class="alert alert-warning" id ="loan3fault" role="alert">
-                    तुम्ही आदर्शपेक्षा कमी तिसरे कर्ज दिले.
+                    तुम्ही आदर्शपेक्षा कमी तिसरे कर्ज दिले.आता आपण तिसरे कर्ज फक्त {{ participant.vars.debt_3_limit }} वेळा फॉल्ट करू शकता.
                 </div>
                 {% endif %}
 
@@ -59,7 +59,7 @@
                 {% if subsession.round_number != 1 %}
                     <div class="row">
                         <div class="col">
-                            <div class="card text-center w-50">
+                            <div class="card text-center">
                                 <div class="card-body">
                                     <h5 class="card-title"><b>आतापर्यंत एकूण बचत</b></h5>
                                     <p class="card-text"> <b>रुपये {{ participant.vars.totalSavings }}</b></p>
@@ -67,10 +67,10 @@
                             </div>
                         </div>
                         <div class="col">
-                            <div class="card text-center w-50">
+                            <div class="card text-center">
                                 <div class="card-body">
                                     <h5 class="card-title"><b>आतापर्यंत एकूण कर्ज</b></h5>
-                                    <p class="card-text"> <b>रुपये {{ participant.vars.totalDebt }}</b></p>
+                                    <p class="card-text" style="color: #c82333"> <b>रुपये {{ participant.vars.totalDebt }}</b></p>
                                 </div>
                             </div>
                         </div>

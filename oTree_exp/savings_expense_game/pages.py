@@ -111,7 +111,7 @@ class MyPage(Page):
                 self.participant.vars['debt_3_limit'] -= 1
                 self.player.faultLoan3 = True
 
-        print(reduceDebt)
+        #print(reduceDebt)
         self.participant.vars['totalDebt'] -= int(reduceDebt)
         self.player.totalDebts = self.participant.vars['totalDebt']
 
@@ -192,7 +192,7 @@ class DebtChoicePage(Page):
                                                                                           'interest'] / 12  # calculate monthly intrest
                 totalAmount = calculateLoan(loanAmt, interest, debtDetails['rounds'])
 
-                print('[interest]-', interest)
+                #print('[interest]-', interest)
 
                 NewDebt = {
                     'amountRemaining': totalAmount,
@@ -200,7 +200,7 @@ class DebtChoicePage(Page):
                     'emiAmount': calculateEmi(totalAmount, debtDetails['rounds'])
                 }
 
-                print(NewDebt)
+                #print(NewDebt)
 
                 self.setLoan(NewDebt)
                 self.player.debtChoice = PLAYER_DEBTCHOICE_S[1].format(debtDetails["interest"],
@@ -238,23 +238,26 @@ class DebtChoicePage(Page):
 
 class Results(Page):
     def is_displayed(self):
-        return Constants.debtRound[-1] == self.round_number
+        return Constants.num_rounds == self.round_number
 
     def vars_for_template(self):
-        if self.participant.vars['debt_1_limit'] <= 0:
-            self.participant.vars['totalSavings'] -= self.participant.vars['debt_1_amount']
+        if self.is_displayed():
 
-        if self.participant.vars['debt_1_limit'] <= 0:
-            self.participant.vars['totalSavings'] -= self.participant.vars['debt_1_amount']
+            # if self.participant.vars['debt_1_limit'] <= 0:
+            #     self.participant.vars['totalSavings'] -= self.participant.vars['debt_1_amount']
+            #
+            # if self.participant.vars['debt_2_limit'] <= 0:
+            #     self.participant.vars['totalSavings'] -= self.participant.vars['debt_2_amount']
+            #
+            # if self.participant.vars['debt_3_limit'] <= 0:
+            #     self.participant.vars['totalSavings'] -= self.participant.vars['debt_3_amount']
 
-        if self.participant.vars['debt_1_limit'] <= 0:
-            self.participant.vars['totalSavings'] -= self.participant.vars['debt_1_amount']
+            self.player.totalSavings = self.participant.vars['totalSavings'] - self.participant.vars['totalDebt']
+            self.participant.vars['totalSavings'] = self.player.totalSavings
 
-        self.player.totalSavings = self.participant.vars['totalSavings']
-
-        return dict(
-            totalSavings=self.participant.vars,
-        )
+            return dict(
+                totalSavings=self.participant.vars,
+            )
 
 
 page_sequence = [MyPage, DebtChoicePage, Results]

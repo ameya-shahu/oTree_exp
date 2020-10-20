@@ -2,7 +2,7 @@
 {% load otree static %}
 
 {% block title %}
-    Page title
+    धन्यवाद
 {% endblock %}
 
 {% block global_styles  %}
@@ -25,12 +25,27 @@
 
 
 {% block content %}
-         <div class="card text-center w-50">
-                        <div class="card-body">
-                            <h5 class="card-title"><b>तुमची एकूण बचत आहे</b></h5>
-                            <p class="card-text"> <b>रुपये {{ totalSavings }}</b></p>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title"><b>तुमची एकूण बचत आहे</b></h5>
+                                    <p class="card-text"> <b>रुपये {{ participant.vars.totalSavings }}</b></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title"><b>तुमची एकूण एकूण कर्ज आहे</b></h5>
+                                    <p class="card-text" style="color: #c82333"> <b>रुपये {{ participant.vars.totalDebt }}</b></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+    <br>
+    <p>आपल्या देयकावर प्रक्रिया होत आहे तोपर्यंत पुढील प्रश्नाचे उत्तर द्या</p>
+
     {% next_button %}
 {% endblock %}
 

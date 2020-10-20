@@ -12,7 +12,7 @@
              font-weight: normal;
         }
          .card-text{
-             color: {{ participant.vars.savings_color }};
+             color: #28a745;
              font-size: x-large;
          }
     </style>
@@ -31,23 +31,30 @@
     {% formfields %}
 
     {% if subsession.round_number != 1 %}
-                    <div class="card text-center w-50">
-                        <div class="card-body">
-                            <h5 class="card-title"><b>आतापर्यंत एकूण बचत</b></h5>
-                            <p class="card-text"> <b>रुपये {{ participant.vars.totalSavings }}</b></p>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title"><b>आतापर्यंत एकूण बचत</b></h5>
+                                    <p class="card-text"> <b>रुपये {{ participant.vars.totalSavings }}</b></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title"><b>आतापर्यंत एकूण कर्ज</b></h5>
+                                    <p class="card-text" style="color: #c82333"> <b>रुपये {{ participant.vars.totalDebt }}</b></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                     <div class="card text-center w-50">
-                        <div class="card-body">
-                            <h5 class="card-title"><b>आतापर्यंत एकूण कर्ज</b></h5>
-                            <p class="card-text"> <b>रुपये {{ participant.vars.totalDebt }}</b></p>
-                        </div>
-                    </div>
+
 
     {% endif %}
 
-
+    <br>
     {% next_button %}
 
 {% endblock %}
@@ -74,11 +81,17 @@
         };
 
         // script to hide form fields depend on choices from radio button
-    $('input[name="debtChoice"]').on("click", function(e) {
-       console.log('JavaScript is executing');
-       let selected = $("input[name='debtChoice']:checked").val();
-       console.log(selected);
-       (selected === '0') ? hideLoanInput() : showLoanInput();
-    })
+
+
+        $(document).ready(function (){
+            hideLoanInput();
+            $('input[name="debtChoice"]').on("click", function(e) {
+                    console.log('JavaScript is executing');
+                    let selected = $("input[name='debtChoice']:checked").val();
+                    console.log(selected);
+                (selected === '0') ? hideLoanInput() : showLoanInput();
+            })
+        });
+
     </script>
 {% endblock %}
