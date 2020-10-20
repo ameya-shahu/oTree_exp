@@ -6,36 +6,9 @@
 {% endblock %}
 
 {% block content %}
-    <p>गेम आता चालू होतो आहे. </p>
-    <p>एक मिनिट आपले विचार स्थिर करा....</p>
-    <p id="timer">पुढील पृष्ठासाठी बटण 60 सेकंदात सक्रिय होईल</p>
+    <p>पुढील पृष्ठावर सुरू ठेवा</p>
     {% next_button %}
 {% endblock %}
 
-{% block g_scripts %}
-    <script>
-    $(document).ready(function (){
-            $('.otree-btn-next.btn.btn-primary').prop('disabled', true);
 
-            setTimeout(function() {
-            $(".otree-btn-next.btn.btn-primary").prop('disabled',false);
-            }, 600000);
-
-            var timeLeft = 60;
-            var elem = document.getElementById('timer');;
-
-            var timerId = setInterval(countdown, 1000);
-
-                function countdown() {
-                  if (timeLeft == -1) {
-                    clearTimeout(timerId);
-                  } else {
-                    elem.innerHTML = 'पुढील पृष्ठासाठी बटण ' + timeLeft + ' सेकंदात सक्रिय होईल.';
-                    timeLeft--;
-                  }
-                }
-
-            });
-    </script>
-{% endblock %}
 
