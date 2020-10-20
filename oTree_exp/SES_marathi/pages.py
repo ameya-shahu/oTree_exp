@@ -9,75 +9,75 @@ class SurveyFormBase(Page):
 
 
 class hungerRate(SurveyFormBase):
-    form_model = ['hungerRate']
+    form_fields = ['hungerRate']
 
 
 class tiredRate(SurveyFormBase):
-    form_model = ['tiredRate']
+    form_fields = ['tiredRate']
 
 
 class age(SurveyFormBase):
-    form_model = ['age']
+    form_fields = ['age']
 
 
 class gender(SurveyFormBase):
-    form_model = ['gender']
+    form_fields = ['gender']
 
 
 class isMarried(SurveyFormBase):
-    form_model = ['isMarried']
+    form_fields = ['isMarried']
 
 
 class religion(SurveyFormBase):
-    form_model = ['religion']
+    form_fields = ['religion']
 
 
 class language(SurveyFormBase):
-    form_model = ['language']
+    form_fields = ['language']
 
 
 class education(SurveyFormBase):
-    form_model = ['education']
+    form_fields = ['education']
 
 
 class occupation(SurveyFormBase):
-    form_model = ['occupation']
+    form_fields = ['occupation']
 
 
 class useofhands(SurveyFormBase):
-    form_model = ['useofhands']
+    form_fields = ['useofhands']
 
 
 class isOwnHouse(SurveyFormBase):
-    form_model = ['isOwnHouse']
+    form_fields = ['isOwnHouse']
 
 
 class hasbankaccount(SurveyFormBase):
-    form_model = ['hasbankaccount']
+    form_fields = ['hasbankaccount']
 
 
 class hasFD(SurveyFormBase):
-    form_model = ['hasFD']
+    form_fields = ['hasFD']
 
 
 class hasmutualfunds(SurveyFormBase):
-    form_model = ['hasmutualfunds']
+    form_fields = ['hasmutualfunds']
 
 
 class hasinsurance(SurveyFormBase):
-    form_model = ['hasinsurance']
+    form_fields = ['hasinsurance']
 
 
 class gotcovid(SurveyFormBase):
-    form_model = ['gotcovid']
+    form_fields = ['gotcovid']
 
 
 class notnenoughfood(SurveyFormBase):
-    form_model = ['notnenoughfood']
+    form_fields = ['notnenoughfood']
 
 
 class howmanytimes(SurveyFormBase):
-    form_model = ['howmanytimes']
+    form_fields = ['howmanytimes']
 
 
 class ResultsWaitPage(WaitPage):

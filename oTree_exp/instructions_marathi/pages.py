@@ -2,7 +2,7 @@ from otree.api import Currency as c, currency_range
 from ._builtin import Page, WaitPage
 from .models import Constants
 
-ERROR_MSG = 'Answer is wrong'
+ERROR_MSG = 'तुमचा उत्तर चुकीचे आहे'
 
 
 class SurveyFormBase(Page):
