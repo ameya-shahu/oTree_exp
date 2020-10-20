@@ -158,7 +158,7 @@ class Player(BasePlayer):
                                              [4, "मी घरातील काहीतरी विकेन (सोने, चांदी..)"],
                                              [5, "मी माझ्या गावी परत जाईन"],
                                          ])
-    otherskill = models.IntegerField(label="आपल्याकडे वेगळी नोकरी शोधण्यासाठी आणखी एक कौशल्य आहे?", choices=yesNoChoice)
+    otherskill = models.BooleanField(label="आपल्याकडे वेगळी नोकरी शोधण्यासाठी आणखी एक कौशल्य आहे?", choices=yesNoChoice)
     whatotherjob = models.IntegerField(label="आपण कोणती दुसरी नोकरी शोधाल?",
                                        choices=[
                                            [1, "बांधकाम चे काम"],
@@ -178,7 +178,7 @@ class Player(BasePlayer):
     standardofliving = models.BooleanField(
         label="आपल्याला असे वाटते की एक विशिष्ट जीवनमान टिकवून ठेवण्यासाठी तो पगार समाधानकारक असेल?",
         choices=yesNoChoice)
-    twojobs = models.IntegerField(
+    twojobs = models.BooleanField(
         label="आपल्याला असे वाटते की जीवनमान टिकविण्यासाठी आपल्याला दोन नोकर्या घ्याव्या लागतील?", choices=yesNoChoice)
     competitiontofind = models.BooleanField(label="आपणास असे वाटते की दोन नोकर्‍या शोधण्यात आपल्यात खूप स्पर्धा आहे?",
                                             choices=yesNoChoice)

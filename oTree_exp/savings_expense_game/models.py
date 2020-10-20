@@ -30,7 +30,7 @@ class Constants(BaseConstants):
     emergedFund = {  # round : func
         debtRound[0]: 10000,
         debtRound[1]: 45000,
-        debtRound[2]: 10000
+        debtRound[2]: 2500
     }
     debtChoice = {
         debtRound[0]: [

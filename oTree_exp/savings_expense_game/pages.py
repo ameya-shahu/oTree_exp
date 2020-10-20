@@ -252,11 +252,11 @@ class Results(Page):
             # if self.participant.vars['debt_3_limit'] <= 0:
             #     self.participant.vars['totalSavings'] -= self.participant.vars['debt_3_amount']
 
-            self.player.totalSavings = self.participant.vars['totalSavings'] - self.participant.vars['totalDebt']
-            self.participant.vars['totalSavings'] = self.player.totalSavings
+            # self.player.totalSavings = self.participant.vars['totalSavings'] - self.participant.vars['totalDebt']
+            # self.participant.vars['totalSavings'] = self.player.totalSavings
 
             return dict(
-                totalSavings=self.participant.vars,
+                diff=self.participant.vars['totalSavings'] - self.participant.vars['totalDebt'],
             )
 
 

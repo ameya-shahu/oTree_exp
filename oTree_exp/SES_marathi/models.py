@@ -141,7 +141,7 @@ class Player(BasePlayer):
                                          widget=widgets.RadioSelect,
                                          choices=yesNoChoice)
 
-    hasFD = models.BooleanField(label="आपला बँक अकाउंट आहे का ?",
+    hasFD = models.BooleanField(label="आपला फिक्स्ड डेपोसिटस (एफ डी) आहे का ?",
                                 widget=widgets.RadioSelect,
                                 choices=yesNoChoice)
 

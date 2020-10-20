@@ -52,7 +52,7 @@ class Player(BasePlayer):
                                                    min=1,
                                                    max=10,
                                                    )
-    areyouemployed = models.IntegerField(label="तुम्ही सध्या व्यवसाय किंवा नोकरी करत आहात का?",
+    areyouemployed = models.BooleanField(label="तुम्ही सध्या व्यवसाय किंवा नोकरी करत आहात का?",
                                          choices=yesNoChoice)
     howmanymonthsago = models.IntegerField(
         label="जर व्यवसाय किंवा नोकरी नाही, तर, किती महिन्यांपूर्वी आपण व्यवसाय किंवा नोकरी गमावली?",
@@ -98,7 +98,7 @@ class Player(BasePlayer):
                                              [5, "मी माझ्या गावी परत जाईन"],
                                          ])
 
-    current_conditions = models.IntegerField(
+    current_conditions = models.BooleanField(
         label="जर सध्याची आर्थिक परिस्थिती अशीच चालू राहिली तर, आपण किराणा सामान, वीज आणि मोबाइलसाठी पैसे देणे चालू ठेवू शकता असे आपल्याला वाटते का?",
         choices=yesNoChoice)
     howmuchpercentsavingsspent = models.IntegerField(
@@ -122,10 +122,10 @@ class Player(BasePlayer):
         [8, "8001-10000"],
         [9, "10001 आणि अधिक"]
     ])
-    doyouthinkthatisenough = models.IntegerField(
+    doyouthinkthatisenough = models.BooleanField(
         label="जर लॉकडाउन अधिक काळ चालला तर आपल्याला वाटतं का कि ती रक्कम पुरेशी आहे?",
         choices=yesNoChoice)
-    otherskill = models.IntegerField(label="आपल्याकडे वेगळी नोकरी शोधण्यासाठी आणखी एक कौशल्य आहे?", choices=yesNoChoice)
+    otherskill = models.BooleanField(label="आपल्याकडे वेगळी नोकरी शोधण्यासाठी आणखी एक कौशल्य आहे?", choices=yesNoChoice)
     whatotherjob = models.IntegerField(label="आपण कोणती दुसरी नोकरी शोधाल?",
                                        choices=[
                                            [1, "बांधकाम चे काम"],
@@ -145,7 +145,7 @@ class Player(BasePlayer):
     standardofliving = models.BooleanField(
         label="आपल्याला असे वाटते की एक विशिष्ट जीवनमान टिकवून ठेवण्यासाठी तो पगार समाधानकारक असेल?",
         choices=yesNoChoice)
-    celebratediwali = models.IntegerField(label="आपणास असे वाटते की आपण यावर्षी दिवाळी, ईद किंवा क्रिसमस साजरा कराल?",
+    celebratediwali = models.BooleanField(label="आपणास असे वाटते की आपण यावर्षी दिवाळी, ईद किंवा क्रिसमस साजरा कराल?",
                                           choices=yesNoChoice)
     howmuchcanyouspend = models.IntegerField(label="अंदाजे आपण किती खर्च करू शकता असे वाटते?", choices=[
         [1, "200-500"],
@@ -199,7 +199,7 @@ class Player(BasePlayer):
         ])
 
     emergency500000rupees = models.IntegerField(
-        label="आपल्याला त्वरित 1,00,000 रुपयांची आवश्यकता असल्यास, उदाहरणार्थ अपघातानंतर खूप गंभीर शस्त्रक्रिया करावी लागल्यास, आपल्याला ते कुठे ममिळतील?",
+        label="आपल्याला त्वरित 5,00,000 रुपयांची आवश्यकता असल्यास, उदाहरणार्थ अपघातानंतर खूप गंभीर शस्त्रक्रिया करावी लागल्यास, आपल्याला ते कुठे ममिळतील?",
         choices=[
             [1, "माझ्याकडे आहेत"],
             [2, "घरातल्यांना विचारून"],
