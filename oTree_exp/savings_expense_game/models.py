@@ -23,7 +23,7 @@ class Constants(BaseConstants):
     name_in_url = 'savings_expense_game'
     players_per_group = None
     num_rounds = 25
-    reqConsumption = 6000
+    reqConsumption = 5000
     debtRound = [4, 12, 19]
     # define round at which emergency fund to shown
     # with emergency func amount

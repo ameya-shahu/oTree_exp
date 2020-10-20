@@ -1,6 +1,6 @@
 {% extends "global/Page.html" %}
 {% load otree %}
-{% block global_styles  %}
+{% block g_styles  %}
     <style>
         .otree-body {
             max-width:2000px;
@@ -40,6 +40,7 @@
                                 </div>
                             </div>
                         </div>
+                        {% if participant.vars.totalDebt > 0 %}
                         <div class="col">
                             <div class="card text-center">
                                 <div class="card-body">
@@ -48,8 +49,8 @@
                                 </div>
                             </div>
                         </div>
+                        {% endif %}
                     </div>
-
 
 
     {% endif %}
@@ -68,7 +69,7 @@
 
             $('label[for="id_fromLoanAmount"]').hide();
             $('input[name="fromLoanAmount"]').hide();
-            $('input[name="fromSavingAmt"]').prop('required',false);
+            $('input[name="fromLoanAmount"]').prop('required',false);
         };
         const showLoanInput = function () {
             $('label[for="id_fromSavingAmt"]').show();

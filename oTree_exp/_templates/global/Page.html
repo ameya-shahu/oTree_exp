@@ -2,7 +2,23 @@
 {% load otree %}
 
 {% block global_styles  %}
+    <style>
+    label , input , p{
+        font-size: xx-large;
+        font-weight: bold;
+    }
+    .col-form-label{
+        font-size: xx-large;
+        font-weight: bold;
+    }
+
+    </style>
+    {% block g_styles %}
+        {% endblock %}
 {% endblock %}
 
 {% block global_scripts  %}
+
+    {% block g_scripts %}
+    {% endblock %}
 {% endblock %}
