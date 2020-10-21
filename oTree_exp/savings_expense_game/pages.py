@@ -56,7 +56,7 @@ class MyPage(Page):
         # pass question depend on the round number
         loanFault = self.participant.vars['set_warning']
         self.participant.vars['set_warning'] = {
-            'loan1Fault': False ,
+            'loan1Fault': False,
             'loan2Fault': False,
             'loan3Fault': False,
         }
@@ -111,13 +111,13 @@ class MyPage(Page):
                 self.participant.vars['debt_3_limit'] -= 1
                 self.player.faultLoan3 = True
 
-        #print(reduceDebt)
+        # print(reduceDebt)
         self.participant.vars['totalDebt'] -= int(reduceDebt)
         self.player.totalDebts = self.participant.vars['totalDebt']
 
     def error_message(self, values):
         # return error if cosume amount is less than set standard
-        if values['consumption'] < Constants.reqConsumption:
+        if int(values['consumption']) < Constants.reqConsumption:
             return PG_MY_CONSUME_LESS_ERROR.format(Constants.reqConsumption)
 
         # display error if sum of 'savings', 'consumption' and EMIs field is not exactly equal to round amount
@@ -186,29 +186,27 @@ class DebtChoicePage(Page):
                 chooseOpt = int(self.player.debtChoice)
                 loanAmt = int(self.player.fromLoanAmount)
 
-                debtDetails = Constants.debtChoice[self.round_number][
-                    chooseOpt - 1]  # get details of debt from  Constants class
-                interest = debtDetails['interest'] if debtDetails['type'] == 'M' else debtDetails[
-                                                                                          'interest'] / 12  # calculate monthly intrest
-                totalAmount = calculateLoan(loanAmt, interest, debtDetails['rounds'])
+                if loanAmt > 0:
+                    debtDetails = Constants.debtChoice[self.round_number][
+                        chooseOpt - 1]  # get details of debt from  Constants class
+                    interest = debtDetails['interest'] if debtDetails['type'] == 'M' else debtDetails[
+                                                                                              'interest'] / 12  # calculate monthly intrest
+                    totalAmount = calculateLoan(loanAmt, interest, debtDetails['rounds'])
 
-                #print('[interest]-', interest)
+                    # print('[interest]-', interest)
 
-                NewDebt = {
-                    'amountRemaining': totalAmount,
-                    'emiRoundRemaining': debtDetails['rounds'],
-                    'emiAmount': calculateEmi(totalAmount, debtDetails['rounds'])
-                }
+                    NewDebt = {
+                        'amountRemaining': totalAmount,
+                        'emiRoundRemaining': debtDetails['rounds'],
+                        'emiAmount': calculateEmi(totalAmount, debtDetails['rounds'])
+                    }
 
-                #print(NewDebt)
-
-                self.setLoan(NewDebt)
-                self.player.debtChoice = PLAYER_DEBTCHOICE_S[1].format(debtDetails["interest"],
-                                                                       "Month" if debtDetails[
-                                                                                      "type"] == "M" else "Year",
-                                                                       debtDetails["rounds"])
-
-                self.participant.vars['totalDebt'] += NewDebt['amountRemaining']
+                    # print(NewDebt)
+                    self.setLoan(NewDebt)
+                    self.player.debtChoice = PLAYER_DEBTCHOICE_S[1].format(debtDetails["interest"],
+                                                                           "Month" if debtDetails["type"] == "M" else "Year",
+                                                                           debtDetails["rounds"])
+                    self.participant.vars['totalDebt'] += NewDebt['amountRemaining']
 
             # subtract 'fromSavingAmt' from cumulative totalSavings
             self.participant.vars['totalSavings'] -= self.player.fromSavingAmt
@@ -242,7 +240,6 @@ class Results(Page):
 
     def vars_for_template(self):
         if self.is_displayed():
-
             # if self.participant.vars['debt_1_limit'] <= 0:
             #     self.participant.vars['totalSavings'] -= self.participant.vars['debt_1_amount']
             #

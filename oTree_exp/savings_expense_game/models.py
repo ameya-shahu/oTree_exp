@@ -22,32 +22,32 @@ Your app description
 class Constants(BaseConstants):
     name_in_url = 'savings_expense_game'
     players_per_group = None
-    num_rounds = 25
-    reqConsumption = 5000
-    debtRound = [4, 12, 19]
+    num_rounds = 16
+    reqConsumption = 3000
+    debtRound = [4,]
     # define round at which emergency fund to shown
     # with emergency func amount
     emergedFund = {  # round : func
-        debtRound[0]: 10000,
-        debtRound[1]: 45000,
-        debtRound[2]: 2500
+        debtRound[0]: 54000,
+        #debtRound[1]: 45000,
+        #debtRound[2]: 2500
     }
     debtChoice = {
         debtRound[0]: [
-            {'interest': 3, 'type': 'M', 'rounds': 8},
-            {'interest': 8, 'type': 'Y', 'rounds': 10},
-            {'interest': 10, 'type': 'Y', 'rounds': 8},
-        ],  # Y stands for yearly interest and M stands for monthly interest
-        debtRound[1]: [
-            {'interest': 10, 'type': 'Y', 'rounds': 10},
+            {'interest': 1.5, 'type': 'M', 'rounds': 10},
             {'interest': 8, 'type': 'Y', 'rounds': 12},
-            {'interest': 3, 'type': 'M', 'rounds': 12},
-        ],
-        debtRound[2]: [
-            {'interest': 8, 'type': 'Y', 'rounds': 6},
-            {'interest': 3, 'type': 'M', 'rounds': 6},
-            {'interest': 10, 'type': 'Y', 'rounds': 3},
-        ],
+            # {'interest': 10, 'type': 'Y', 'rounds': 8},
+        ],  # Y stands for yearly interest and M stands for monthly interest
+        # debtRound[1]: [
+        #     {'interest': 10, 'type': 'Y', 'rounds': 10},
+        #     {'interest': 8, 'type': 'Y', 'rounds': 12},
+        #     {'interest': 3, 'type': 'M', 'rounds': 12},
+        # ],
+        # debtRound[2]: [
+        #     {'interest': 8, 'type': 'Y', 'rounds': 6},
+        #     {'interest': 3, 'type': 'M', 'rounds': 6},
+        #     {'interest': 10, 'type': 'Y', 'rounds': 3},
+        # ],
     }
 
     salaryFund = {

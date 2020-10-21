@@ -1,6 +1,5 @@
 from os import environ
-
-# DEBUG=False
+#DEBUG=False
 SESSION_CONFIGS = [
     dict(
         name='control_marathi',
