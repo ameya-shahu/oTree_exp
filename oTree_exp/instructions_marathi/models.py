@@ -33,13 +33,13 @@ class Group(BaseGroup):
 class Player(BasePlayer):
     instructionquestion1 = models.IntegerField(label="खेळ किती फेऱयांचा आहे?", choices=[[1, "10"],
                                                                                         [2, "15"],
-                                                                                        [3, "25"],
-                                                                                        [4, "30"]])
+                                                                                        [3, "16"],
+                                                                                        [4, "20"]])
     instructionquestion2 = models.IntegerField(label="तुम्हाला प्रत्येक फेरीत किती पैसे मिळतील?",
                                                widget=widgets.RadioSelect,
                                                choices=[[1, "5000"], [2, "10000"],
                                                         [3, "15000"], [4, "25000"]])
-    instructionquestion3 = models.IntegerField(label="आपण अकल्पित खर्चासाठी पैसे कसे देऊ शकता?",
+    instructionquestion3 = models.IntegerField(label="आपण खर्चासाठी पैसे कसे देऊ शकता?",
                                                widget=widgets.RadioSelect,
                                                choices=[[1, "बचत"], [2, "कर्ज"], [3, "दोन्ही"], [4, "दोन्हीही नाही"]])
     instructionquestion4 = models.IntegerField(

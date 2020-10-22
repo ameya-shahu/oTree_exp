@@ -6,28 +6,28 @@ SESSION_CONFIGS = [
         display_name='experiment with control - marathi',
         num_demo_participants=1,
         app_sequence=['welcome_screen', 'depression_scale_marathi', 'instruction_display_marathi','instructions_marathi',
-                      'control_marathi', 'savings_expense_game', 'SES_marathi'],
+                      'control_marathi', 'saving_game_lite', 'SES_marathi'],
     ),
     dict(
         name='hybrid_marathi',
         display_name='experiment with hybrid questions - marathi',
         num_demo_participants=1,
         app_sequence=['welcome_screen', 'depression_scale_marathi', 'instruction_display_marathi','instructions_marathi',
-                      'hybrid_marathi', 'savings_expense_game', 'SES_marathi'],
+                      'hybrid_marathi', 'saving_game_lite', 'SES_marathi'],
     ),
     dict(
         name='expenditure_anxiety_marathi',
         display_name='experiment with expenditure anxiety - marathi',
         num_demo_participants=1,
         app_sequence=['welcome_screen', 'depression_scale_marathi', 'instruction_display_marathi','instructions_marathi',
-                      'expenditureanxiety_marathi', 'savings_expense_game', 'SES_marathi'],
+                      'expenditureanxiety_marathi', 'saving_game_lite', 'SES_marathi'],
     ),
     dict(
         name='income_uncertainty_marathi',
         display_name='experiment with income uncertainty - marathi',
         num_demo_participants=1,
         app_sequence=['welcome_screen', 'depression_scale_marathi', 'instruction_display_marathi','instructions_marathi',
-                      'incomeuncertainty_marathi', 'savings_expense_game', 'SES_marathi'],
+                      'incomeuncertainty_marathi', 'saving_game_lite', 'SES_marathi'],
     ),
     dict(
         name='expend',
@@ -73,7 +73,7 @@ Here are some oTree games.
 # don't share this with anybody.
 SECRET_KEY = '_l+m7#$h$m32=7rvke^o-nx=eoiz%!#e&d5ut+fw3^qt3$a4yr'
 
-# DEBUG=False
+DEBUG=False
 
 INSTALLED_APPS = [
     'django.contrib.humanize',

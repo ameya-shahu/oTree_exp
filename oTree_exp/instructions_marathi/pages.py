@@ -34,45 +34,45 @@ class Instructionquestion3(SurveyFormBase):
             return ERROR_MSG
 
 
-class Instructionquestion4(SurveyFormBase):
-    form_fields = ['instructionquestion4']
-
-    def error_message(self, values):
-        if values['instructionquestion4'] != 3:
-            return ERROR_MSG
-
-
-class Instructionquestion5(SurveyFormBase):
-    form_fields = ['instructionquestion5']
-
-    def error_message(self, values):
-        if values['instructionquestion5'] != 2:
-            return ERROR_MSG
-
-
-class Instructionquestion6(SurveyFormBase):
-    form_fields = ['instructionquestion6']
-
-    def error_message(self, values):
-        if values['instructionquestion6'] != 2:
-            return ERROR_MSG
-
-
-class Instructionquestion7(SurveyFormBase):
-    form_fields = ['instructionquestion7']
-
-    def error_message(self, values):
-        if values['instructionquestion7'] != 2:
-            return ERROR_MSG
-
-
-class Instructionquestion8(SurveyFormBase):
-    form_fields = ['instructionquestion8']
-
-    def error_message(self, values):
-        if values['instructionquestion8'] != 2:
-            return ERROR_MSG
-
+# class Instructionquestion4(SurveyFormBase):
+#     form_fields = ['instructionquestion4']
+#
+#     def error_message(self, values):
+#         if values['instructionquestion4'] != 3:
+#             return ERROR_MSG
+#
+#
+# class Instructionquestion5(SurveyFormBase):
+#     form_fields = ['instructionquestion5']
+#
+#     def error_message(self, values):
+#         if values['instructionquestion5'] != 2:
+#             return ERROR_MSG
+#
+#
+# class Instructionquestion6(SurveyFormBase):
+#     form_fields = ['instructionquestion6']
+#
+#     def error_message(self, values):
+#         if values['instructionquestion6'] != 2:
+#             return ERROR_MSG
+#
+#
+# class Instructionquestion7(SurveyFormBase):
+#     form_fields = ['instructionquestion7']
+#
+#     def error_message(self, values):
+#         if values['instructionquestion7'] != 2:
+#             return ERROR_MSG
+#
+#
+# class Instructionquestion8(SurveyFormBase):
+#     form_fields = ['instructionquestion8']
+#
+#     def error_message(self, values):
+#         if values['instructionquestion8'] != 2:
+#             return ERROR_MSG
+#
 
 class Instructionquestion9(SurveyFormBase):
     form_fields = ['instructionquestion9']
@@ -90,10 +90,10 @@ page_sequence = [
     Instructionquestion1,
     Instructionquestion2,
     Instructionquestion3,
-    Instructionquestion4,
-    Instructionquestion5,
-    Instructionquestion6,
-    Instructionquestion7,
-    Instructionquestion8,
+    # Instructionquestion4,
+    # Instructionquestion5,
+    # Instructionquestion6,
+    # Instructionquestion7,
+    # Instructionquestion8,
     Instructionquestion9,
     Results]
