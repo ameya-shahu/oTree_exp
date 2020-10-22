@@ -1,0 +1,116 @@
+{% extends "global/Page.html" %}
+{% load humanize %}
+{% load otree %}
+{% block g_styles  %}
+    <style>
+        .otree-body {
+            max-width:2000px;
+        }
+         .table-info, .table-info>td, .table-info>th {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+             font-weight: normal;
+        }
+         .card-text{
+             color: #28a745;
+             font-size: x-large;
+         }
+    </style>
+{% endblock %}
+
+{% block title %}
+    Saving and expense (महिना क्रमांक - {{ subsession.round_number }})
+{% endblock %}
+
+
+
+
+{% block content %}
+
+        <div class="row mb-4">
+            <div class="col">
+                <p>
+                    तुम्हाला {{ roundSalary }} रुपये मिळाले, तुम्ही किती खर्च कराल आणि किती बचत कराल?
+                </p>
+
+                {% formfields %}
+                {% next_button %}
+
+
+
+                {% if subsession.round_number != 1 %}
+                    <div class="row">
+                        <div class="col">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title"><b>आतापर्यंत एकूण बचत</b></h5>
+                                    <p class="card-text"> <b>रुपये {{ participant.vars.totalSavings }}</b></p>
+                                </div>
+                            </div>
+                        </div>
+                        {% if participant.vars.totalDebt > 0 %}
+                        <div class="col">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title"><b>आतापर्यंत एकूण कर्ज</b></h5>
+                                    <p class="card-text" style="color: #c82333"> <b>रुपये {{ participant.vars.totalDebt }}</b></p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
+
+
+                {% endif %}
+            </div>
+            <div class="col">
+                   <div>
+                        <p>जर आपल्याला गणनामध्ये समस्या येत असेल तर खाली दिलेल्या कॅल्क्युलेटरचा वापर करा</p>
+                    </div>
+                {% include "global/calculator.html" %}
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col-md-auto mt-4">
+                {% if participant.vars.EMI > 0 %}
+                    <div>
+                        <table class="table">
+                          <thead>
+                            <tr class = "table-info">
+                              <th scope="col">कर्ज क्रमांक</th>
+                              <th scope="col">शिल्लक रक्कम</th>
+                              <th scope="col">फेरीनुसार परत करण्यायोग्य रक्कम</th>
+                              <th scope="col">उर्वरित कर्जाच्या फे्या</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">1</th>
+                              <td>{{ participant.vars.totalDebt }}</td>
+                              <td>{{ participant.vars.EMI }}</td>
+                              <td>{{ participant.vars.loanRemainRound }}</td>
+                            </tr>
+                          </tbody>
+                    </table>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+{% endblock %}
+
+
+{% block app_scripts %}
+    <script>
+        $(document).ready(function (){
+            $('label[for="id_EMI"]').html('कर्जाची ईएमआय रुपये {{ participant.vars.EMI }} :');
+
+            $('#id_consumption').attr('oninvalid','this.setCustomValidity("आपले  खर्च 3,000 रुपयांपेक्षा कमी आहेत. तेवढा मिनिमम खर्च करणं आवश्यक आहे.")');
+            $('#id_consumption').attr('oninput','this.setCustomValidity("")');
+
+        });
+    </script>
+{% endblock %}
+
+

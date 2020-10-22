@@ -33,7 +33,7 @@ SESSION_CONFIGS = [
         name='expend',
         display_name='expend',
         num_demo_participants=20,
-        app_sequence=['savings_expense_game'],
+        app_sequence=['saving_game_lite'],
     ),
 ]
 
