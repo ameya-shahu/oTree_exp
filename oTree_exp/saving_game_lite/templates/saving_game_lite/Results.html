@@ -29,24 +29,42 @@
                         <div class="col">
                             <div class="card text-center">
                                 <div class="card-body">
+                                    <h5 class="card-title"><b>घरची एकूण बचत</b></h5>
+                                    <p class="card-text"> <b>रुपये {{ participant.vars.homeSavings }}</b></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title"><b>बँकेची एकूण बचत</b></h5>
+                                    <p class="card-text"> <b>रुपये {{ participant.vars.bankSavings }}</b></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card text-center">
+                                <div class="card-body">
                                     <h5 class="card-title"><b>तुमची एकूण बचत आहे</b></h5>
                                     <p class="card-text"> <b>रुपये {{ participant.vars.totalSavings }}</b></p>
                                 </div>
                             </div>
                         </div>
+                        {% if participant.vars.totalDebt > 0 %}
                         <div class="col">
                             <div class="card text-center">
                                 <div class="card-body">
-                                    <h5 class="card-title"><b>तुमची एकूण एकूण कर्ज आहे</b></h5>
+                                    <h5 class="card-title"><b>आतापर्यंत एकूण कर्ज</b></h5>
                                     <p class="card-text" style="color: #c82333"> <b>रुपये {{ participant.vars.totalDebt }}</b></p>
                                 </div>
                             </div>
                         </div>
+                        {% endif %}
                         <div class="col">
                             <div class="card text-center">
                                 <div class="card-body">
                                     <h5 class="card-title"><b>तुमची एकूण शिल्लक बचत आहे</b></h5>
-                                    <p class="card-text" style="color: #c82333"> <b>रुपये {{ diff }}</b></p>
+                                    <p class="card-text"> <b>रुपये {{ diff }}</b></p>
                                 </div>
                             </div>
                         </div>

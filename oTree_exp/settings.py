@@ -73,7 +73,7 @@ Here are some oTree games.
 # don't share this with anybody.
 SECRET_KEY = '_l+m7#$h$m32=7rvke^o-nx=eoiz%!#e&d5ut+fw3^qt3$a4yr'
 
-DEBUG=False
+#DEBUG=False
 
 INSTALLED_APPS = [
     'django.contrib.humanize',

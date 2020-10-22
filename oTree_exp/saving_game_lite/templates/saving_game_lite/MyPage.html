@@ -49,6 +49,22 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title"><b>आतापर्यंत घरची एकूण बचत</b></h5>
+                                    <p class="card-text"> <b>रुपये {{ participant.vars.homeSavings }}</b></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title"><b>आतापर्यंत बँकेची एकूण बचत</b></h5>
+                                    <p class="card-text"> <b>रुपये {{ participant.vars.bankSavings }}</b></p>
+                                </div>
+                            </div>
+                        </div>
                         {% if participant.vars.totalDebt > 0 %}
                         <div class="col">
                             <div class="card text-center">

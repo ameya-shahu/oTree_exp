@@ -29,7 +29,7 @@ class MyPage(Page):
     form_model = 'player'
 
     def __init__(self):
-        self.fieldList = ['consumption', 'bankSavings', 'homeSavings']
+        self.fieldList = ['consumption', 'homeSavings', 'bankSavings']
 
     def get_form_fields(self):
         if self.participant.vars['loanRemainRound'] > 0:  # if loan is there append EMI field
@@ -46,8 +46,8 @@ class MyPage(Page):
     def error_message(self, values):
         EMI = 0
         if 'EMI' in self.fieldList:
-            if values['EMI'] > self.participant.vars['EMI']:
-                return EMI_1_LABEL.format(self.participant.vars['EMI'])
+            if values['EMI'] != self.participant.vars['EMI']:
+                return EMI_ERROR.format(self.participant.vars['EMI'])
             EMI += values['EMI']
 
         # sumation of all the fields in form
@@ -69,13 +69,14 @@ class MyPage(Page):
         self.player.cumHomeSavings = self.participant.vars['homeSavings']
         self.player.cumBankSavings = self.participant.vars['bankSavings']
 
-        print('home Svings - ', self.participant.vars['homeSavings'])
-        print('bank Svings - ', self.participant.vars['bankSavings'])
+        #print('home Svings - ', self.participant.vars['homeSavings'])
+        #print('bank Svings - ', self.participant.vars['bankSavings'])
 
         if 'EMI' in self.fieldList:
             self.participant.vars['totalDebt'] -= self.player.EMI
             self.participant.vars['loanRemainRound'] -= 1
             self.player.totalDebt = self.participant.vars['totalDebt']
+
 
 
 class DebtChoicePage(Page):
@@ -92,11 +93,11 @@ class DebtChoicePage(Page):
 
     def error_message(self, values):
         # if sumation loan+from home + from bank is less or greater
-        if (values['fromBankSavingAmt'] + values['fromBankSavingAmt'] + values['fromLoanAmount']) > \
+        if (values['fromHomeSavingAmt'] + values['fromBankSavingAmt'] + values['fromLoanAmount']) > \
                 Constants.emergedFund[self.round_number]:
             return PG_DEBTCHOICE_LOANSUM_GREAT_ERROR.format(Constants.emergedFund[self.round_number])
 
-        if (values['fromBankSavingAmt'] + values['fromBankSavingAmt'] + values['fromLoanAmount']) < \
+        if (values['fromHomeSavingAmt'] + values['fromBankSavingAmt'] + values['fromLoanAmount']) < \
                 Constants.emergedFund[self.round_number]:
             return PG_DEBTCHOICE_LOANSUM_LESS_ERROR.format(Constants.emergedFund[self.round_number])
 

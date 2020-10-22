@@ -64,9 +64,9 @@ class Player(BasePlayer):
     # consumption variable
     consumption = models.IntegerField(label=PLAYER_CONSUMP_LABEL, min=Constants.reqConsumption)
     # savings at bank variable
-    bankSavings = models.IntegerField(label=PLAYER_BANK_SAVING_LABEL)
+    bankSavings = models.IntegerField(label=PLAYER_BANK_SAVING_LABEL,min=0)
     # savings at Home variable
-    homeSavings = models.IntegerField(label=PLAYER_HOME_SAVING_LABEL)
+    homeSavings = models.IntegerField(label=PLAYER_HOME_SAVING_LABEL,min=0)
 
     # cumulative home savings till this round
     cumBankSavings = models.IntegerField()
@@ -80,14 +80,17 @@ class Player(BasePlayer):
 
     fromLoanAmount = models.IntegerField(
         label=PLAYER_LOAN_AMT_LABEL,
+        min=0
     )
 
     fromBankSavingAmt = models.IntegerField(
         label=PLAYER_FROM_BANK_AMT_LABEL,
+        min=0
     )
 
     fromHomeSavingAmt = models.IntegerField(
         label=PLAYER_FROM_HOME_AMT_LABEL,
+        min=0
     )
 
     debtChoice = models.StringField(
@@ -105,11 +108,14 @@ class Player(BasePlayer):
             choices.append(choice)
         return choices
 
+
+
+
     # if less amount in bank savings
     def fromBankSavingAmt_error_message(self, value):
         if value > self.participant.vars['bankSavings']:
-            return 'PG_DEBT_LESS_BANK_SAVE_ERROR'
+            return PG_DEBT_LESS_BANK_SAVE_ERROR
 
     def fromHomeSavingAmt_error_message(self, value):
         if value > self.participant.vars['homeSavings']:
-            return 'PG_DEBT_LESS_HOME_SAVE_ERROR'
+            return PG_DEBT_LESS_HOME_SAVE_ERROR
