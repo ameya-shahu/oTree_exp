@@ -1,5 +1,5 @@
 from os import environ
-#DEBUG=False
+DEBUG=False
 SESSION_CONFIGS = [
     dict(
         name='control_marathi',
@@ -58,6 +58,11 @@ ROOMS = [
     dict(
         name='exp_room',
         display_name='exp_room',
+    ),
+    dict(
+        name='exp',
+        display_name='exp',
+        participant_label_file='_rooms/econ101.txt'
     ),
     dict(name='live_demo', display_name='Room for live demo (no participant labels)'),
 ]

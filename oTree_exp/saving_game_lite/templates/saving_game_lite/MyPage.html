@@ -82,7 +82,7 @@
             </div>
             <div class="col">
                    <div>
-                        <p>जर आपल्याला गणनामध्ये समस्या येत असेल तर खाली दिलेल्या कॅल्क्युलेटरचा वापर करा</p>
+                        <p>जर आपल्याला गणनामध्ये (calculation) समस्या येत असेल तर खाली दिलेल्या कॅल्क्युलेटरचा वापर करा</p>
                     </div>
                 {% include "global/calculator.html" %}
             </div>
@@ -120,7 +120,7 @@
 {% block app_scripts %}
     <script>
         $(document).ready(function (){
-            $('label[for="id_EMI"]').html('कर्जाची ईएमआय रुपये {{ participant.vars.EMI }} :');
+            $('label[for="id_EMI"]').html('कर्जाची ईएमआय (EMI) रुपये {{ participant.vars.EMI }} :');
 
             $('#id_consumption').attr('oninvalid','this.setCustomValidity("आपले  खर्च 3,000 रुपयांपेक्षा कमी आहेत. तेवढा मिनिमम खर्च करणं आवश्यक आहे.")');
             $('#id_consumption').attr('oninput','this.setCustomValidity("")');
