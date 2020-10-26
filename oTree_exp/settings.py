@@ -61,7 +61,7 @@ SESSION_CONFIGS = [
         name='debug1',
         display_name='debug1',
         num_demo_participants=1,
-        app_sequence=['hybrid_hindi'],
+        app_sequence=['instruction_display_hindi'],
     ),
 ]
 
