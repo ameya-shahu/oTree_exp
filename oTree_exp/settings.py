@@ -1,5 +1,5 @@
 from os import environ
-DEBUG=False
+# DEBUG=False
 SESSION_CONFIGS = [
     # dict(
     #     name='control_marathi',
@@ -61,7 +61,7 @@ SESSION_CONFIGS = [
         name='debug1',
         display_name='debug1',
         num_demo_participants=1,
-        app_sequence=['SES_hindi'],
+        app_sequence=['hybrid_hindi'],
     ),
 ]
 
