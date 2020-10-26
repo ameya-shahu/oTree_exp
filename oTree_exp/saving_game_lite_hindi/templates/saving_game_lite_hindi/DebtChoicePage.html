@@ -1,0 +1,115 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+{% block g_styles  %}
+    <style>
+        .otree-body {
+            max-width:2000px;
+        }
+         .table-info, .table-info>td, .table-info>th {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+             font-weight: normal;
+        }
+         .card-text{
+             color: #28a745;
+             font-size: x-large;
+         }
+    </style>
+{% endblock %}
+
+{% block title %}
+    Saving and expense ( महिना क्रमांक - {{ subsession.round_number }})
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        आपातकाल (emergency) के लिए आपको {{ emergedFund }}रुपये खर्च करने होंगे। आपने कौन सा विकल्प चुना है?
+    </p>
+
+    {% formfields %}
+
+    {% if subsession.round_number != 1 %}
+                    <div class="row">
+                        <div class="col">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title"><b>अब तक की कुल बचत</b></h5>
+                                    <p class="card-text"> <b>रुपये {{ participant.vars.totalSavings }}</b></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title"><b>अब तक की कुल घरेलू बचत</b></h5>
+                                    <p class="card-text"> <b>रुपये {{ participant.vars.homeSavings }}</b></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title"><b>अब तक की कुल बैंक बचत</b></h5>
+                                    <p class="card-text"> <b>रुपये {{ participant.vars.bankSavings }}</b></p>
+                                </div>
+                            </div>
+                        </div>
+                        {% if participant.vars.totalDebt > 0 %}
+                        <div class="col">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title"><b>अब तक का कुल कर्ज</b></h5>
+                                    <p class="card-text" style="color: #c82333"> <b>रुपये {{ participant.vars.totalDebt }}</b></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {% endif %}
+                    </div>
+
+
+    {% endif %}
+
+    <br>
+    {% next_button %}
+
+{% endblock %}
+
+{#{% block app_scripts %}#}
+{#    <script>#}
+{#        const hideLoanInput = function () {#}
+{#            $('label[for="id_fromSavingAmt"]').hide();#}
+{#            $('input[name="fromSavingAmt"]').hide();#}
+{#            $('input[name="fromSavingAmt"]').prop('required',false);#}
+{##}
+{#            $('label[for="id_fromLoanAmount"]').hide();#}
+{#            $('input[name="fromLoanAmount"]').hide();#}
+{#            $('input[name="fromLoanAmount"]').prop('required',false);#}
+{#        };#}
+{#        const showLoanInput = function () {#}
+{#            $('label[for="id_fromSavingAmt"]').show();#}
+{#            $('input[name="fromSavingAmt"]').show();#}
+{#            $('input[name="fromSavingAmt"]').prop('required',true);#}
+{##}
+{#            $('label[for="id_fromLoanAmount"]').show();#}
+{#            $('input[name="fromLoanAmount"]').show();#}
+{#            $('input[name="fromLoanAmount"]').prop('required',true);#}
+{#        };#}
+{##}
+{#        // script to hide form fields depend on choices from radio button#}
+{##}
+{##}
+{#        $(document).ready(function (){#}
+{#            hideLoanInput();#}
+{#            $('input[name="debtChoice"]').on("click", function(e) {#}
+{#                    console.log('JavaScript is executing');#}
+{#                    let selected = $("input[name='debtChoice']:checked").val();#}
+{#                    console.log(selected);#}
+{#                (selected === '0') ? hideLoanInput() : showLoanInput();#}
+{#            })#}
+{#        });#}
+{##}
+{#    </script>#}
+{#{% endblock %}#}
