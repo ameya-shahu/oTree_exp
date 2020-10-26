@@ -42,7 +42,7 @@ class Player(BasePlayer):
     favactor2 = models.IntegerField(label="अपना पसंदीदा अभिनेता चुनें:", choices=[[1, "अजय देवगण"], [2, "अक्षय कुमार"]])
     favactor3 = models.IntegerField(label="अपना पसंदीदा अभिनेता चुनें:", choices=[[1, "आमिर खान"], [2, "शाहरुख खान"]])
     favactor4 = models.IntegerField(label="अपना पसंदीदा अभिनेता चुनें:", choices=[[1, "आमिर खान"], [2, "शाहरुख खान"]])
-    favactor5 = models.IntegerField(label="अपना पसंदीदा अभिनेता चुनें:", choices=[[1, "हृतिक रोशन"], [2, "शाहरुख खान"]])
+    favactor5 = models.IntegerField(label="अपना पसंदीदा अभिनेता चुनें:", choices=[[1, "सुनील शेट्टी"], [2, "शाहरुख खान"]])
     favactress1 = models.IntegerField(label="अपनी पसंदीदा अभिनेत्री को चुनें:",
                                       choices=[[1, "काजोल"], [2, "राणी मुखर्जी"]])
     favactress2 = models.IntegerField(label="अपनी पसंदीदा अभिनेत्री को चुनें:",
@@ -54,7 +54,7 @@ class Player(BasePlayer):
     favmovie2 = models.IntegerField(label="अपनी पसंदीदा फिल्म चुनें:",
                                     choices=[[1, "कभी खुशी कभी गम"], [2, "कल हो ना हो"]])
     favmovie3 = models.IntegerField(label="अपनी पसंदीदा फिल्म चुनें:",
-                                    choices=[[1, "कुछ कुछ होता है"], [2, "कुछ कुछ होता हैो"]])
+                                    choices=[[1, "कुछ कुछ होता है"], [2, "कभी खुशी कभी गम"]])
     doyoulikesongs = models.BooleanField(label="क्या आपको बॉलीवुड गाने पसंद हैं?", choices=yesNoChoice)
     favsinger1 = models.IntegerField(label="अपनी पसंदीदा महिला गायिका चुनें:",
                                      choices=[[1, "अलका याज्ञिक"], [2, "साधना सरगम"]])
@@ -62,22 +62,22 @@ class Player(BasePlayer):
                                      choices=[[1, "सुनिधी चौहान"], [2, "श्रेया घोषाल"]])
     favsinger3 = models.IntegerField(label="अपनी पसंदीदा महिला गायिका चुनें:",
                                      choices=[[1, "उदित नारायण"], [2, "कुमार सानू"]])
-    favsinger4 = models.IntegerField(label="अपना पसंदीदा गायक चुनें:", choices=[[1, "के.के."], [2, "शान"]])
-    favsinger5 = models.IntegerField(label="अपना पसंदीदा गायक चुनें:", choices=[[1, "के.के."], [2, "शान"]])
-    favsinger6 = models.IntegerField(label="अपना पसंदीदा गायक चुनें:", choices=[[1, "शान"], [2, "सोनू निगम"]])
+    favsinger4 = models.IntegerField(label="अपना पसंदीदा गायक चुनें:", choices=[[1,"लता मंगेशकर"],[2, "आशा भोंसले"]])
+    favsinger5 = models.IntegerField(label="अपना पसंदीदा गायक चुनें:", choices=[[1,"किशोर कुमार"],[2, "मोहम्मद रफी"]])
+    favsinger6 = models.IntegerField(label="अपना पसंदीदा गायक चुनें:", cchoices=[[1,"किशोर कुमार"],[2, "सुरेश वाडकर"]])
     music1990sor2000s = models.IntegerField(label="क्या आपको 1990s का संगीत या 2000s का संगीत पसंद है?",
                                             choices=[[1, "1990s"], [2, "2000s"]])
     sloworfastmusic = models.IntegerField(label="क्या आपको नृत्य गाने या धीमे गाने पसंद हैं?",
                                           choices=[[1, "नृत्य गाणे"], [2, "मंद गाणे"]])
-    doyouwatchtv = models.BooleanField(label="क्या आप टीवी धारावाहिक देखते हैं?", choices=yesNoChoice)
-    onlineorontv = models.IntegerField(label="क्या आप ऑनलाइन या टीवी पर श्रृंखला देखते हैं?",
-                                       choices=[[1, "ऑनलाइन"], [2, "टीव्हीवर"]])
+    doyouwatchtv = models.BooleanField(label="क्या आप टीवी सेरिअल्स देखते हैं?", choices=yesNoChoice)
+    onlineorontv = models.IntegerField(label="आप हिंदी सेरिअल्स देखते हैं या मराठी?",
+                                       choices=[[1, "हिंदी"], [2, "मराठी"]])
     lasttvshow = models.IntegerField(label="आपके द्वारा देखा गया नवीनतम टीवी शो क्या है?",
                                      choices=[[1, "सॅक्रेड गेम्स "],
                                               [2, "पाताल लोक"],
                                               [3, "फॅमिली मॅन"], [4,
-                                                                  "इनमे से कोई भी नहींी"]])
-    howmuchyouliked = models.IntegerField(label="आप इसे 0 से 3 तक कितना पसंद करते हैं।",
+                                                                  "इनमे से कोई भी नहीं"]])
+    howmuchyouliked = models.IntegerField(label="आप जो सेरिअल्स देखते हैं, उससे आपको कितना पसंद है उसको ०-३ में रेट कीजिये",
                                           choices=[0, 1, 2, 3])
     optimistic = models.IntegerField(label="0-3 पर, आप अपने भविष्य को लेकर कितने आशावादी हैं?",
                                      choices=[0, 1, 2, 3])

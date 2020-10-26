@@ -19,7 +19,7 @@ Your app description
 
 
 class Constants(BaseConstants):
-    name_in_url = 'SES_hindi'
+    name_in_url = "SES_hindi"
     players_per_group = None
     num_rounds = 1
 
@@ -33,30 +33,30 @@ class Group(BaseGroup):
 
 
 yesNoChoice = [
-    [True, 'होय'],
-    [False, 'नाही'],
+    [True, 'हाँ'],
+    [False, 'नही'],
 ]
 
 
 class Player(BasePlayer):
     hungerRate = models.IntegerField(
-        label='प्रयोगादरम्यान आपल्याला किती भूक लागली होती ते रेटिंग द्या (1 ते 5)',
+        label='प्रयोग के दौरान आपको कितनी भूख लगी थी उसका रेटिंग दीजिये (1 ते 5)',
         min=1,
         max=5,
     )
 
     tiredRate = models.IntegerField(
-        label='प्रयोगादरम्यान आपण किती थकलेले आहात त्याचे रेटिंग द्या (1 ते 5)',
+        label='प्रयोग के दौरान आप कितने थके हुए थे उसका रेटिंग दीजिये (1 ते 5)',
         min=1,
         max=5,
     )
 
     age = models.IntegerField(
-        label='तुमचे वय काय आहे?'
+        label='आपकी उम्र क्या हैं?'
     )
 
     gender = models.StringField(
-        label='तुमचे लिंग काय आहे?',
+        label='आपका लिंग क्या है?',
         widget=widgets.RadioSelect,
         choices=[
             ['Male', 'पुरुष'],
@@ -65,13 +65,13 @@ class Player(BasePlayer):
     )
 
     isMarried = models.BooleanField(
-        label='तुमचे लग्न झाले आहे का?',
+        label='क्या आप शादीशुदा है?',
         widget=widgets.RadioSelect,
         choices=yesNoChoice
     )
 
     religion = models.StringField(
-        label='तुमचे धर्म कोणता?',
+        label='आपका क्या धर्म है? ',
         choices=[
             ['Hinduism', 'हिंदू धर्म'],
             ['Buddhism', 'बौद्ध धर्म'],
@@ -82,7 +82,7 @@ class Player(BasePlayer):
     )
 
     language = models.StringField(
-        label='आपण घरी कोणती भाषा बोलता?',
+        label='आप घर पर कौन सी भाषा बोलते हैं?',
         choices=[
             ['Marathi', 'मराठी'],
             ['Hindi', 'हिंदी'],
@@ -93,12 +93,12 @@ class Player(BasePlayer):
     )
 
     education = models.StringField(
-        label='आपले शिक्षण स्तर काय आहे?',
+        label='आप कहा तक पढ़े है?',
         choices=[
             ['Primary (Std 1-5)', 'प्राथमिक (इयत्ता 1-5)'],
             ['Secondary (Std 8-12)', 'माध्यमिक (इयत्ता 8-12)'],
-            ['Some college', 'काही महाविद्यालय'],
-            ['College graduate and above', 'महाविद्यालयीन पदवी आणि त्यापेक्षा अधिक']
+            ['Some college', 'कुछ कॉलेज'],
+            ['College graduate and above', 'कॉलेज की डिग्री और ऊपर']
         ]
     )
 
@@ -112,59 +112,59 @@ class Player(BasePlayer):
     # )
 
     occupation = models.IntegerField(
-        label='आपण काय काम करतात?', choices=[
-            [1, "सरकारी नोकरी"],
-            [2, "स्वत: चा व्यवसाय"],
-            [3, "घरगुती व्यवसाय"],
-            [4, "कारखान्यात कामगार"],
-            [5, "रिक्षा किंवा टॅक्सी ड्रायव्हर किंवा डिलिव्हरी चे काम"],
-            [6, "मोठ्या कंपनीत नोकरी"],
-            [7, "वैद्यकीय क्षेत्र (वार्ड बोय, नर्स इ.)"],
+        label='आप क्या करते हैं?', choices=[
+            [1, "सरकारी नौकरी"],
+            [2, "अपना व्यवसाय"],
+            [3, "घर में व्यवसाय"],
+            [4, "कारखाने के कर्मचारी"],
+            [5, "रिक्शा या टैक्सी ड्राइवर या डिलीवरी का काम"],
+            [6, "एक बड़ी कंपनी में नौकरी"],
+            [7, "चिकित्सा क्षेत्र (वार्ड बॉय, नर्स आदि)"],
             [8, "शिक्षक"],
             [9, "इतर"],
-            [10, "नोकरी कधीच नव्हती"]
+            [10, "कभी नौकरी नहीं की थी"]
         ]
     )
     useofhands = models.BooleanField(
-        label="आपल्या हाताचा वापर करणं हे आपल्या व्यवसायाचा खूप मोठा भाग आहे का? (उदाहरणार्थ: फॅक्टरी कामगार, टेलर ...)",
+        label="क्या आपके हाथों का उपयोग आपके व्यवसाय का एक बड़ा हिस्सा है? (उदाहरण: कारखाना कर्मचारी, दर्जी ...)",
         widget=widgets.RadioSelect,
         choices=yesNoChoice
     )
 
     isOwnHouse = models.BooleanField(
-        label='तुमचे स्वत: चे घर आहे का?',
+        label='क्या आपका अपना घर है?',
         widget=widgets.RadioSelect,
         choices=yesNoChoice
     )
 
-    hasbankaccount = models.BooleanField(label="आपला बँक अकाउंट आहे का ?",
+    hasbankaccount = models.BooleanField(label="क्या आपके पास बैंक खाता है?",
                                          widget=widgets.RadioSelect,
                                          choices=yesNoChoice)
 
-    hasFD = models.BooleanField(label="आपला फिक्स्ड डेपोसिटस (एफ डी) आहे का ?",
+    hasFD = models.BooleanField(label="क्या आपके पास फिक्स्ड डिपॉजिट (एफ डी) हैं?",
                                 widget=widgets.RadioSelect,
                                 choices=yesNoChoice)
 
-    hasmutualfunds = models.BooleanField(label="आपला म्युच्युअल फंडस् आहे का ?",
+    hasmutualfunds = models.BooleanField(label="क्या आपके पास म्यूचुअल फंड हैं?",
                                          widget=widgets.RadioSelect,
                                          choices=yesNoChoice)
 
-    hasinsurance = models.BooleanField(label="आपल्याकडे विमा आहे का?",
+    hasinsurance = models.BooleanField(label="क्या आपका बीमा है?",
                                        widget=widgets.RadioSelect,
                                        choices=yesNoChoice)
-    gotcovid = models.BooleanField(label="आपल्याला कोवीड  झाला होता का?",
+    gotcovid = models.BooleanField(label=" क्या आपको कोरोनावायरस हुआ था?",
                                    widget=widgets.RadioSelect,
                                    choices=yesNoChoice)
     notnenoughfood = models.BooleanField(
-        label="गेल्या सहा महिन्यांत अशी वेळ आली आहे का जेव्हा तुमच्याकडे पुरेसे अन्न नव्हते?",
+        label="क्या पिछले छह महीनों में ऐसा समय आया था जब आपके पास पर्याप्त (enough) भोजन नहीं था?",
         widget=widgets.RadioSelect,
         choices=yesNoChoice)
-    howmanytimes = models.IntegerField(label="किती वेळा असे घडले?",
+    howmanytimes = models.IntegerField(label="ऐसा कितनी बार हुआ?",
                                        choices=[
                                            [1, "1-2"],
                                            [2, "3-4"],
                                            [3, "5-6"],
                                            [4, "7-8"],
-                                           [5, "8 आणि अधिक"],
-                                           [6, "कधीच असे घडले नाही"]
+                                           [5, "8 और अधिक"],
+                                           [6, "ऐसा कभी नहीं हुआ"]
                                        ])

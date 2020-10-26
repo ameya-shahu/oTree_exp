@@ -5,10 +5,10 @@
     धन्यवाद
 {% endblock %}
 
-{% block content %}
-    <p>गेम आता चालू होतो आहे. </p>
-    <p>एक मिनिट आपले विचार स्थिर करा....</p>
-    <p id="timer">पुढील पृष्ठासाठी बटण 60 सेकंदात सक्रिय (activate) होईल</p>
+% block content %}
+    <p>गेम अब चालू हो रहा है </p>
+    <p> एक मिनट के लिए अपने विचारों को स्थिर करें....</p>
+    <p id="timer">अगले पृष्ठ के लिए बटन 60 सेकंड में सक्रिय (activate) हो जाएगा</p>
     {% next_button %}
 {% endblock %}
 
@@ -30,7 +30,7 @@
                   if (timeLeft == -1) {
                     clearTimeout(timerId);
                   } else {
-                    elem.innerHTML = 'पुढील पृष्ठासाठी बटण ' + timeLeft + ' सेकंदात सक्रिय होईल.';
+                    elem.innerHTML = 'अगले पेज के लिए बटन ' + timeLeft + ' सेकंड में सक्रिय हो जाएगा';
                     timeLeft--;
                   }
                 }
@@ -38,6 +38,5 @@
             });
     </script>
 {% endblock %}
-
 
 

@@ -17,9 +17,15 @@ Your app description
 
 
 class Constants(BaseConstants):
-    name_in_url = 'incomeuncertainty_hindi'
+    name_in_url = 'hybrid_hindi'
     players_per_group = None
     num_rounds = 1
+
+
+yesNoChoice = [
+    [True, 'हाँ'],
+    [False, 'नही'],
+]
 
 
 class Subsession(BaseSubsession):
@@ -28,16 +34,6 @@ class Subsession(BaseSubsession):
 
 class Group(BaseGroup):
     pass
-
-
-yesNoChoice = [
-    [True, 'होय'],
-    [False, 'नाही'],
-]
-
-yesNoMaybeChoice = [
-    [1, "हो"], [2, "नाही"], [3, "कदाचित"]
-]
 
 
 class Player(BasePlayer):
@@ -53,13 +49,13 @@ class Player(BasePlayer):
                                           min=1,
                                           max=10,
                                           )
+    tempwork = models.BooleanField(
+        label="क्या आपके परिवार का कोई सदस्य वर्तमान में अस्थायी या अंशकालिक काम कर रहा है?",
+        choices=yesNoChoice)
     wenttoworkbeforelockdown = models.IntegerField(label="लॉकडाउन से पहले कितने लोग आपके घर में काम करने जा रहे थे?",
                                                    min=1,
                                                    max=10,
                                                    )
-    tempwork = models.BooleanField(
-        label="क्या आपके परिवार का कोई सदस्य वर्तमान में अस्थायी या अंशकालिक काम कर रहा है?",
-        choices=yesNoChoice)
     areyouemployed = models.BooleanField(label="क्या आप अभी व्यवसाय या नौकरी कर रहे हैं?",
                                          choices=yesNoChoice)
     howmanymonthsago = models.IntegerField(
@@ -70,9 +66,9 @@ class Player(BasePlayer):
             [3, "7-9"],
             [4, "9-12"],
             [5, "12+"],
-            [6, "अभी भी एक व्यवसाय या नौकरी है"],
-            [7, "कभी कोई व्यवसाय या नौकरी नहीं थी"]
-        ])
+            [6, "अभी भी व्यवसाय या नौकरी है"],
+            [7, "कभी कोई व्यवसाय या नौकरी नहीं थी"]])
+
     directlylostjob = models.IntegerField(
         label="क्या आपने अपनी नौकरी सीधे खो दी या आपको पहले आधा वेतन मिला, फिर अंत में छोड़ दिया?",
         choices=[
@@ -89,67 +85,12 @@ class Player(BasePlayer):
             [3, "कोई व्यवसाय या नौकरी नहीं हैे"],
             [4, "कभी कोई व्यवसाय या नौकरी नहीं थी"]
         ])
-    ifpartial = models.IntegerField(label="यदि आंशिक है, तो आप कितनी आय या वेतन प्राप्त कर रहे हैं?",
-                                    choices=[
-                                        [1, "आधे से ज्यादा"],
-                                        [2, "आधा"],
-                                        [3, "आधे से कम"],
-                                        [4, "पूरी आमदनी या वेतन मिलनाे"],
-                                        [5, "कोई व्यवसाय या नौकरी नहीं हैे"],
-                                        [6, "कभी कोई व्यवसाय या नौकरी नहीं थी"]
-                                    ])
-    otheremployed = models.BooleanField(
-        label="क्या परिवार के किसी अन्य सदस्य के पास वर्तमान में कोई व्यवसाय या नौकरी है?",
-        choices=yesNoChoice)
-    otherfullorpartial = models.IntegerField(
-        label="यदि हां, तो क्या उन्हें पूरी आय या वेतन या इसका कुछ हिस्सा मिलता है?",
-        choices=[
-            [1, "पूरी आमदनी या वेतन"],
-            [2, "आंशिक आय या वेतन"],
-            [3, "कोई व्यवसाय या नौकरी नहीं हैे"],
-            [4, "कभी कोई व्यवसाय या नौकरी नहीं थी"]
-        ])
-    otherifpartial = models.IntegerField(label="यदि आंशिक है, तो वे कितना प्राप्त कर रहे हैं?",
-                                         choices=[
-                                             [1, "आधे से ज्यादा"],
-                                             [2, "आधा"],
-                                             [3, "आधे से कम"],
-                                             [4, "पूरी आमदनी या वेतन मिलनाे"],
-                                             [5, "कोई व्यवसाय या नौकरी नहीं हैे"],
-                                             [6, "कभी कोई व्यवसाय या नौकरी नहीं थी"]
-                                         ])
-    incomebeforelockdown = models.IntegerField(label="लॉकडाउनअधी कुटुंबातील एकूण उत्पन्न किती होते?", choices=[
-        [1, "5000 या कम"],
-        [2, "5000 - 7500"],
-        [3, "7500 - 10,000"],
-        [4, "10,000 - 12,500"],
-        [5, "12,500 - 15,000"],
-        [6, "15,000 - 20,000"],
-        [7, "20,000 - 25,000"],
-        [8, "25,000 या ज्यादा"]
-    ])
-    incometoday = models.IntegerField(label="आज पारिवारिक आय क्या है?", choices=[
-        [1, "5000 या कम"],
-        [2, "5000 - 7500"],
-        [3, "7500 - 10,000"],
-        [4, "10,000 - 12,500"],
-        [5, "12,500 - 15,000"],
-        [6, "15,000 - 20,000"],
-        [7, "20,000 - 25,000"],
-        [8, "25,000 या ज्यादा"]
-    ])
     jobsecureorfinding = models.IntegerField(
         label="क्या आपको लगता है कि आपकी नौकरी सुरक्षित है या आपको अगले तीन महीनों में नौकरी मिल जाएगी?",
-        choices=yesNoMaybeChoice)
+        choices=yesNoChoice)
     lesssalary = models.IntegerField(
         label="क्या आपको लगता है कि अगर आपको नौकरी मिलती है, तो अगले तीन महीनों में आपको मिलने वाला वेतन पहले से कम हो जाएगा?",
-        choices=yesNoMaybeChoice)
-    otherjobssecureorfinding = models.IntegerField(
-        label="क्या आपको लगता है कि आपके परिवार के सदस्य का व्यवसाय या नौकरी सुरक्षित है या उन्हें अगले तीन महीनों में व्यवसाय या नौकरी मिल जाएगी?",
-        choices=yesNoMaybeChoice)
-    otherlesssalary = models.IntegerField(
-        label="क्या आपको लगता है कि अगले तीन महीनों में उन्हें अपनी आय या वेतन से कम वेतन मिलेगा?",
-        choices=yesNoMaybeChoice)
+        choices=yesNoChoice)
     losejob3months = models.IntegerField(
         label="यदि आप तीन महीने में एक व्यवसाय या नौकरी खो देते हैं, या अगले तीन महीनों में व्यवसाय या नौकरी नहीं पाते हैं, तो आप अपने परिवार का समर्थन कैसे करेंगे?",
         choices=[
@@ -159,6 +100,34 @@ class Player(BasePlayer):
             [4, "मैं घर में कुछ बेचूंगा (सोना, चांदी ..)"],
             [5, "मैं अपने गाँव लौट जाऊंगा"],
         ])
+
+    current_conditions = models.BooleanField(
+        label="यदि वर्तमान स्थिति इस तरह जारी रहे, तो क्या आपको लगता है कि आप किराने का सामान, बिजली और मोबाइल के लिए पैसे देना जारी रख सकते हैं?",
+        choices=yesNoChoice)
+    howmuchpercentsavingsspent = models.IntegerField(
+        label="लॉकडाउन के दौरान आपके द्वारा बचाए गए धन का कितना प्रतिशत खर्च किया गया था?",
+        choices=[
+            [1, "0-25%"],
+            [2, "26-50%"],
+            [3, "51-75%"],
+            [4, "76-85%"],
+            [5, "85-95%"],
+            [6, "95-100%"]
+        ])
+    howmuchleftsavings = models.IntegerField(label="अब आपके पास (रुपयों में) कितनी बचत है?", choices=[
+        [1, "200-500"],
+        [2, "501-1000"],
+        [3, "1001-1500"],
+        [4, "1501-2000"],
+        [5, "2001-2500"],
+        [6, "2501-5000"],
+        [7, "5001-8000"],
+        [8, "8001-10000"],
+        [9, "10001 आणि अधिक"]
+    ])
+    doyouthinkthatisenough = models.BooleanField(
+        label="यदि लॉकडाउन लंबे समय तक रहता है, तो क्या आपको लगता है कि उतनी बचत बस है?",
+        choices=yesNoChoice)
     otherskill = models.IntegerField(label="क्या आपके पास एक अलग नौकरी खोजने के लिए एक और कौशल है?",
                                      choices=yesNoChoice)
     whatotherjob = models.IntegerField(label="आप किस और नौकरी की तलाश करेंगे?",
@@ -180,14 +149,59 @@ class Player(BasePlayer):
     standardofliving = models.BooleanField(
         label="आपल्याला असे वाटते की एक विशिष्ट जीवनमान टिकवून ठेवण्यासाठी तो पगार समाधानकारक असेल?",
         choices=yesNoChoice)
-    twojobs = models.IntegerField(
-        label="क्या आपको लगता है कि जीवनयापन करने के लिए आपको दो काम करने होंगे?", choices=yesNoChoice)
-    competitiontofind = models.BooleanField(
-        label="क्या आपको लगता है कि दो नौकरियों को खोजने के लिए हमारे बीच बहुत प्रतिस्पर्धा है?",
-        choices=yesNoChoice)
-    physicallywell = models.BooleanField(label="क्या आपको लगता है कि आप दो नौकरियों के लिए शारीरिक रूप से फिट हैं?",
-                                         choices=yesNoChoice)
-    covidhealth = models.BooleanField(
-        label="क्या आप चिंतित हैं कि यदि आप कॉड प्राप्त करते हैं, तो यह आपके दीर्घकालिक स्वास्थ्य को प्रभावित करेगा और स्थायी रूप से काम करने की आपकी शारीरिक क्षमता को प्रभावित करेगा?",
-        choices=yesNoChoice)
-    optimistic = models.IntegerField(label="0-3 पर, आप अपने भविष्य को लेकर कितने आशावादी हैं?", choices=[0, 1, 2, 3])
+    celebratediwali = models.BooleanField(label="क्या आपको लगता है कि आप इस साल दिवाली, ईद या क्रिसमस मनाएंगे?",
+                                          choices=yesNoChoice)
+    howmuchcanyouspend = models.IntegerField(label="आपको क्या लगता है कि आप कितना खर्च कर सकते हैं?", choices=[
+        [1, "200-500"],
+        [2, "501-1000"],
+        [3, "1001-1500"],
+        [4, "1501-2000"],
+        [5, "2001-2500"],
+        [6, "2501-5000"],
+        [7, "5001-8000"],
+        [8, "8001-10000"],
+        [9, "10001 आणि अधिक"]
+    ])
+    emergency10000rupees = models.IntegerField(
+        label="यदि आपको तत्काल 10,000 रुपये की आवश्यकता है, उदाहरण के लिए अस्पताल में भर्ती के लिए, तो आप इसे कहां पा सकते हैं",
+        choices=[
+            [1, "मेरे पास है"],
+            [2, "परिवार से पूछ के"],
+            [3, "पड़ोसियों या रिश्तेदारों से पूछ के"],
+            [4, "ऋणदाता से"],
+            [5, "नहीं मिलेगा"],
+        ])
+    emergency50000rupees = models.IntegerField(
+        label="यदि आपको तत्काल 50,000 रुपये की आवश्यकता है, उदाहरण के लिए अस्पताल में कई दिन बिताने के लिए, तो आपको यह कहां मिलेगा?",
+        choices=[
+            [1, "मेरे पास है"],
+            [2, "परिवार से पूछ के"],
+            [3, "पड़ोसियों या रिश्तेदारों से पूछ के"],
+            [4, "ऋणदाता से"],
+            [5, "नहीं मिलेगा"],
+        ])
+    emergency100000rupees = models.IntegerField(
+        label="यदि आपको तत्काल 1,00,000 रुपये की आवश्यकता है, उदाहरण के लिए, यदि आपके पास दुर्घटना के बाद सर्जरी होनी है, तो आप इसे कहाँ प्राप्त करेंगे?",
+        choices=[
+            [1, "मेरे पास है"],
+            [2, "परिवार से पूछ के"],
+            [3, "पड़ोसियों या रिश्तेदारों से पूछ के"],
+            [4, "ऋणदाता से"],
+            [5, "नहीं मिलेगा"],
+        ])
+
+    emergency500000rupees = models.IntegerField(
+        label="यदि आपको तत्काल 5,00,000 रुपये की आवश्यकता है, उदाहरण के लिए, यदि आपको किसी दुर्घटना के बाद बहुत गंभीर सर्जरी से गुजरना पड़ता है, तो आप इसे कहां पाएंगे?",
+        choices=[
+            [1, "मेरे पास है"],
+            [2, "परिवार से पूछ के"],
+            [3, "पड़ोसियों या रिश्तेदारों से पूछ के"],
+            [4, "ऋणदाता से"],
+            [5, "नहीं मिलेगा"],
+        ])
+    optimistic = models.IntegerField(label="0-3 में रेट करें कि आप अपने भविष्य को लेकर कितने आशावादी हैं", choices=[
+        [1, "0"],
+        [2, "1"],
+        [3, "2"],
+        [4, "3"]
+    ])

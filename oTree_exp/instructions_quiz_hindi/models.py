@@ -31,17 +31,17 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    instructionquestion1 = models.IntegerField(label="खेळ किती फेऱयांचा आहे?", choices=[[1, "10"],
+    instructionquestion1 = models.IntegerField(label="खेल कितने राउंड का है?", choices=[[1, "10"],
                                                                                         [2, "15"],
                                                                                         [3, "16"],
                                                                                         [4, "20"]])
-    instructionquestion2 = models.IntegerField(label="तुम्हाला प्रत्येक फेरीत किती पैसे मिळतील?",
+    instructionquestion2 = models.IntegerField(label="प्रत्येक राउंड में आपको कितना पैसा मिलेगा?",
                                                widget=widgets.RadioSelect,
                                                choices=[[1, "5000"], [2, "10000"],
                                                         [3, "15000"], [4, "25000"]])
-    instructionquestion3 = models.IntegerField(label="आपण खर्चासाठी पैसे कसे देऊ शकता?",
+    instructionquestion3 = models.IntegerField(label="आप खर्चों का भुगतान कैसे कर सकते हैं?",
                                                widget=widgets.RadioSelect,
-                                               choices=[[1, "बचत"], [2, "कर्ज"], [3, "दोन्ही"], [4, "दोन्हीही नाही"]])
+                                               choices=[[1, "बचत"], [2, "कर्ज"], [3, "दोनों"], [4, "दोनों भी नहीं"]])
     instructionquestion4 = models.IntegerField(
         label="आदर्श हप्तापेक्षा तुम्हाला किती वेळा कमी पैसे देण्याची परवानगी आहे?",
         choices=[1, 2, 3, 4])
@@ -59,8 +59,8 @@ class Player(BasePlayer):
     instructionquestion8 = models.IntegerField(label="खूप कर्ज असेल आणि परतफेड करण्याचा कालावधी संपल्यावर काय होईल?",
                                                widget=widgets.RadioSelect,
                                                choices=[[1, "काहीही होणार नाही"], [2, "कर्ज गोठेल"]])
-    instructionquestion9 = models.IntegerField(label="आपल्या देयकाची गणना कशी केली जाते?",
+    instructionquestion9 = models.IntegerField(label="आपके भुगतान की गणना कैसे की जाती है?",
                                                widget=widgets.RadioSelect,
-                                               choices=[[1, "एकूण बचत"],
-                                                        [2, "एकूण कर्ज बाकी"],
-                                                        [3, "एकूण बचत वजा एकूण कर्ज बाकी"]])
+                                               choices=[[1, "कुल बचत"],
+                                                        [2, "कुल बकाया कर्ज"],
+                                                        [3, "कुल बचत ऋण कुल कर्ज"]])

@@ -18,7 +18,7 @@ Your app description
 
 
 class Constants(BaseConstants):
-    name_in_url = 'hybrid_marathi'
+    name_in_url = 'hybrid_hindi'
     players_per_group = None
     num_rounds = 1
 

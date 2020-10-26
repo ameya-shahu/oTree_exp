@@ -101,8 +101,8 @@ class onlineorontv(SurveyFormBase):
     form_fields = ['onlineorontv']
 
 
-class lasttvshow(SurveyFormBase):
-    form_fields = ['lasttvshow']
+# class lasttvshow(SurveyFormBase):
+#     form_fields = ['lasttvshow']
 
 
 class howmuchyouliked(SurveyFormBase):
@@ -124,7 +124,7 @@ page_sequence = [doyouwatchbollywood,
                  sloworfastmusic,
                  doyouwatchtv,
                  onlineorontv,
-                 lasttvshow,
+                 # lasttvshow,
                  howmuchyouliked,
                  optimistic
                  ]

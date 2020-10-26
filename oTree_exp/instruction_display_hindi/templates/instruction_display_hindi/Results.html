@@ -1,0 +1,58 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block g_styles %}
+    <style>
+    #main{
+        font-size: xx-large;
+        font-weight: bold;
+    }
+    </style>
+{% endblock %}
+
+
+{% block content %}
+        <p>
+            यह संभव है कि आपको खेल में कुछ समय अप्रत्याशित खर्च मिलेगा। वहाँ आपको ऋण के लिए दो विकल्प मिलेंगे। इन्हे कृपया ध्यानपूर्वक पढ़े।
+            <br>
+           खेल के अंत में, आपकी कुल बचत (ऋण कर्ज) आपका इनाम है।
+           अध्ययन के अंत में, 10 लोगों को पुरस्कार के लिए यादृच्छिक रूप से (randomly) चुना जाएगा।
+        </p>
+
+
+    <p id="timer">अगले पृष्ठ के लिए बटन 60 सेकंड में सक्रिय (activate) हो जाएगा</p>
+
+
+    {% next_button %}
+
+{% endblock %}
+
+
+{% block g_scripts %}
+    <script>
+    $(document).ready(function (){
+            $('.otree-btn-next.btn.btn-primary').prop('disabled', true);
+
+            setTimeout(function() {
+            $(".otree-btn-next.btn.btn-primary").prop('disabled',false);
+            }, 60000);
+
+            var timeLeft = 60;
+            var elem = document.getElementById('timer');;
+
+            var timerId = setInterval(countdown, 1000);
+
+                function countdown() {
+                  if (timeLeft == -1) {
+                    clearTimeout(timerId);
+                  } else {
+                    elem.innerHTML = 'अगले पृष्ठ के लिए बटन ' + timeLeft + 'सेकंड में सक्रिय (activate) हो जाएगा';
+                    timeLeft--;
+                  }
+                }
+
+            });
+    </script>
+{% endblock %}
+
+
