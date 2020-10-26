@@ -37,7 +37,7 @@ class Howmanymonthsago(SurveyFormBase):
 
 
 class Directlylostjob(SurveyFormBase):
-    form_fields = ['Directlylostjob']
+    form_fields = ['directlylostjob']
 
 
 class Fullorpartial(SurveyFormBase):

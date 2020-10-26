@@ -52,16 +52,16 @@ SESSION_CONFIGS = [
     ),
     dict(
         name='control_hindi',
-        display_name='experiment with control - hindii',
+        display_name='experiment with control - hindi',
         num_demo_participants=1,
         app_sequence=['welcome_screen', 'depression_scale_hindi', 'instruction_display_hindi','instructions_quiz_hindi',
                       'control_hindi', 'saving_game_lite', 'SES_hindi'],
     ),
     dict(
-        name='expend',
-        display_name='expend',
-        num_demo_participants=20,
-        app_sequence=['saving_game_lite'],
+        name='debug1',
+        display_name='debug1',
+        num_demo_participants=1,
+        app_sequence=['SES_hindi'],
     ),
 ]
 

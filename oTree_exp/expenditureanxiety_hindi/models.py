@@ -40,11 +40,11 @@ yesNoChoice = [
 
 class Player(BasePlayer):
     howmanypeople = models.IntegerField(label="आपके परिवार में कितने लोग हैं?",
-                                        min=1,
+                                        min=0,
                                         max=10,
                                         )
     howmanydependent = models.IntegerField(label="आर्थिक रूप से कितने निर्भर (बच्चों सहित)?",
-                                           min=1,
+                                           min=0,
                                            max=10,
                                            )
     areyouemployed = models.BooleanField(label="क्या आप अभी व्यवसाय या नौकरी कर रहे हैं?",
@@ -75,7 +75,7 @@ class Player(BasePlayer):
         [4, "1501-2000"],
         [5, "2001 और अधिक"]
     ])
-    groceries_gonedown = models.BooleanField(label="लॉकडाउन से पहले आप जितने िराने का सामान खरीद सकते हैं, क्या आप उतने ही लॉकडाउन के बाद भी खरीद सकते हैं?",
+    groceries_gonedown = models.BooleanField(label="लॉकडाउन से पहले आप जितने किराने का सामान खरीद सकते हैं, क्या आप उतने ही लॉकडाउन के बाद भी खरीद सकते हैं?",
                                              choices=yesNoChoice)
 
     electricity_monthly = models.IntegerField(label="आप प्रति माह बिजली पर कितना खर्च करते हैं?", choices=[
@@ -87,7 +87,7 @@ class Player(BasePlayer):
     [6, "2501-5000"],
     [7, "5001 और अधिक"]])
 
-    electricity_goneup = models.BooleanField(label="क्या पिछले तीन महीनों में बिजली का बिल बढ़ी है?", choices=yesNoChoice)
+    electricity_goneup = models.BooleanField(label="क्या पिछले तीन महीनों में बिजली का बिल बढ़ा है?", choices=yesNoChoice)
     mobile_monthly = models.IntegerField(label="आप हर महीने मोबाइल पर कितना खर्च करते हैं?", choices=[
     [1, "200-500"],
     [2, "501-1000"],
@@ -106,7 +106,7 @@ class Player(BasePlayer):
     [4, "अन्य"],
     [5, "अप्रत्याशित खर्चा नहीं हुआ"]
 ])
-    savingsbeforelockdown = models.IntegerField(label="लॉकडाउन से पहले आप प्रति माह कितना बचत करना चाहते हैं?", choices=[
+    savingsbeforelockdown = models.IntegerField(label="लॉकडाउन से पहले आप प्रति माह कितनी बचत करते थे?", choices=[
     [1, "200-500"],
     [2, "501-1000"],
     [3, "1001-1500"],
@@ -117,7 +117,7 @@ class Player(BasePlayer):
     [8, "8001-10000"],
     [9, "10001 और अधिक"]
 ])
-    howmuchpercentsavingsspent = models.IntegerField(label="लॉकडाउन के दौरान आपके द्वारा बचाए गए धन का कितना प्रतिशत खर्च किया गया था?",
+    howmuchpercentsavingsspent = models.IntegerField(label="लॉकडाउन के दौरान आपके द्वारा बचाए गए धन का कितना प्रतिशत खर्च किया गया?",
                                                  choices=[
                                                      [1, "0-25%"],
                                                      [2, "26-50%"],
@@ -161,12 +161,12 @@ class Player(BasePlayer):
     [9, "10001 आणि अधिक"]
 ])
     enoughfoodfortwomeals = models.BooleanField(
-    label="क्या अभी घर में सभी के लिए दो वक्त के भोजन के लिए भोजन है?", choices=yesNoChoice)
+    label="क्या अभी घर में सभी के लिए दो वक्त के लिए भोजन है?", choices=yesNoChoice)
     howlongcanyouensurefood = models.BooleanField(
-    label="यदि लॉकडाउन लंबे समय तक रहता है, तो क्या आपको लगता है कि आपके परिवार को एक दिन में 2 भोजन मिलते रहेंगे?",
+    label="यदि लॉकडाउन लंबे समय तक रहता है, तो क्या आपको लगता है कि आपके परिवार को एक दिन में दो भोजन मिलते रहेंगे?",
     choices=yesNoChoice)
     emergency1000rupees = models.IntegerField(
-    label="यदि आपको तत्काल 1000 रुपये की आवश्यकता है, उदाहरण के लिए डॉक्टर की यात्रा के लिए, तो आप इसे कहां पा सकते हैं?",
+    label="यदि आपको तत्काल 1000 रुपये की आवश्यकता है, उदाहरण के लिए डॉक्टर के पास जाने के लिए, तो आप इसे कहां पा सकते हैं?",
     choices=[
         [1, "मेरे पास है"],
         [2, "परिवार से पूछ के"],
@@ -175,7 +175,7 @@ class Player(BasePlayer):
         [5, "नहीं मिलेगा"],
     ])
     emergency10000rupees = models.IntegerField(
-    label="यदि आपको तत्काल 10,000 रुपये की आवश्यकता है, उदाहरण के लिए अस्पताल में भर्ती के लिए, तो आप इसे कहां पा सकते हैं",
+    label="यदि आपको तत्काल 10,000 रुपये की आवश्यकता है, उदाहरण के लिए अस्पताल में भर्ती के लिए, तो आप इसे कहां पा सकते हैं?",
     choices=[
             [1, "मेरे पास है"],
             [2, "परिवार से पूछ के"],
@@ -193,7 +193,7 @@ class Player(BasePlayer):
             [5, "नहीं मिलेगा"],
     ])
     emergency100000rupees = models.IntegerField(
-    label="यदि आपको तत्काल 1,00,000 रुपये की आवश्यकता है, उदाहरण के लिए, यदि आपके पास दुर्घटना के बाद सर्जरी होनी है, तो आप इसे कहाँ प्राप्त करेंगे?",
+    label="यदि आपको तत्काल 1,00,000 रुपये की आवश्यकता है, उदाहरण के लिए, यदि आपकी दुर्घटना के बाद सर्जरी होनी है, तो आप इसे कहाँ प्राप्त करेंगे?",
     choices=[
             [1, "मेरे पास है"],
             [2, "परिवार से पूछ के"],
