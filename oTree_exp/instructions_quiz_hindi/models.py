@@ -63,4 +63,4 @@ class Player(BasePlayer):
                                                widget=widgets.RadioSelect,
                                                choices=[[1, "कुल बचत"],
                                                         [2, "कुल बकाया कर्ज"],
-                                                        [3, "कुल बचत ऋण कुल कर्ज"]])
+                                                        [3, "कुल बचत से घटाए गए कुल ऋण के बाद शेष राशि"]])

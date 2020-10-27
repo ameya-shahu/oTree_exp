@@ -24,56 +24,70 @@
 
 {% block content %}
 
-    <p>
-        आपातकाल (emergency) के लिए आपको {{ emergedFund }}रुपये खर्च करने होंगे। आपने कौन सा विकल्प चुना है?
-    </p>
 
-    {% formfields %}
+    <div class="row mb-4">
 
-    {% if subsession.round_number != 1 %}
-                    <div class="row">
-                        <div class="col">
-                            <div class="card text-center">
-                                <div class="card-body">
-                                    <h5 class="card-title"><b>अब तक की कुल बचत</b></h5>
-                                    <p class="card-text"> <b>रुपये {{ participant.vars.totalSavings }}</b></p>
+        <div class="col">
+             <p>
+                आपातकाल (emergency) के लिए आपको {{ emergedFund }}रुपये खर्च करने होंगे। आपने कौन सा विकल्प चुना है?
+            </p>
+            {% formfields %}
+            {% if subsession.round_number != 1 %}
+                        <div class="row">
+                            <div class="col">
+                                <div class="card text-center">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><b>अब तक की कुल बचत</b></h5>
+                                        <p class="card-text"> <b>रुपये {{ participant.vars.totalSavings }}</b></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="card text-center">
-                                <div class="card-body">
-                                    <h5 class="card-title"><b>अब तक की कुल घरेलू बचत</b></h5>
-                                    <p class="card-text"> <b>रुपये {{ participant.vars.homeSavings }}</b></p>
+                            <div class="col">
+                                <div class="card text-center">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><b>अब तक की कुल घरेलू बचत</b></h5>
+                                        <p class="card-text"> <b>रुपये {{ participant.vars.homeSavings }}</b></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="card text-center">
-                                <div class="card-body">
-                                    <h5 class="card-title"><b>अब तक की कुल बैंक बचत</b></h5>
-                                    <p class="card-text"> <b>रुपये {{ participant.vars.bankSavings }}</b></p>
+                            <div class="col">
+                                <div class="card text-center">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><b>अब तक की कुल बैंक बचत</b></h5>
+                                        <p class="card-text"> <b>रुपये {{ participant.vars.bankSavings }}</b></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        {% if participant.vars.totalDebt > 0 %}
-                        <div class="col">
-                            <div class="card text-center">
-                                <div class="card-body">
-                                    <h5 class="card-title"><b>अब तक का कुल कर्ज</b></h5>
-                                    <p class="card-text" style="color: #c82333"> <b>रुपये {{ participant.vars.totalDebt }}</b></p>
+                            {% if participant.vars.totalDebt > 0 %}
+                            <div class="col">
+                                <div class="card text-center">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><b>अब तक का कुल कर्ज</b></h5>
+                                        <p class="card-text" style="color: #c82333"> <b>रुपये {{ participant.vars.totalDebt }}</b></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        {% endif %}
+                            {% endif %}
+                        </div>
+            {% endif %}
+            <br>
+            {% next_button %}
+        </div>
+        <div class="col">
+                   <div>
+                        <p>यदि आपको गणना में (calculation) कठिनाई हो रही है, तो नीचे दिए गए कैलकुलेटर का उपयोग करें</p>
                     </div>
+                {% include "global/calculator.html" %}
+        </div>
 
 
-    {% endif %}
+    </div>
 
-    <br>
-    {% next_button %}
+
+
+
+
 
 {% endblock %}
 
