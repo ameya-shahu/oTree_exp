@@ -103,7 +103,7 @@ class Player(BasePlayer):
         choices = []
         for i, opt in enumerate(debtOpt):
             choice = [i,
-                      PLAYER_DEBTCHOICE_S[1].format(opt["interest"], "मासिक (monthly)" if opt["type"] == "M" else "वार्षिक (yearly)",
+                      PLAYER_DEBTCHOICE_S[1].format(opt["interest"], "मासिक (monthly)" if opt["type"] == "M" else "सालाना (yearly)",
                                                     opt["rounds"])]
             choices.append(choice)
         return choices
