@@ -137,16 +137,16 @@ class Player(BasePlayer):
         [7, "20,000 - 25,000"],
         [8, "25,000 या ज्यादा"]
     ])
-    jobsecureorfinding = models.IntegerField(
+    jobsecureorfinding = models.BooleanField(
         label="क्या आपको लगता है कि आपकी नौकरी सुरक्षित है या आपको अगले तीन महीनों में नौकरी मिल जाएगी?",
         choices=yesNoChoice)
-    lesssalary = models.IntegerField(
+    lesssalary = models.BooleanField(
         label="क्या आपको लगता है कि अगर आपको नौकरी मिलती है, तो अगले तीन महीनों में आपको मिलने वाला वेतन पहले से कम हो जाएगा?",
         choices=yesNoChoice)
-    otherjobssecureorfinding = models.IntegerField(
+    otherjobssecureorfinding = models.BooleanField(
         label="क्या आपको लगता है कि आपके परिवार के सदस्य का व्यवसाय या नौकरी सुरक्षित है या उन्हें अगले तीन महीनों में व्यवसाय या नौकरी मिल जाएगी?",
         choices=yesNoChoice)
-    otherlesssalary = models.IntegerField(
+    otherlesssalary = models.BooleanField(
         label="क्या आपको लगता है कि अगले तीन महीनों में उन्हें अपनी आय या वेतन से कम वेतन मिलेगा?",
         choices=yesNoChoice)
     losejob3months = models.IntegerField(
