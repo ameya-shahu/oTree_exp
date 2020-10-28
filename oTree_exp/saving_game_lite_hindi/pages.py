@@ -69,8 +69,8 @@ class MyPage(Page):
         self.player.cumHomeSavings = self.participant.vars['homeSavings']
         self.player.cumBankSavings = self.participant.vars['bankSavings']
 
-        #print('home Svings - ', self.participant.vars['homeSavings'])
-        #print('bank Svings - ', self.participant.vars['bankSavings'])
+        # print('home Svings - ', self.participant.vars['homeSavings'])
+        # print('bank Svings - ', self.participant.vars['bankSavings'])
 
         if 'EMI' in self.fieldList:
             self.participant.vars['totalDebt'] -= self.player.EMI
@@ -78,14 +78,16 @@ class MyPage(Page):
             self.player.totalDebt = self.participant.vars['totalDebt']
 
 
-
 class DebtChoicePage(Page):
     form_model = "player"
     form_fields = ['debtChoice', 'fromHomeSavingAmt', 'fromBankSavingAmt', 'fromLoanAmount']
+    #form_fields = ['debtChoice', 'fromHomeSavingAmt', 'fromBankSavingAmt',]
 
     def vars_for_template(self):
         return {
             'emergedFund': Constants.emergedFund[self.round_number],
+            'fromHomeSavingLabel': PLAYER_FROM_HOME_AMT_LABEL.format(self.participant.vars['homeSavings']),
+            'fromBankSavingLabel': PLAYER_FROM_BANK_AMT_LABEL.format(self.participant.vars['bankSavings']),
         }
 
     def is_displayed(self):
@@ -117,7 +119,8 @@ class DebtChoicePage(Page):
                 self.participant.vars['loanRemainRound'] = debtDetails['rounds']
                 self.player.totalDebt = totalAmount
 
-                self.participant.vars['totalSavings'] -= (int(self.player.fromBankSavingAmt) + int(self.player.fromHomeSavingAmt))
+                self.participant.vars['totalSavings'] -= (
+                            int(self.player.fromBankSavingAmt) + int(self.player.fromHomeSavingAmt))
                 self.participant.vars['homeSavings'] -= int(self.player.fromHomeSavingAmt)
                 self.participant.vars['bankSavings'] -= int(self.player.fromBankSavingAmt)
 
@@ -125,6 +128,9 @@ class DebtChoicePage(Page):
                 self.player.cumBankSavings = self.participant.vars['bankSavings']
 
 
+class DebtResult(Page):
+    def is_displayed(self):
+        return True if self.round_number in Constants.debtRound else False
 
 
 class Results(Page):
@@ -138,4 +144,4 @@ class Results(Page):
             )
 
 
-page_sequence = [MyPage, DebtChoicePage, Results]
+page_sequence = [MyPage, DebtChoicePage, DebtResult, Results]

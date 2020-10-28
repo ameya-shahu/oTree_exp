@@ -19,7 +19,7 @@
 {% endblock %}
 
 {% block title %}
-    Saving and expense ( महिना क्रमांक - {{ subsession.round_number }})
+    <b>( महिना क्रमांक - {{ subsession.round_number }})</b>
 {% endblock %}
 
 {% block content %}
@@ -31,17 +31,28 @@
              <p>
                 आपातकाल (emergency) के लिए आपको {{ emergedFund }}रुपये खर्च करने होंगे। आपने कौन सा विकल्प चुना है?
             </p>
-            {% formfields %}
+            {% formfield player.debtChoice %}
+            {% formfield player.fromHomeSavingAmt label=fromHomeSavingLabel %}
+            {% formfield player.fromBankSavingAmt label=fromBankSavingLabel %}
+            {% formfield player.fromLoanAmount%}
+
+            <div class="alert alert-warning" role="alert">
+                <p> घर से निकाली गई राशि + बैंक से निकाली गई राशि +  उधार राशि  = 54,000 रुपये होनी चाहिए।</p>
+            </div>
+
+
+
+
             {% if subsession.round_number != 1 %}
                         <div class="row">
-                            <div class="col">
-                                <div class="card text-center">
-                                    <div class="card-body">
-                                        <h5 class="card-title"><b>अब तक की कुल बचत</b></h5>
-                                        <p class="card-text"> <b>रुपये {{ participant.vars.totalSavings }}</b></p>
-                                    </div>
-                                </div>
-                            </div>
+{#                            <div class="col">#}
+{#                                <div class="card text-center">#}
+{#                                    <div class="card-body">#}
+{#                                        <h5 class="card-title"><b>अब तक की कुल बचत</b></h5>#}
+{#                                        <p class="card-text"> <b>रुपये {{ participant.vars.totalSavings }}</b></p>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
                             <div class="col">
                                 <div class="card text-center">
                                     <div class="card-body">

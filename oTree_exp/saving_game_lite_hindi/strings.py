@@ -19,8 +19,8 @@ PLAYER_DEBTCHOICE_S = [
 ]
 
 PLAYER_DEBTCHOICE_LABEL = 'आपने अपने खर्चों को कवर करने के लिए कौन सा विकल्प चुना है?'
-PLAYER_FROM_BANK_AMT_LABEL = 'बैंक की बचत से आप कितना पैसा निकालेंगे?'
-PLAYER_FROM_HOME_AMT_LABEL = 'आप अपने घर की बचत में से कितना पैसा निकालेंगे?'
+PLAYER_FROM_BANK_AMT_LABEL = 'बैंक की बचत से आप कितना पैसा निकालेंगे?(बैंक में बचत रु {})'
+PLAYER_FROM_HOME_AMT_LABEL = 'आप अपने घर की बचत में से कितना पैसा निकालेंगे?(घर में बचत रु {})'
 PLAYER_LOAN_AMT_LABEL = 'कितना उधार लेंगे?'
 
 PG_DEBTCHOICE_TITLE_QUE = 'आपातकाल के लिए आपको %s रुपये खर्च करने होंगे। आपने कौन सा विकल्प चुना है?'
