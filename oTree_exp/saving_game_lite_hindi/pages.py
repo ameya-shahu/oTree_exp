@@ -33,7 +33,7 @@ class MyPage(Page):
 
     def get_form_fields(self):
         if self.participant.vars['loanRemainRound'] > 0:  # if loan is there append EMI field
-            self.fieldList.insert(0,'EMI')
+            self.fieldList.insert(0, 'EMI')
 
         return self.fieldList
 
@@ -41,6 +41,7 @@ class MyPage(Page):
         # pass question depend on the round number
         return {
             'roundSalary': Constants.salaryFund[self.round_number],
+            'remainAmt': 10000 - self.participant.vars['EMI'],
         }
 
     def error_message(self, values):
@@ -81,7 +82,8 @@ class MyPage(Page):
 class DebtChoicePage(Page):
     form_model = "player"
     form_fields = ['debtChoice', 'fromHomeSavingAmt', 'fromBankSavingAmt', 'fromLoanAmount']
-    #form_fields = ['debtChoice', 'fromHomeSavingAmt', 'fromBankSavingAmt',]
+
+    # form_fields = ['debtChoice', 'fromHomeSavingAmt', 'fromBankSavingAmt',]
 
     def vars_for_template(self):
         return {
@@ -120,7 +122,7 @@ class DebtChoicePage(Page):
                 self.player.totalDebt = totalAmount
 
                 self.participant.vars['totalSavings'] -= (
-                            int(self.player.fromBankSavingAmt) + int(self.player.fromHomeSavingAmt))
+                        int(self.player.fromBankSavingAmt) + int(self.player.fromHomeSavingAmt))
                 self.participant.vars['homeSavings'] -= int(self.player.fromHomeSavingAmt)
                 self.participant.vars['bankSavings'] -= int(self.player.fromBankSavingAmt)
 

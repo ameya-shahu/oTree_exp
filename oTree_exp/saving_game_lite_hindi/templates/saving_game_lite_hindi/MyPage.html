@@ -34,18 +34,27 @@
                     आपको {{ roundSalary }} मिले है, आप कितना खर्च करोगे और कितना बचत करोगे?
                 </p>
 
-                {% formfields %}
                 <div class="alert alert-warning" role="alert">
 
 
                     {% if participant.vars.totalDebt == 0 %}
                         <p> खर्चा + घर पर बचत + बैंक पर बचत = 10,000 रुपये होनी चाहिए।</p>
                      {% else %}
-                        <p> खर्चा + घर पर बचत + बैंक पर बचत + उधार का ईएमआई = 10,000 रुपये होनी चाहिए।</p>
+                        <p>
+                            <ul>
+                                <li><p>ईएमआई निश्चित (fixed) राशि है। आपको इसका भुगतान अवश्य करना होगा।</p></li>
+                                <li><p>ईएमआई(रुपये {{ participant.vars.EMI }}) भुगतान करने के बाद आपके पास 10000 - {{ participant.vars.EMI }} = {{ remainAmt }} रुपये की राशि होगी।</p></li>
+                                <li><p>खर्चा + घर पर बचत + बैंक पर बचत = {{ remainAmt }} रुपये होनी चाहिए।</p></li>
+                            </ul>
+                        </p>
                     {% endif %}
 
 
                 </div>
+
+
+                {% formfields %}
+
 
                 {% next_button %}
                 {% if subsession.round_number != 1 %}
@@ -121,7 +130,7 @@
 {% block app_scripts %}
     <script>
         $(document).ready(function (){
-            $('label[for="id_EMI"]').html('उधार का ईएमआई रु {{ participant.vars.EMI }} :');
+            $('label[for="id_EMI"]').html('उधार का ईएमआई रु {{ participant.vars.EMI }}:');
 
             $('#id_consumption').attr('oninvalid','this.setCustomValidity("आपका खर्च 3000 से कम है। यह खर्च करने के लिए न्यूनतम राशि है।")');
             $('#id_consumption').attr('oninput','this.setCustomValidity("")');
