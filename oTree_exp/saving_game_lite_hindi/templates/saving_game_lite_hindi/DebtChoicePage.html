@@ -29,16 +29,18 @@
 
         <div class="col">
              <p>
-                आपातकाल (emergency) के लिए आपको {{ emergedFund }}रुपये खर्च करने होंगे। आपने कौन सा विकल्प चुना है?
+                आपातकाल (emergency) के लिए आपको {{ emergedFund }}रुपये खर्च करने होंगे।
             </p>
             {% formfield player.debtChoice %}
+            <p>आप अपने घर की बचत और बैंक बचत से राशि निकाल सकते हैं और बाकी की राशि आपको उधार के रूप में लेनी होगी।</p>
+            <div class="alert alert-warning" role="alert">
+                <p> घर से निकाली गई राशि + बैंक से निकाली गई राशि +  उधार राशि  = 54,000 रुपये होनी चाहिए।</p>
+            </div>
+
             {% formfield player.fromHomeSavingAmt label=fromHomeSavingLabel %}
             {% formfield player.fromBankSavingAmt label=fromBankSavingLabel %}
             {% formfield player.fromLoanAmount%}
 
-            <div class="alert alert-warning" role="alert">
-                <p> घर से निकाली गई राशि + बैंक से निकाली गई राशि +  उधार राशि  = 54,000 रुपये होनी चाहिए।</p>
-            </div>
 
 
 

@@ -33,7 +33,7 @@ class MyPage(Page):
 
     def get_form_fields(self):
         if self.participant.vars['loanRemainRound'] > 0:  # if loan is there append EMI field
-            self.fieldList.append('EMI')
+            self.fieldList.insert(0,'EMI')
 
         return self.fieldList
 
