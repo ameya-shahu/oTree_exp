@@ -130,7 +130,8 @@
 {% block app_scripts %}
     <script>
         $(document).ready(function (){
-            $('label[for="id_EMI"]').html('उधार का ईएमआई रु {{ participant.vars.EMI }}:');
+            $('label[for="id_EMI"]').html('उधार का ईएमआई रु {{ participant.vars.EMI }} (\n' +
+                'यहाँ अपने ईएमआई का भुगतान करें):');
 
             $('#id_consumption').attr('oninvalid','this.setCustomValidity("आपका खर्च 3000 से कम है। यह खर्च करने के लिए न्यूनतम राशि है।")');
             $('#id_consumption').attr('oninput','this.setCustomValidity("")');
