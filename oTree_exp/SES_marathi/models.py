@@ -19,7 +19,7 @@ Your app description
 
 
 class Constants(BaseConstants):
-    name_in_url = 'SES_hindi'
+    name_in_url = 'SES_marathi'
     players_per_group = None
     num_rounds = 1
 
@@ -57,7 +57,7 @@ class Player(BasePlayer):
 
     gender = models.StringField(
         label='तुमचे लिंग काय आहे?',
-        widget=widgets.RadioSelect,
+        widget=widgets.RadioSelectHorizontal,
         choices=[
             ['Male', 'पुरुष'],
             ['female', 'महिला']
@@ -66,12 +66,13 @@ class Player(BasePlayer):
 
     isMarried = models.BooleanField(
         label='तुमचे लग्न झाले आहे का?',
-        widget=widgets.RadioSelect,
+        widget=widgets.RadioSelectHorizontal,
         choices=yesNoChoice
     )
 
     religion = models.StringField(
         label='तुमचे धर्म कोणता?',
+        widget=widgets.RadioSelectHorizontal,
         choices=[
             ['Hinduism', 'हिंदू धर्म'],
             ['Buddhism', 'बौद्ध धर्म'],
@@ -83,6 +84,7 @@ class Player(BasePlayer):
 
     language = models.StringField(
         label='आपण घरी कोणती भाषा बोलता?',
+        widget=widgets.RadioSelectHorizontal,
         choices=[
             ['Marathi', 'मराठी'],
             ['Hindi', 'हिंदी'],
@@ -94,6 +96,7 @@ class Player(BasePlayer):
 
     education = models.StringField(
         label='आपले शिक्षण स्तर काय आहे?',
+        widget=widgets.RadioSelect,
         choices=[
             ['Primary (Std 1-5)', 'प्राथमिक (इयत्ता 1-5)'],
             ['Secondary (Std 8-12)', 'माध्यमिक (इयत्ता 8-12)'],
@@ -112,7 +115,9 @@ class Player(BasePlayer):
     # )
 
     occupation = models.IntegerField(
-        label='आपण काय काम करतात?', choices=[
+        label='आपण काय काम करतात?',
+        widget=widgets.RadioSelect,
+        choices=[
             [1, "सरकारी नोकरी"],
             [2, "स्वत: चा व्यवसाय"],
             [3, "घरगुती व्यवसाय"],
@@ -127,39 +132,40 @@ class Player(BasePlayer):
     )
     useofhands = models.BooleanField(
         label="आपल्या हाताचा वापर करणं हे आपल्या व्यवसायाचा खूप मोठा भाग आहे का? (उदाहरणार्थ: फॅक्टरी कामगार, टेलर ...)",
-        widget=widgets.RadioSelect,
+        widget=widgets.RadioSelectHorizontal,
         choices=yesNoChoice
     )
 
     isOwnHouse = models.BooleanField(
         label='तुमचे स्वत: चे घर आहे का?',
-        widget=widgets.RadioSelect,
+        widget=widgets.RadioSelectHorizontal,
         choices=yesNoChoice
     )
 
     hasbankaccount = models.BooleanField(label="आपला बँक अकाउंट आहे का ?",
-                                         widget=widgets.RadioSelect,
+                                         widget=widgets.RadioSelectHorizontal,
                                          choices=yesNoChoice)
 
     hasFD = models.BooleanField(label="आपला फिक्स्ड डेपोसिटस (एफ डी) आहे का ?",
-                                widget=widgets.RadioSelect,
+                                widget=widgets.RadioSelectHorizontal,
                                 choices=yesNoChoice)
 
     hasmutualfunds = models.BooleanField(label="आपला म्युच्युअल फंडस् आहे का ?",
-                                         widget=widgets.RadioSelect,
+                                         widget=widgets.RadioSelectHorizontal,
                                          choices=yesNoChoice)
 
     hasinsurance = models.BooleanField(label="आपल्याकडे विमा आहे का?",
-                                       widget=widgets.RadioSelect,
+                                       widget=widgets.RadioSelectHorizontal,
                                        choices=yesNoChoice)
     gotcovid = models.BooleanField(label="आपल्याला कोवीड  झाला होता का?",
-                                   widget=widgets.RadioSelect,
+                                   widget=widgets.RadioSelectHorizontal,
                                    choices=yesNoChoice)
     notnenoughfood = models.BooleanField(
         label="गेल्या सहा महिन्यांत अशी वेळ आली आहे का जेव्हा तुमच्याकडे पुरेसे अन्न नव्हते?",
-        widget=widgets.RadioSelect,
+        widget=widgets.RadioSelectHorizontal,
         choices=yesNoChoice)
     howmanytimes = models.IntegerField(label="किती वेळा असे घडले?",
+                                       widget=widgets.RadioSelect,
                                        choices=[
                                            [1, "1-2"],
                                            [2, "3-4"],

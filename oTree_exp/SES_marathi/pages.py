@@ -88,6 +88,31 @@ class Results(Page):
     pass
 
 
+class OnePageForm(Page):
+    form_model = 'player'
+    form_fields = ['hungerRate',
+                   'tiredRate',
+                   'age',
+                   'gender',
+                   'isMarried',
+                   'religion',
+                   'language',
+                   'education',
+                   'occupation',
+                   'useofhands',
+                   'isOwnHouse',
+                   'hasbankaccount',
+                   'hasFD',
+                   'hasmutualfunds',
+                   'hasinsurance',
+                   'gotcovid',
+                   'notnenoughfood',
+                   'howmanytimes',
+                   ]
+
+
+isOnePage = True
+
 page_sequence = [hungerRate,
                  tiredRate,
                  age,
@@ -107,4 +132,4 @@ page_sequence = [hungerRate,
                  notnenoughfood,
                  howmanytimes,
                  Results,
-                 ]
+                 ] if not isOnePage else [OnePageForm]

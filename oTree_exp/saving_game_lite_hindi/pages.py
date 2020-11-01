@@ -111,7 +111,7 @@ class DebtChoicePage(Page):
             loanAmt = int(self.player.fromLoanAmount)
             if loanAmt > 0:
                 debtDetails = Constants.debtChoice[self.round_number][
-                    choosenOpt - 1]  # get details of debt from  Constants class
+                    choosenOpt]  # get details of debt from  Constants class
 
                 interest = debtDetails['interest'] if debtDetails['type'] == 'M' else debtDetails[
                                                                                           'interest'] / 12  # calculate monthly intrest
