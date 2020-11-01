@@ -63,12 +63,7 @@ SESSION_CONFIGS = [
         num_demo_participants=1,
         app_sequence=['saving_game_lite_hindi'],
     ),
-dict(
-        name='onePageForm',
-        display_name='onePageForm',
-        num_demo_participants=1,
-        app_sequence=['SES_marathi'],
-    ),
+
 ]
 
 # if you set a property in SESSION_CONFIG_DEFAULTS, it will be inherited by all configs
