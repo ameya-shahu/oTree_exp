@@ -149,9 +149,9 @@ class Player(BasePlayer):
     standardofliving = models.BooleanField(
         label="क्या आपको लगता है कि एक निश्चित जीवन स्तर बनाए रखने के लिए वेतन संतोषजनक होगा?",
         choices=yesNoChoice)
-    celebratediwali = models.BooleanField(label="क्या आपको लगता है कि आप इस साल दिवाली, ईद या क्रिसमस मनाएंगे?",
+    celebratediwali = models.BooleanField(label="क्या आपने इस साल दीवाली या ईद मनाई?",
                                           choices=yesNoChoice)
-    howmuchcanyouspend = models.IntegerField(label="आपको क्या लगता है कि आप कितना खर्च कर सकते हैं?", choices=[
+    howmuchcanyouspend = models.IntegerField(label="आप कितना खर्च कर पाये?", choices=[
         [1, "200-500"],
         [2, "501-1000"],
         [3, "1001-1500"],

@@ -140,16 +140,16 @@ class Player(BasePlayer):
     doyouthinkthatisenough = models.BooleanField(
     label="यदि लॉकडाउन लंबे समय तक रहता है, तो क्या आपको लगता है कि उतनी बचत बस है?",
     choices=yesNoChoice)
-    celebratediwali = models.BooleanField(label="क्या आपको लगता है कि आप इस साल दिवाली, ईद या क्रिसमस मनाएंगे?",
+    celebratediwali = models.BooleanField(label="क्या आपने इस साल दीवाली या ईद मनाई?",
                                       choices=yesNoChoice)
 
-    whatwillyouspendon = models.IntegerField(label="आप किस पर खर्च कर सकते हैं?",choices=[[1, "फूड्स"],
+    whatwillyouspendon = models.IntegerField(label="आपने किस पर खर्च किया?",choices=[[1, "फूड्स"],
                                                                        [2, "बच्चों के लिए कपड़े"],
                                                                        [3, "सबके लिए कपड़े"],
                                                                        [4, "सोना, चांदी, इ"]
                                                                        ])
 
-    howmuchcanyouspend = models.IntegerField(label="आपको क्या लगता है कि आप कितना खर्च कर सकते हैं?", choices=[
+    howmuchcanyouspend = models.IntegerField(label="आप कितना खर्च कर पाये?", choices=[
     [1, "200-500"],
     [2, "501-1000"],
     [3, "1001-1500"],
